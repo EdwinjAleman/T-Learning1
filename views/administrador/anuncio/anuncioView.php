@@ -1,13 +1,12 @@
+<!--funcionalidad-->
+<script src="../assets/js/scripts.foro.js"></script>
+<script src="../assets/js/scripts.comentario.js"></script>
+<script src="../assets/js/scripts.respuesta.js"></script>
 
- <!--funcionalidad-->
-	<script src="../assets/js/scripts.foro.js"></script>
-	<script src="../assets/js/scripts.comentario.js"></script>
-  <script src="../assets/js/scripts.respuesta.js"></script>
+<!--scrip funcionalidad-->
 
-  <!--scrip funcionalidad-->
-  
 
-  <div id="main">
+<div id="main">
 
     <script src="../assets/js/scripts.anuncio.js"></script>
 

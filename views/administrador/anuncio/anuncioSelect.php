@@ -4,13 +4,15 @@
         <h3><i class="fa fa-angle-right"></i> Anuncios </h3>
         <h4>Los siguientes anuncios son referentes al Centro de Formacion (CDTI) y a nuestro programa de formacion:</h4>
 
+
+
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSelecFicha">
-            funciona hpta
+            Crear anuncio
         </button>
 
         <!-- Modal -->
-        <div class="modal fade" id="modalSelecFicha" tabindex="-1" role="dialog"
-            aria-labelledby="modal" aria-hidden="true">
+        <div class="modal fade" id="modalSelecFicha" tabindex="-1" role="dialog" aria-labelledby="modal"
+            aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -31,14 +33,14 @@
         </div>
 
         <?php foreach ($this->anuncio->Select() as $filas): ?>
-    
+
         <?php $grupal="'".$filas->anu_id."','".$filas->anu_titl."','".$filas->anu_descrpcn."','".$filas->anu_fechCrcn."','".$filas->usu_usuari."'" ?>
 
         <div class="row content-panel mt mb">
 
             <div class="pull-right">
 
-              
+
 
                 <button type="button" class="btn btn-theme04 delete">
                     <i class="glyphicon glyphicon-trash"></i>
@@ -57,7 +59,7 @@
                 </h3>
 
                 <h4 contenteditable="true">
-                   <a>autor:</a> <?php echo $filas->usu_usuari; ?>
+                    <a>autor:</a> <?php echo $filas->usu_usuari; ?>
                 </h4>
             </div>
 

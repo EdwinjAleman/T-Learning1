@@ -1,24 +1,23 @@
-
 <form name="formanuncio" id="formanuncio" onSubmit="event.preventDefault();">
-        
-        <input type="text" name="id" hidden>
 
-        <label for="titulo">Titulo</label><br>
-        <input type="text" name="titulo" id="anu_titulo"><br>
-                
-        <label for="foro_mensaje"> Mensaje: </label> <br>
-        <textarea name="mensaje" placeholder="Asunto"></textarea> <br>
-                
-        <label for="fchcre">Fecha Creacion</label><br>
-        <input type="date" name="fchcre" id="anu_fechaCreacion"><br>
-                
-        <label for="fchfin">Fecha Fin</label><br>
-        <input type="date" name="fchfin" id="anu_fechafin"><br>
+    <input type="text" name="id" hidden>
 
-        <label for="fchfin">Nombre Creador</label><br>
-        <input type="text" name="nombre" id="anu_nombreCreacion"><br>
+    <label for="titulo">Titulo</label><br>
+    <input type="text" name="titulo" id="anu_titulo"><br>
 
-        <input id="btnguardar" type="button" value="Grabar" onclick="InsertAnuncio();">
+    <label for="foro_mensaje"> Mensaje: </label> <br>
+    <textarea name="mensaje" placeholder="Asunto"></textarea> <br>
+
+    <label for="fchcre">Fecha Creacion</label><br>
+    <input type="date" name="fchcre" id="anu_fechaCreacion"><br>
+
+    <label for="fchfin">Fecha Fin</label><br>
+    <input type="date" name="fchfin" id="anu_fechafin"><br>
+
+    <label for="fchfin">Nombre Creador</label><br>
+    <input type="text" name="nombre" id="anu_nombreCreacion"><br>
+
+    <input id="btnguardar" type="button" value="Grabar" onclick="InsertAnuncio();">
 
 </form>
 
@@ -27,7 +26,7 @@
 
 <head>
     <title></title>
- 
+
 
     <script type="text/javascript">
     $(document).ready(function() {
