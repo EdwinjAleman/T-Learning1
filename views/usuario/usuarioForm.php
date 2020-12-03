@@ -11,8 +11,8 @@
 
 			              <form name="FormUsuario">
 
-			                  <label for="id" hidden>id</label><br>
-			                  <input type="text" id="id" name="id" hidden="true" readonly="true"><br>
+			                 
+			                  <input type="text" id="id" name="id" hidden><br>
 			                  <label for="usuario">usuario</label><br>
 			                  <input type="text" id="usuario" name="usuario"><br>
 			                  <label for="clave">clave</label><br>

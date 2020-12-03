@@ -16,7 +16,7 @@
     <tbody id="tbody">
 
         <?php foreach($this->usuario->Select() as $value) { 	
-					$conjunto="actualizar','".$value->usu_id."','".$value->usu_usuari."','".$value->usu_passwd."','".$value->usu_ficid."','".$value->usu_perid."','".$value->tipo_usuario_id."'";
+					$conjunto="guardar,'".$value->usu_id."','".$value->usu_usuari."','".$value->usu_passwd."','".$value->usu_ficid."','".$value->usu_perid."','".$value->tipo_usuario_id."'";
 				?>
 
         <tr>

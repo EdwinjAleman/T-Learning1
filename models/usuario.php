@@ -87,10 +87,10 @@
 										try 				 { 
 
 																$sql = "UPDATE tbl_usuario 
-																						SET usu_usuario 	  =?,
-																							usu_pswswd  	  =?,
+																						SET usu_usuari  	  =?,
+																							usu_passwd  	  =?,
 																							usu_ficid   	  =?,
-																							usu_perid		  =?
+																							usu_perid		  =?,
 																							tipo_usuario_id   =?
 																						WHERE usu_id=?";
 

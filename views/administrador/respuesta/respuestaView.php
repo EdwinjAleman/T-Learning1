@@ -8,7 +8,7 @@
   </div>
 
   <div id="tview">
-    <?php  include ('respuestaSelect.php'); ?>
+    <?php  include('respuestaSelect.php'); ?>
   </div>
 
 </div>
