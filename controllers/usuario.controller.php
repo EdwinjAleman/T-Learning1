@@ -49,11 +49,12 @@
 									{
 										$datos= $this->usuario;
 
-										$datos->id 		= $_REQUEST['id'];
-										$datos->usuario = $_REQUEST['usuario'];
-										$datos->nombre  = $_REQUEST['nombre'];
-										$datos->area 	= $_REQUEST['area'];
-										$datos->clave 	= $_REQUEST['clave'];
+										$datos->id 			= $_REQUEST['id'];
+										$datos->usuario 	= $_REQUEST['usuario'];
+										$datos->clave   	= $_REQUEST['clave'];
+										$datos->ficha 		= $_REQUEST['ficha'];
+										$datos->idpersona 	= $_REQUEST['idpersona'];
+										$datos->tipusuid 	= $_REQUEST['tipusuid'];
 
 										$this->usuario->Update($datos);
 										require_once('../views/usuario/usuarioSelect.php');

@@ -86,21 +86,23 @@
 									{
 										try 				 { 
 
-																$sql = "UPDATE usuarios 
-																						SET usuario =?,
-																							nombre  =?,
-																							area    =?,
-																							clave   =?
-																						WHERE id=?";
+																$sql = "UPDATE tbl_usuario 
+																						SET usu_usuario 	  =?,
+																							usu_pswswd  	  =?,
+																							usu_ficid   	  =?,
+																							usu_perid		  =?
+																							tipo_usuario_id   =?
+																						WHERE usu_id=?";
 
 																$this->pdo->prepare($sql)
 																          ->execute(
 																          			array(
 																          					$data->usuario,
-																          					$data->nombre,
-																          					$data->area,
 																          					md5($data->clave),
-																          					$data->id
+																          					$data->ficha,
+																          					$data->idpersona,
+																							$data->tipusuid,
+																							$data->id
 																          				 )
 																          		   );
 															 }
