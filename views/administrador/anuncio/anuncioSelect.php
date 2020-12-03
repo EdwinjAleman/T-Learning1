@@ -32,7 +32,7 @@
 
         <?php foreach ($this->anuncio->Select() as $filas): ?>
     
-        <?php $grupal="'".$filas->anu_id."','".$filas->anu_titl."','".$filas->anu_descrpcn."','".$filas->anu_fechCrcn."','".$filas->Usu_usuari."'" ?>
+        <?php $grupal="'".$filas->anu_id."','".$filas->anu_titl."','".$filas->anu_descrpcn."','".$filas->anu_fechCrcn."','".$filas->usu_usuari."'" ?>
 
         <div class="row content-panel mt mb">
 
