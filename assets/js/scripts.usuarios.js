@@ -150,7 +150,7 @@
 	}
 
 
-	function Edit(id,usuario,clave,ficha,idpersona)
+	function Edit(id,usuario,clave,ficha,idpersona,tipusuid)
 	{	
 		var  id 		= document.FormUsuario.id.value;
 		var  usuario 	= document.FormUsuario.usuario.value;

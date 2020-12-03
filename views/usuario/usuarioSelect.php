@@ -7,6 +7,7 @@
             <th>CLAVE</th>
             <th>FICHA</th>
             <th>PERSONA</th>
+            <th>TIPO USUARIO</th>
             <th>EDITAR</th>
             <th>ELIMINAR</th>
         </tr>
@@ -15,7 +16,7 @@
     <tbody id="tbody">
 
         <?php foreach($this->usuario->Select() as $value) { 	
-					$conjunto="guardar','".$value->usu_id."','".$value->usu_usuari."','".$value->usu_passwd."','".$value->usu_ficid."','".$value->usu_perid."";
+					$conjunto="actualizar','".$value->usu_id."','".$value->usu_usuari."','".$value->usu_passwd."','".$value->usu_ficid."','".$value->usu_perid."','".$value->tipo_usuario_id."'";
 				?>
 
         <tr>
@@ -24,6 +25,7 @@
             <td> <?php echo $value->usu_passwd; 	?> </td>
             <td> <?php echo $value->usu_ficid; 		?> </td>
             <td> <?php echo $value->usu_perid; 		?> </td>
+            <td> <?php echo $value->tipo_usuario_id;?> </td>  
             <td> <button type="button" class="btn btn-warning ToggleOpti" id="edit" data-toggle="modal"
                     data-target="#modaledit" value="<?php echo $conjunto; ?>"> Editar </button> </td>
             <td> <button type="button" class="btn btn-danger ToggleOpti" id="delete"
