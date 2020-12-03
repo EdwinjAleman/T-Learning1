@@ -6,6 +6,12 @@
         <script src="../assets/js/scripts.respuesta.js"></script>
 
         <!--scrip funcionalidad-->
+         
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
 
 
         <button type="button" id="boton1" onclick="BotonCrearForo();"> Crear foro </button>
