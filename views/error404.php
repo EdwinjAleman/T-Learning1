@@ -15,7 +15,7 @@ require_once('../views/frames/footer.php');
             <a > giron es gei</a>
           </div>
         </div>
-        <h5 class="mt">Oye, tal vez te interese esta pagina:</h5>
+        <h5 class="mt">Oye, tal vez te interese esta pagina: puto</h5>
         <p><a href="main.php">Index</a>
       </div>
     </div>
