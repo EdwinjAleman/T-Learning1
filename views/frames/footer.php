@@ -10,7 +10,7 @@
 	<script type="text/javascript" src="../assets/js/jquery-confirm.js"></script>
 	<script type="text/javascript" src="../assets/js/scripts.usuarios.js"></script>
 	<script type="text/javascript" src="../assets/js/logout.js"></script>
-	<link rel="stylesheet" href="../assets/css/main.css" ></style>
+	<link rel="stylesheet" href="../assets/css/main.css" >
 	
 
 	 <!-- js placed at the end of the document so the pages load faster -->
