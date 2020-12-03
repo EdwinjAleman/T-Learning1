@@ -1,7 +1,7 @@
 <script>
 
   document.addEventListener('DOMContentLoaded', function() {
-    var initialLocaleCode = 'en';
+    var initialLocaleCode = 'es';
     var localeSelectorEl = document.getElementById('locale-selector');
     var calendarEl = document.getElementById('calendar');
 
@@ -11,7 +11,7 @@
         center: 'title',
         right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
       },
-      initialDate: '2020-09-12',
+      initialDate: '2020-12-04',
       locale: initialLocaleCode,
       buttonIcons: false, // show the prev/next text
       weekNumbers: true,
@@ -21,36 +21,36 @@
       events: [
         {
           title: 'All Day Event',
-          start: '2020-09-01'
+          start: '2020-12-01'
         },
         {
           title: 'Long Event',
-          start: '2020-09-07',
-          end: '2020-09-10'
+          start: '2020-12-07',
+          end: '2020-12-10'
         },
         {
           groupId: 999,
           title: 'Repeating Event',
-          start: '2020-09-09T16:00:00'
+          start: '2020-12-09T16:00:00'
         },
         {
           groupId: 999,
           title: 'Repeating Event',
-          start: '2020-09-16T16:00:00'
+          start: '2020-12-16T16:00:00'
         },
         {
           title: 'Conference',
-          start: '2020-09-11',
-          end: '2020-09-13'
+          start: '2020-12-11',
+          end: '2020-12-13'
         },
         {
           title: 'Meeting',
-          start: '2020-09-12T10:30:00',
-          end: '2020-09-12T12:30:00'
+          start: '2020-12-12T10:30:00',
+          end: '2020-12-12T12:30:00'
         },
         {
           title: 'Lunch',
-          start: '2020-09-12T12:00:00'
+          start: '2020-12-12T12:00:00'
         },
         {
           title: 'Meeting',
@@ -126,7 +126,7 @@
 
   <div id='top'>
 
-    Locales:
+    Selector de idioma:
     <select id='locale-selector'></select>
 
   </div>
