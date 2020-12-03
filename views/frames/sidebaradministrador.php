@@ -50,11 +50,15 @@
               <span>Panel de Control</span>
               </a>
             <ul class="sub">
-              <li><a href="./main.php?Ctr=estado"><i class="fa fa-bell"></i>Estado</a></li>
-              <li><a href="./main.php?Ctr=fases"><i class="fa fa-bell"></i>Fases</a></li>
-              <li><a href="./main.php?Ctr=ficha"><i class="fa fa-archive"></i>Ficha</a></li>
-              <li><a href="./main.php?Ctr=usuario"><i class="fa fa-address-card"></i>Usuarios</a></li>
-              <li><a href="panels.html"><i class="fa fa-book"></i>Programas formativos</a></li>
+              <li><a href="./main.php?Ctr=estado"><i class="fa fa-toggle-on"></i>Estado</a></li>
+              <li><a href="./main.php?Ctr=fases"><i class="fa fa-clone"></i>Fases</a></li>
+              <li><a href="./main.php?Ctr=ficha"><i class="fa fa-address-card"></i>Ficha</a></li>
+              <li><a href="./main.php?Ctr=tipojor"><i class="fa fa-clock-o"></i>Jornada</a></li>
+              <li><a href="./main.php?Ctr=modalidad"><i class="fa fa-cog"></i>Modalidad</a></li>
+              <li><a href="./main.php?Ctr=tipoofe"><i class="fa fa-book"></i>Oferta</a></li>
+              <li><a href="./main.php?Ctr=tipopro"><i class="fa fa-desktop"></i>Tipo Programa</a></li>
+              <li><a href="./main.php?Ctr=usuario"><i class="fa fa-user"></i>Usuarios</a></li>
+              <li><a href="panels.html"><i class="fa fa-graduation-cap"></i>Programas formativos</a></li>
               
             </ul>
           </li>
