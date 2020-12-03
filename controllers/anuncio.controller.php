@@ -7,7 +7,7 @@
 
 			function __Construct()
 									{
-										$this->usuario = new Anuncio();
+										$this->anuncio = new Anuncio();
 									}
 
 
@@ -17,18 +17,14 @@
 										if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="1"){ require_once('frames/sidebaradministrador.php'); }
 										if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="2"){ require_once('frames/menuAprendiz.php'); }
 										if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="3"){ require_once('frames/menuInstructor.php'); }
-											require_once('../views/administrador/anuncio/anuncioInsert.php');
-										    require_once('../views/frames/footer.php');
-										
-										
-
+            							require_once('../views/administrador/anuncio/anuncioView.php');							
+										require_once('../views/frames/footer.php');
 									}
-
-
 			public function Eliminar()
 									{
+
 										$this->anuncio->Delete($_REQUEST['id']);
-										require_once('../views/usuario/usuarioSelect.php');
+										require_once('../views/administrador/anuncio/anuncioView.php');	
 									}
 
 
