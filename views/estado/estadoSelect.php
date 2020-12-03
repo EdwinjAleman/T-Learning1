@@ -1,10 +1,12 @@
-<table style="margin: 0 auto; overflow-y: scroll;">
+<div class="table">
+<table style="margin: 0 auto; overflow-y: scroll;" class="table table-hover">
 		<!-- Cabecera de la Tabla -->
 		<thead>
 			<tr>
 
 				<th>ID Estado	</th>
 				<th>Descripcion	</th>
+				<th>Editar</th>
 				<th>Eliminar	</th>
 			</tr>
 		</thead>
@@ -24,3 +26,4 @@
 				<?php endforeach; ?>
 		</tbody>
 </table>
+</div>

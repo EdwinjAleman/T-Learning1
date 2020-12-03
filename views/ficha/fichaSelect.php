@@ -1,4 +1,5 @@
-<table style="margin: 0 auto; overflow-y: scroll;">
+<div class="table">
+<table style="margin: 0 auto; overflow-y: scroll;" class="table table-hover">
 		<!-- Cabecera de la Tabla -->
 		<thead>
 			
@@ -38,3 +39,4 @@
 		<tfoot>
   </tfoot>
 </table>
+</div>
