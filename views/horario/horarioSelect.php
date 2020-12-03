@@ -19,7 +19,7 @@
       selectable: true,
       selectMirror: true,
       select: function(arg) {
-        var title = prompt('Event Title:');
+        var title = prompt('titulo del evento:');
         if (title) {
           calendar.addEvent({
             title: title,
@@ -31,7 +31,7 @@
         calendar.unselect()
       },
       eventClick: function(arg) {
-        if (confirm('Are you sure you want to delete this event?')) {
+        if (confirm('esta seguro que quiere eliminar este evento?')) {
           arg.event.remove()
         }
       },
