@@ -5,8 +5,8 @@
 
 
 	<script type="text/javascript" src="../assets/js/jquery.min.js"></script>
-	<script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="../assets/js/datatables.min.js"></script>
+	<script type="text/javascript" src="../assets/DataTables/Bootstrap-4-4.1.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../assets/DataTables/datatables.min.js"></script>
 	<script type="text/javascript" src="../assets/js/jquery-confirm.js"></script>
 	<script type="text/javascript" src="../assets/js/scripts.usuarios.js"></script>
 	<script type="text/javascript" src="../assets/js/logout.js"></script>

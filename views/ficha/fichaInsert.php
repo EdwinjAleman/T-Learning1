@@ -1,31 +1,32 @@
+<!-- Modal -->
+<div class="modal fade" id="formcrear" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Ficha</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
 
-  <section id="container">
-     
+            <form action="">
 
-<div class="row mt">
-<div class="col-lg-12">
-    <h4><i class="fa fa-angle-right"></i> Nueva Ficha</h4>
-        <div class="form-panel">
-			<div id="form" class="form">
-				<br>
-			
-				 <form class="cmxform form-horizontal style-form" id="formCrear" name="formCrear  ">
-
-                  <div class="form-group ">
+            <div class="form-group ">
                     <label for="codigo" class="control-label col-lg-2" >Codigo</label>
                     <div class="col-lg-10">
                       <input class=" form-control"  type="text" name="codigos" id="codigos" required />
                    </div>
                   </div>
 				  
-				  <div class="form-group ">
+				          <div class="form-group ">
                     <label for="programa" class="control-label col-lg-2" >Programa</label>
                     <div class="col-lg-10">
                       <input class=" form-control"  type="text" name="programa" id="programa"  required />
                     </div>
                   </div>
     			
-    			  <div class="form-group ">
+    			        <div class="form-group ">
                     <label for="abrvtr" class="control-label col-lg-2" >Abrevitura</label>
                     <div class="col-lg-10">
                       <input class="form-control " type="text" name="abreviacion" id="abreviacion" required />
@@ -45,26 +46,24 @@
                       <input class="form-control " type="Date" name="fechafin" id="fechafin"  required/>
                     </div>
                   </div>
-		
-		
 
-
-			<br>
-			<div class="form-group">
-                    <div class="col-lg-offset-2 col-lg-10">
-                      <button class="btn btn-primary"  onclick="InsertFicha();" value="Grabar" id="btnguardar">Guardar</button>
-                      
-                    </div>
-                  </div>
-		
-			</form>
-              </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button class="btn btn-primary"  onclick="InsertFicha();" value="Grabar" id="btnguardar">Guardar</button>
             </div>
-            <!-- /form-panel -->
-          </div>
-          <!-- /col-lg-12 -->
+
+            </form>
+        
+      </div>
+     
+    </div>
   </div>
+</div>
+
+
+  
+     
+
+			          
 		
-    
 		
-</html>

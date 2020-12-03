@@ -14,7 +14,7 @@
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Bootstrap core CSS -->
-  <link href="../assets/plantilla/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/DataTables/Bootstrap-4-4.1.1/css/bootstrap.min.css" rel="stylesheet">
   <!--external css-->
   <link href="../assets/plantilla/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
   <link href="../assets/plantilla/lib/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
