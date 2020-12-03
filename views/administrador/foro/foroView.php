@@ -14,7 +14,7 @@
          <br>
 
 
-        <button type="button" id="boton1" onclick="BotonCrearForo();"> Crear foro </button>
+         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formforo">Nuevo foro</button>
         <br>
         <br>
 
