@@ -1,4 +1,4 @@
-<h1>Hola</h1>
+
 <table>
   <!-- Cabecera de la tabla-->
   <thead>

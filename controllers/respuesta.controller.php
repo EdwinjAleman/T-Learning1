@@ -12,7 +12,10 @@
 
 		public function Index()
 								{
-								require_once('./views/administrador/respuesta/respuestaView.php');
+							
+								require_once('../views/administrador/respuesta/respuestaView.php');
+							
+
 								}
 
 		public function Insertar(){
