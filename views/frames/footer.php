@@ -27,5 +27,5 @@
 
   <script src="../assets/plantilla/lib/sparkline-chart.js"></script>
   <script src="../assets/plantilla/lib/zabuto_calendar.js"></script>
-  <script type="text/javascript">
+  
 
