@@ -1,12 +1,19 @@
-<div id="main">
+<section id="main-content">
+    <section class="wrapper">
 
-    <script src="../assets/js/scripts.centro.js"></script>
 
-    <div id="tview">
+        <div id="main">
 
-        <?php  include_once('centroInsert.php'); ?>
-        <?php  include_once('centroSelect.php'); ?>
+            <script src="../assets/js/scripts.centro.js"></script>
 
-    </div>
+            <div id="tview">
 
-</div>
+                <?php  include_once('centroInsert.php'); ?>
+                <?php  include_once('centroSelect.php'); ?>
+
+            </div>
+
+        </div>
+
+    </section>
+</section>
