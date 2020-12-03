@@ -37,7 +37,7 @@
             
           </li>
               <li class="sub-menu"href="">
-            <a href="javascript:;">
+            <a href="./main.php?Ctr=horario">
               <i class="fa fa-calendar"></i>
               <span>Horario</span>
               </a>
@@ -66,7 +66,7 @@
 
 
 
-    <!-- <script type="application/javascript">
+    <script type="application/javascript">
     $(document).ready(function() {
       $("#date-popover").popover({
         html: true,
@@ -107,5 +107,5 @@
       var to = $("#" + id).data("to");
       console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
     }
-  </script> -->
+  </script>
     
