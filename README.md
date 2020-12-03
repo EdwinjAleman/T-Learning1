@@ -2,6 +2,10 @@
 tareas que faltan por realizar
 
 
+
+lewis:
+intentar hacer funcionar ese hpta modal de crear foro
+
 Canelita:
 - Material de apoyo
 
