@@ -1,9 +1,8 @@
-<formname="formarea" id="formarea" onSubmit="InsertEst(); return false">
+<form action="" id="formarea" onSubmit="InsertEst(); return false">
   <h4><i class="fa fa-angle-right"></i> Estado</h4>
-      <div class="form-panel">
-			<div id="form" class="form">
-				<br>
-					<input type="text" name="id" hidden>
+    <div class="form-panel">
+
+             <input type="text" name="id" hidden>
 
             <div class="form-group ">
              	<label for="estado" class="control-label col-lg-2" >Estado</label>
@@ -20,7 +19,15 @@
                 <button class="btn btn-theme04" type="button" >Cancelar</button>
               </div>
             </div>
+    </div>
+
 </form>
+
+
+  
+     
+            
+
     
 
 

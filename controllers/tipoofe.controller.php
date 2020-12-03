@@ -16,7 +16,7 @@
 									require_once('../views/frames/header.php');
             						require_once('frames/sidebaradministrador.php');
 									require_once('../views/tipoofe/tipoofeView.php');		
-									
+									require_once('../views/frames/footer.php');
 									
 								}
 
