@@ -2,17 +2,19 @@
     <section class="wrapper">
 
 
-        <div id="main">
 
-            <script src="../assets/js/scripts.centro.js"></script>
+        <script src="../assets/js/scripts.centro.js"></script>
 
-            <div id="tview">
 
-                <?php  include_once('centroInsert.php'); ?>
-                <?php  include_once('centroSelect.php'); ?>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#forminfo">Info Centro</button>
+        <div id="tmain">
 
-            </div>
+            <?php  include_once('centroInsert.php'); ?>
 
+        </div>
+        <div id="tview">
+
+            <?php  include_once('centroSelect.php'); ?>
         </div>
 
     </section>
