@@ -13,3 +13,8 @@ Mayer:
 - Anuncios
 - Foro
 - Info Centro
+
+Edwin:
+insert usuario funcional...listo
+actualizar
+eliminar
