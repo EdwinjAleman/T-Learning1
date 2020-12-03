@@ -1,4 +1,4 @@
-<table style="margin: 0 auto; overflow-y: scroll;">
+<table style="margin: 0 auto; overflow-y: scroll;" class="table table-hover" >
     <!-- Cabecera de la Tabla -->
     <thead>
         <tr>
