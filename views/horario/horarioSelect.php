@@ -20,58 +20,53 @@
       dayMaxEvents: true, // allow "more" link when too many events
       events: [
         {
-          title: 'All Day Event',
+          title: 'todo el dia en evento',
           start: '2020-12-01'
         },
         {
-          title: 'Long Event',
+          title: 'dia de las velitas',
           start: '2020-12-07',
-          end: '2020-12-10'
+          end: '2020-12-07'
         },
         {
           groupId: 999,
-          title: 'Repeating Event',
+          title: 'alguito',
           start: '2020-12-09T16:00:00'
         },
         {
           groupId: 999,
-          title: 'Repeating Event',
+          title: 'alguito',
           start: '2020-12-16T16:00:00'
         },
         {
-          title: 'Conference',
+          title: 'Conferencia',
           start: '2020-12-11',
           end: '2020-12-13'
         },
         {
-          title: 'Meeting',
+          title: 'reuniones',
           start: '2020-12-12T10:30:00',
           end: '2020-12-12T12:30:00'
         },
         {
-          title: 'Lunch',
+          title: 'almuerzo',
           start: '2020-12-12T12:00:00'
         },
         {
-          title: 'Meeting',
+          title: 'reunion',
           start: '2020-09-12T14:30:00'
         },
         {
-          title: 'Happy Hour',
-          start: '2020-09-12T17:30:00'
+          title: 'hora felis',
+          start: '2020-12-12T16:20:00'
         },
         {
-          title: 'Dinner',
+          title: 'sena',
           start: '2020-09-12T20:00:00'
         },
         {
-          title: 'Birthday Party',
+          title: 'fiesta',
           start: '2020-09-13T07:00:00'
-        },
-        {
-          title: 'Click for Google',
-          url: 'http://google.com/',
-          start: '2020-09-28'
         }
       ]
     });
