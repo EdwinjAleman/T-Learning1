@@ -1,9 +1,10 @@
 <aside>
+
     <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
             <p class="centered"><a href=""></a></p>
-            <h5 class="centered"> ADMINISTRADOR </h5>
+            <h5 class="centered"> <?php echo$_SESSION['SUsu'] ?> </h5>
             <div class="centered"><a href="logout.php">Cerrar Sesion</a><br></div>
             <li class="mt">
                 <a class="" href="./main.php?Ctr=anuncio">
