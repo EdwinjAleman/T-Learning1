@@ -22,7 +22,7 @@
 
 
             <li class="sub-menu" href="">
-                <a href="javascript:;">
+                <a href="./main.php?Ctr=centro">
                     <i class="fa fa-bell"></i>
                     <span>Informacion del Centro</span>
                 </a>
