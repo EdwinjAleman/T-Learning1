@@ -21,7 +21,7 @@
 
 
             <li class="sub-menu" href="">
-                <a href="javascript:;">
+                <a href="./main.php?Ctr=centro">
                     <i class="fa fa-bell"></i>
                     <span>Informacion del Centro</span>
                 </a>
@@ -36,7 +36,7 @@
 
             </li>
             <li class="sub-menu" href="">
-                <a href="javascript:;">
+                <a href="./main.php?Ctr=horario">
                     <i class="fa fa-calendar"></i>
                     <span>Horario</span>
                 </a>
