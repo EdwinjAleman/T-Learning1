@@ -31,14 +31,16 @@
 
 			public function Insertar()
 									{	
-										$datos = $this->usuario;
+										$data = $this->usuario;
 
-										$datos->nombre 	= $_REQUEST['nombre'];
-										$datos->usuario = $_REQUEST['usuario'];
-										$datos->area 	= $_REQUEST['area'];
-										$datos->clave 	= $_REQUEST['clave'];
+										$data->usuario 		= $_REQUEST['usuario'];
+										$data->clave 		= $_REQUEST['clave'];
+										$data->ficha 		= $_REQUEST['ficha'];
+										$data->idpersona	= $_REQUEST['idpersona'];
+										$data->tipusuid		= $_REQUEST['tipusuid'];
+										
 
-										$this->usuario->Insert($datos);
+										$this->usuario->Insert($data);
 										require_once('../views/usuario/usuarioSelect.php');
 									}
 
@@ -49,7 +51,7 @@
 
 										$datos->id 		= $_REQUEST['id'];
 										$datos->usuario = $_REQUEST['usuario'];
-										$datos->nombre = $_REQUEST['nombre'];
+										$datos->nombre  = $_REQUEST['nombre'];
 										$datos->area 	= $_REQUEST['area'];
 										$datos->clave 	= $_REQUEST['clave'];
 

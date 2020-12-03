@@ -72,11 +72,12 @@
 												if(this.value!="")
 												{
 													var Cadena = this.value.split("','");
-													document.FormUsuario.id.value 		= Cadena[0];
-													document.FormUsuario.nombre.value 	= Cadena[1];
-													document.FormUsuario.usuario.value 	= Cadena[2];
-													document.FormUsuario.area.value 	= Cadena[3];
-													document.FormUsuario.clave.value 	= Cadena[4];
+													document.FormUsuario.id.value 			= Cadena[0];
+													document.FormUsuario.usuario.value 		= Cadena[1];
+													document.FormUsuario.clave.value 		= Cadena[2];
+													document.FormUsuario.ficha.value 		= Cadena[3];
+													document.FormUsuario.idpersona.value 	= Cadena[4];
+													document.FormUsuario.tipusuid.value 	= Cadena[5];
 												}
 											}
 										
@@ -103,10 +104,12 @@
 
 	function Create()
 	{
-		var  nombre = document.FormUsuario.nombre.value;
-		var  usuario = document.FormUsuario.usuario.value;
-		var  area = document.FormUsuario.area.value;
-		var  clave = document.FormUsuario.clave.value;
+		var  usuario   = document.FormUsuario.usuario.value;
+		var  clave 	   = document.FormUsuario.clave.value;
+		var  ficha     = document.FormUsuario.ficha.value;
+		var  idpersona = document.FormUsuario.idpersona.value;
+		var  tipusuid  = document.FormUsuario.tipusuid.value;
+		
 
 		var ajax = ObjAjax();
 		ajax.onreadystatechange = function()
@@ -143,17 +146,18 @@
 
 		ajax.open("POST","main.php",true);
 		ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-		ajax.send("Ctr=usuario&Acc=insertar&nombre="+nombre+"&usuario="+usuario+"&area="+area+"&clave="+clave);
+		ajax.send("Ctr=usuario&Acc=insertar&usuario="+usuario+"&clave="+clave+"&ficha="+ficha+"&idpersona="+idpersona+"&tipusuid="+tipusuid);
 	}
 
 
-	function Edit(id,nombre,usuario,area,clave)
+	function Edit(id,usuario,clave,ficha,idpersona)
 	{	
-		var  id = document.FormUsuario.id.value;
-		var  nombre = document.FormUsuario.nombre.value;
-		var  usuario = document.FormUsuario.usuario.value;
-		var  area = document.FormUsuario.area.value;
-		var  clave = document.FormUsuario.clave.value;
+		var  id 		= document.FormUsuario.id.value;
+		var  usuario 	= document.FormUsuario.usuario.value;
+		var  clave	    = document.FormUsuario.clave.value;
+		var  ficha 		= document.FormUsuario.ficha.value;
+		var  idpersona  = document.FormUsuario.idpersona.value;
+		var  tipusuid	= document.FormUsuario.tipusuid.value;
 
 		var ajax = ObjAjax();
 		ajax.onreadystatechange = function()
@@ -189,7 +193,7 @@
 
 		ajax.open("POST","main.php",true);
 		ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-		ajax.send("Ctr=usuario&Acc=actualizar&id="+id+"&nombre="+nombre+"&usuario="+usuario+"&area="+area+"&clave="+clave);
+		ajax.send("Ctr=usuario&Acc=actualizar&id="+id+"&usuario="+usuario+"&clave="+clave+"&ficha="+ficha+"&idpersona="+idpersona+"&tipusuid="+tipusuid);
 	}
 
 	

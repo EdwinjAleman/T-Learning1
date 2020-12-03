@@ -13,21 +13,23 @@
 
 			                  <label for="id" hidden>id</label><br>
 			                  <input type="text" id="id" name="id" hidden="true" readonly="true"><br>
-			                  <label for="nombre">nombre</label><br>
-			                  <input type="text" id="nombre" name="nombre"><br>
 			                  <label for="usuario">usuario</label><br>
 			                  <input type="text" id="usuario" name="usuario"><br>
-			                  <label for="area">area</label><br>
-			                  <input type="text" id="area" name="area"><br>
 			                  <label for="clave">clave</label><br>
 			                  <input type="password" id="clave" name="clave"><br>
+			                  <label for="ficha">ficha</label><br>
+			                  <input type="text" id="ficha" name="ficha"><br>
+			                  <label for="idpersona">idpersona</label><br>
+			                  <input type="text" id="idpersona" name="idpersona"><br>
+							  <label for="tipusuid">tipusuid</label><br>
+			                  <input type="text" id="tipusuid" name="tipusuid"><br>
 
 			              </form>
 
 
 			          </div>
 			          <div class="modal-footer">
-			              <button type="button" class="btn btn-primary" id="save" data-dismiss="modal">Guardar</button>
+			              <button type="button" class="btn btn-primary" id="save" data-dismiss="modal" onclick="Create()">Guardar</button>
 			              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
 			          </div>
 			      </div>
