@@ -12,6 +12,7 @@ require_once('../views/frames/footer.php');
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
             <a >suqchaenfour</a>
+            <a > giron es gei</a>
           </div>
         </div>
         <h5 class="mt">Oye, tal vez te interese esta pagina:</h5>
