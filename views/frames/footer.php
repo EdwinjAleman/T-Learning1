@@ -1,5 +1,5 @@
 	<footer class="mainfooter">
-			<small><span> Derechos de Autor Giron</span></small>
+			<small><span> Derechos de Autor SeNet</span></small>
 	</footer>
 
 
