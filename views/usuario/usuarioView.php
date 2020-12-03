@@ -1,3 +1,6 @@
+<section id="main-content">
+      <section class="wrapper">
+
 	<div class="maincontainer">
 		
 		<button type="button" class="btn btn-warning ToggleOpti" id="export"> Mostrar Opciones </button>

@@ -1,5 +1,5 @@
 <table id="tblusuario" class="table table-striped table-bordered">
-	
+
 		<thead>
 			<tr>
 				<th>#</th>
