@@ -66,7 +66,7 @@
     <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
     <script type="text/javascript" src="assets/plantilla/lib/jquery.backstretch.min.js"></script>
     <script>
-    $.backstretch("assets/plantilla/img/login-bg.jpg", {
+    $.backstretch("assets/plantilla/img/login-tl.jpg", {
         speed: 500
     });
     </script>
