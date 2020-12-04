@@ -31,14 +31,16 @@
 
 			public function Insertar()
 									{	
-										$datos = $this->usuario;
+										$data = $this->usuario;
 
-										$datos->nombre 	= $_REQUEST['nombre'];
-										$datos->usuario = $_REQUEST['usuario'];
-										$datos->area 	= $_REQUEST['area'];
-										$datos->clave 	= $_REQUEST['clave'];
+										$data->usuario 		= $_REQUEST['usuario'];
+										$data->clave 		= $_REQUEST['clave'];
+										$data->ficha 		= $_REQUEST['ficha'];
+										$data->idpersona	= $_REQUEST['idpersona'];
+										$data->tipusuid		= $_REQUEST['tipusuid'];
+										
 
-										$this->usuario->Insert($datos);
+										$this->usuario->Insert($data);
 										require_once('../views/usuario/usuarioSelect.php');
 									}
 
@@ -47,14 +49,23 @@
 									{
 										$datos= $this->usuario;
 
-										$datos->id 		= $_REQUEST['id'];
-										$datos->usuario = $_REQUEST['usuario'];
-										$datos->nombre = $_REQUEST['nombre'];
-										$datos->area 	= $_REQUEST['area'];
-										$datos->clave 	= $_REQUEST['clave'];
+										$datos->id 			= $_REQUEST['id'];
+										$datos->usuario 	= $_REQUEST['usuario'];
+										$datos->clave   	= $_REQUEST['clave'];
+										$datos->ficha 		= $_REQUEST['ficha'];
+										$datos->idpersona 	= $_REQUEST['idpersona'];
+										$datos->tipusuid 	= $_REQUEST['tipusuid'];
 
-										$this->usuario->Update($datos);
-										require_once('../views/usuario/usuarioSelect.php');
+									echo $_REQUEST['id']."<br>";
+									echo $_REQUEST['usuario']."<br>";
+									echo $_REQUEST['clave']."<br>";
+									echo $_REQUEST['ficha']."<br>";
+									echo $_REQUEST['idpersona']."<br>";
+									echo $_REQUEST['tipusuid']."<br>";	
+								 $respuesta=$this->usuario->Update($datos);
+									
+									require_once('../views/usuario/usuarioSelect.php');
+								echo $respuesta;		
 									}
 
 			public function Login($user,$pass)

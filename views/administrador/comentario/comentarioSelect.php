@@ -1,37 +1,35 @@
-<h1>Hola</h1>
-<table>
-  <!-- Cabecera de la tabla-->
-  <thead>
-    <tr>
-      <th>id</th>
-      <th>nombre usuario</th>
-      <th>mensaje</th>
-      <th>id foro</th>
-      
-    </tr>
-  </thead>
+<table class="table table-striped table-bordered">
+    <!-- Cabecera de la tabla-->
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>nombre usuario</th>
+            <th>mensaje</th>
+            <th>id foro</th>
 
-  <!--cuerpo de la tabla-->
+        </tr>
+    </thead>
 
-  <tbody>
-    
-    <?php foreach ($this->comentario->Select() as $filas): ?>
-      <?php $grupal="'".$filas->com_id."','".$filas->com_usunom."','".$filas->com_mensj."','".$filas->com_foro_id."'" ?>
+    <!--cuerpo de la tabla-->
 
-      <tr>
-        <th><?php echo $filas->com_id; ?> </th>
-        <th><?php echo $filas->com_usunom; ?> </th>
-        <th><?php echo $filas->com_mensj; ?> </th>
-        <th><?php echo $filas->com_foro_id; ?> </th>
+    <tbody>
 
-        <th> <button onclick="BorrarComentario(<?php echo $filas->com_id;?>);"> Eliminar </button></th>
-        <th> <button onclick="ResponderComentario();"> Responder </button></th>   
+        <?php foreach ($this->comentario->Select() as $filas): ?>
+        <?php $grupal="'".$filas->com_id."','".$filas->com_usunom."','".$filas->com_mensj."','".$filas->com_foro_id."'" ?>
 
-      </tr>
-     <?php endforeach; ?>
-  </tbody>
-  <!-- pie de la tabla-->
-  <tfoot>
-  </tfoot>
+        <tr>
+            <th><?php echo $filas->com_id; ?> </th>
+            <th><?php echo $filas->com_usunom; ?> </th>
+            <th><?php echo $filas->com_mensj; ?> </th>
+            <th><?php echo $filas->com_foro_id; ?> </th>
+
+            <th> <button onclick="BorrarComentario(<?php echo $filas->com_id;?>);"> Eliminar </button></th>
+            <th> <button onclick="ResponderComentario();"> Responder </button></th>
+
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
+    <!-- pie de la tabla-->
+    <tfoot>
+    </tfoot>
 </table>
-

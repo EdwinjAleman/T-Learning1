@@ -12,9 +12,9 @@
 
 		public function Index()
 								{
-									
+								
 									require_once('../views/administrador/comentario/comentarioView.php');	
-															
+											
 								}
 
 		public function Insertar(){

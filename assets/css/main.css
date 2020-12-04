@@ -105,7 +105,7 @@ a.mainmenu             {color:#000000;font-family:verdana,arial,helvetica,sans-s
 a:hover.mainmenu       {color:#ffffff;font-family:verdana,arial,helvetica,sans-serif;font-size:8pt;font-weight:bold;text-decoration:none;}
 td.menudivider         {background:#ffffff;}
 
-td.adminmenu           {background:#029b82;color:#ffffff;font-family:verdana,arial,helvetica,sans-serif;font-size:8pt;font-weight:bold;text-decoration:none;}
+td.adminmenu           {background:#cc6600;color:#ffffff;font-family:verdana,arial,helvetica,sans-serif;font-size:8pt;font-weight:bold;text-decoration:none;}
 .adminmenu             {color:#ffffff;font-family:verdana,arial,helvetica,sans-serif;font-size:8pt;font-weight:bold;text-decoration:none;}
 a.adminmenu            {color:#ffffff;font-family:verdana,arial,helvetica,sans-serif;font-size:8pt;font-weight:bold;text-decoration:none;}
 a:hover.adminmenu      {color:#660000;font-family:verdana,arial,helvetica,sans-serif;font-size:8pt;font-weight:bold;text-decoration:none;}
@@ -120,7 +120,7 @@ a.submenu              {color:#ffffff;font-family:verdana,arial,helvetica,sans-s
 a:hover.submenu        {color:#ffcc00;font-family:verdana,arial,helvetica,sans-serif;font-size:8pt;font-weight:bold;text-decoration:none;}
 
 td.familyborder        {background:#000000;}
-td.familytitle         {background:#029c84;color:#FFFFFF;font-family:verdana,arial,helvetica,sans-serif;font-size:10pt;font-weight:bold;text-decoration:none;}
+td.familytitle         {background:#cc6600;color:#FFFFFF;font-family:verdana,arial,helvetica,sans-serif;font-size:10pt;font-weight:bold;text-decoration:none;}
 td.categoryborder      {background:#000000;}
 td.categorytitle       {background:#663398;color:#FFFFFF;font-family:verdana,arial,helvetica,sans-serif;font-size:10pt;font-weight:bold;text-decoration:none;}
 td.subcategoryborder   {background:#000000;}
@@ -149,7 +149,7 @@ a.warningaction        {color:#CC6600;font-family:arial,helvetica,sans-serif;fon
 a:hover.warningaction  {color:#CC6600;text-decoration:underline;}
 
 td.boxbordersuccess    {background:#000000;}
-td.boxtitlesuccess     {background:#029c84;color:#FFFFFF;font-family:arial,helvetica,sans-serif;font-size:10pt;font-weight:bold;text-decoration:none;}
+td.boxtitlesuccess     {background:#cc6600;color:#FFFFFF;font-family:arial,helvetica,sans-serif;font-size:10pt;font-weight:bold;text-decoration:none;}
 .successmessage        {color:#000000;font-family:arial,helvetica,sans-serif;font-size:10pt;font-weight:bold;text-decoration:none;}
 .successaction         {color:#663399;font-family:verdana,arial,helvetica,sans-serif;font-size:10pt;font-weight:bold;text-decoration:none;}
 a.successaction        {color:#663399;font-family:verdana,arial,helvetica,sans-serif;font-size:10pt;font-weight:bold;text-decoration:underline;}

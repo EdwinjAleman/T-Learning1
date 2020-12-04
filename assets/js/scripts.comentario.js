@@ -74,6 +74,6 @@ function ResponderComentario(){
 									};
 	
 	ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	ajax.send("ctrl=respuesta");
+	ajax.send("Ctr=respuesta");
 	
 }
