@@ -4,7 +4,8 @@ tareas que faltan por realizar
 
 
 lewis:
-voy a mirar el horario como vergas :c
+no que hacer :c
+
 
 Canelita:
 - Material de apoyo
