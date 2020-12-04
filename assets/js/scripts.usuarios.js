@@ -150,7 +150,7 @@
 	}
 
 
-	function Edit(id,usuario,clave,ficha,idpersona,tipusuid)
+	function Edit()
 	{	
 		var  id 		= document.FormUsuario.id.value;
 		var  usuario 	= document.FormUsuario.usuario.value;
@@ -158,6 +158,8 @@
 		var  ficha 		= document.FormUsuario.ficha.value;
 		var  idpersona  = document.FormUsuario.idpersona.value;
 		var  tipusuid	= document.FormUsuario.tipusuid.value;
+
+		
 
 		var ajax = ObjAjax();
 		ajax.onreadystatechange = function()
