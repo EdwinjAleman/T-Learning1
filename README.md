@@ -16,5 +16,5 @@ Mayer:
 
 Edwin:
 insert usuario funcional...listo
-actualizar
+actualizar....listo
 eliminar....listo

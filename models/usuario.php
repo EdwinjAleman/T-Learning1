@@ -94,7 +94,7 @@
 																							tipo_usuario_id   =?
 																						WHERE usu_id=?";
 */  															$sql = "UPDATE  `tbl_usuario` SET `usu_usuari`=?,`usu_passwd`=?,`usu_ficid`=?,`usu_perid`=?,`tipo_usuario_id`=? WHERE `usu_id`=?";
-																return $this->pdo->prepare($sql)
+																 $this->pdo->prepare($sql)
 																          ->execute(
 																          			array(
 																          					$data->usuario,
