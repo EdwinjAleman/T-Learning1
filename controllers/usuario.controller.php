@@ -56,12 +56,7 @@
 										$datos->idpersona 	= $_REQUEST['idpersona'];
 										$datos->tipusuid 	= $_REQUEST['tipusuid'];
 
-									echo $_REQUEST['id']."<br>";
-									echo $_REQUEST['usuario']."<br>";
-									echo $_REQUEST['clave']."<br>";
-									echo $_REQUEST['ficha']."<br>";
-									echo $_REQUEST['idpersona']."<br>";
-									echo $_REQUEST['tipusuid']."<br>";	
+										
 								 $respuesta=$this->usuario->Update($datos);
 									
 									require_once('../views/usuario/usuarioSelect.php');

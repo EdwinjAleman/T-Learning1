@@ -29,8 +29,8 @@
                         <br>
                         <div class="form-group">
                             <div class="col-lg-offset-2 col-lg-10">
-                                <button class="btn btn-primary" type="submit" value="Grabar"
-                                    id="btnguardar">Guardar</button>
+                                <input class="btn btn-primary" type="submit" value="Grabar"
+                                    id="btnguardar"/>
                                 <button class="btn btn-theme04" type="button">Cancelar</button>
                             </div>
                         </div>
