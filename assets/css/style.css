@@ -34,11 +34,11 @@ a, a:hover, a:focus {
 }
 ::selection {
 
-    background: #4ECDC4;
+    background: #cc6600;
     color: #fff;
 }
 ::-moz-selection {
-    background: #4ECDC4;
+    background: #cc6600;
     color: #fff;
 }
 
@@ -49,7 +49,7 @@ a, a:hover, a:focus {
 
 /* Bootstrap Modifications */
 .modal-header {
-	background: #4ECDC4;
+	background: #cc6600;
 }
 
 .modal-title {
@@ -79,7 +79,7 @@ a, a:hover, a:focus {
 /*Theme Backgrounds*/
 
 .bg-theme {
-	background-color: #4ECDC4;
+	background-color: #cc6600;
 }
 
 .bg-theme02 {
@@ -87,7 +87,7 @@ a, a:hover, a:focus {
 }
 
 .bg-theme03 {
-  background-color: #48cfad;
+  background-color: #cc6600;
 }
 
 .bg-theme04 {
@@ -106,8 +106,8 @@ a, a:hover, a:focus {
 .btn-theme.active,
 .open .dropdown-toggle.btn-theme {
   color: #fff;
-  background-color: #48bcb4;
-  border-color: #48bcb4;
+  background-color: #cc6600;
+  border-color: #435251;
 }
 
 .btn-theme02 {
@@ -366,7 +366,7 @@ ul.sidebar-menu li a{
 }
 
 ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
-    background: #4ECDC4;
+    background: #cc6600;
     color: #fff;
     display: block;
 
@@ -646,7 +646,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 
 .full-width .dropdown-menu.extended.logout > li > a:hover {
     background: none !important;
-    color: #50c8ea !important;
+    color: #cc6600 !important;
 }
 
 .dropdown-menu.extended.logout > li > a:hover {
@@ -654,7 +654,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 .dropdown-menu.extended.logout > li > a:hover i {
-    color: #50c8ea;
+    color: #cc6600;
 }
 
 .dropdown-menu.extended.logout > li > a i {
@@ -995,10 +995,10 @@ PANELS CONFIGURATIONS
 /*Green Panel*/
 .green-panel {
 	text-align: center;
-	background: #4ECDC4;
+	background: #cc6600;
 }
 .green-panel .green-header {
-	background: #43b1a9;
+	background: #cc6600;
 	padding: 3px;
 	margin-bottom: 15px;
 }
@@ -1217,23 +1217,7 @@ PANELS CONFIGURATIONS
 	width: 100%
 }
 
-/*Twitter Panel*/
-.twitter-panel {
-	background: #4fc1e9;
-	text-align: center;
-}
-.twitter-panel i {
-	color: white;
-	margin-top: 40px;
-}
-.twitter-panel p {
-	color: #f5f5f5;
-	margin: 10px;
-}
-.twitter-panel .user {
-	color: white;
-	font-weight: 900;
-}
+
 
 
 /* Instagram Panel*/
@@ -1405,7 +1389,7 @@ PANELS CONFIGURATIONS
   transition: background 0.5s ease
 }
 .steps input[type=submit]:hover{
-  background: #8fde9c;
+  background: #cc6600;
 }
 .steps label{
   background: #393D40;
@@ -1942,7 +1926,7 @@ ul li {
 }
 .dataTables_paginate.paging_bootstrap.pagination li:hover a, .dataTables_paginate.paging_bootstrap.pagination li.active a {
 	color: #fff;
-	background: #4ECDC4;
+	background: #cc6600;
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
 }
@@ -2182,7 +2166,7 @@ ul.my-friends li .friends-pic {
 	height:3px;
 	margin: 10px auto;
 	width: 80px;
-	background-color:#4ECDC4;
+	background-color:#cc6600;
 }
 .icn-main-container {
 	position: relative;
@@ -2198,7 +2182,7 @@ ul.my-friends li .friends-pic {
 	font-size: 2.4em;
 	line-height: 100px;
 	color: #fff;
-	background-color:#4ECDC4;
+	background-color:#cc6600;
 		-webkit-transition: all 0.6s ease-in-out;
 		transition: all 0.6s ease-in-out;
 }
@@ -2278,7 +2262,7 @@ ul.my-friends li .friends-pic {
 
 .dm-icon:active,
 .dm-icon:hover {
-	background: #4ECDC4
+	background: #cc6600
 }
 
 
@@ -2307,12 +2291,12 @@ ul.my-friends li .friends-pic {
 .mail-nav>li>a:hover,.mail-nav>li>a:focus {
     background:#fafafa;
     color:#4ECDC4;
-    border-right:3px solid #1fb5ad;
+    border-right:3px solid #cc6600;
 }
 .mail-nav>li.active>a,.mail-nav>li.active>a:hover,.mail-nav>li.active>a:focus {
     background:#fafafa;
-    color:#4ECDC4;
-    border-right:3px solid #4ECDC4;
+    color:#cc6600;
+    border-right:3px solid #cc6600;
 }
 .mail-nav>li+li {
     margin-left:0;
@@ -2748,11 +2732,11 @@ ul.inbox-pagination li {
 }
 
 .chat-room .right-side .user-head {
-    background: #3498db;
+    background: #cc6600;
     color: #FFFFFF;
     min-height: 70px;
     padding: 10px;
-    border-left: 1px solid #3498db;
+    border-left: 1px solid #cc6600;
     margin-left: -1px;
     position: relative;
 }
@@ -3059,35 +3043,7 @@ ul.chat-available-user li a:hover {
 }
 
 
-.btn-facebook {
-  color: #fff;
-  background-color: #5193ea;
-  border-color: #2775e2;
-}
-.btn-facebook:hover,
-.btn-facebook:focus,
-.btn-facebook:active,
-.btn-facebook.active,
-.open .dropdown-toggle.btn-facebook {
-  color: #fff;
-  background-color: #2775e2;
-  border-color: #2775e2;
-}
 
-.btn-twitter {
-  color: #fff;
-  background-color: #44ccfe;
-  border-color: #2bb4e8;
-}
-.btn-twitter:hover,
-.btn-twitter:focus,
-.btn-twitter:active,
-.btn-twitter.active,
-.open .dropdown-toggle.btn-twitter {
-  color: #fff;
-  background-color: #2bb4e8;
-  border-color: #2bb4e8;
-}
 
 
 /*badge*/
@@ -3295,7 +3251,7 @@ ul.chat-available-user li a:hover {
 }
 
 .ui-sortable li.list-primary {
-    border-left: 3px solid #41CAC0;
+    border-left: 3px solid #965a1f;
 }
 
 .ui-sortable li.list-success {
@@ -3311,7 +3267,7 @@ ul.chat-available-user li a:hover {
 }
 
 .ui-sortable li.list-info {
-    border-left: 3px solid #58C9F3;
+    border-left: 3px solid #965a1f;
 }
 
 .ui-sortable li.list-inverse {
@@ -3320,7 +3276,7 @@ ul.chat-available-user li a:hover {
 
 /*footer*/
 .site-footer {
-    background: #4ECDC4;
+    background: #924900;
     color: #fff;
     padding: 15px 0;
 }

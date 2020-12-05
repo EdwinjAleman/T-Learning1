@@ -1,6 +1,6 @@
 <section id="main-content">
     <section class="wrapper">
-
+        <script src="../assets/js/scripts.usuarios.js"></script>
         <div class="maincontainer">
 
             <button type="button" class="btn btn-warning ToggleOpti" id="export"> Mostrar Opciones </button>
@@ -18,4 +18,6 @@
 
         </div>
 
-        <script src="../assets/js/scripts.usuarios.js"></script>
+
+    </section>
+</section>

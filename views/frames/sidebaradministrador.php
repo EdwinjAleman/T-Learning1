@@ -29,8 +29,8 @@
 
             </li>
 
-            <li class="sub-menu" href="">
-                <a href="javascript:;">
+            <li class="sub-menu" >
+                <a href="./main.php?Ctr=materialapoyo">
                     <i class="fa fa-book"></i>
                     <span>Material de Apoyo</span>
                 </a>

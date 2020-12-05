@@ -48,7 +48,7 @@
 		public function Delete($id)
 									{
 										try 				 { 
-																$sql="DELETE FROM USUARIOS WHERE id=?";
+																$sql="DELETE FROM tbl_usuario WHERE usu_id=?";
 																$this->pdo->prepare($sql)
 																		  ->execute(
 																		  			array($id)
@@ -63,15 +63,16 @@
 									{
 										try 				 { 
 
-																$sql = "INSERT INTO usuarios (usuario,nombre,area,clave)
-																					VALUES (?,?,?,?)";
+																$sql = "INSERT INTO tbl_usuario (usu_usuari,usu_passwd,usu_ficid,usu_perid,tipo_usuario_id)
+																					VALUES (?,?,?,?,?)";
 																$this->pdo->prepare($sql)
 																          ->execute(
 																          			array(
 																          					$data->usuario,
-																          					$data->nombre,
-																          					$data->area,
-																          					md5($data->clave)
+																          					md5($data->clave),
+																          					$data->ficha,
+																							$data->idpersona,
+																							$data->tipusuid
 																          				 )
 																          		   );
 
@@ -85,21 +86,23 @@
 									{
 										try 				 { 
 
-																$sql = "UPDATE usuarios 
-																						SET usuario =?,
-																							nombre  =?,
-																							area    =?,
-																							clave   =?
-																						WHERE id=?";
-
-																$this->pdo->prepare($sql)
+															/*	$sql = "UPDATE tbl_usuario 
+																						SET usu_usuari  	  =?,
+																							usu_passwd  	  =?,
+																							usu_ficid   	  =?,
+																							usu_perid		  =?,
+																							tipo_usuario_id   =?
+																						WHERE usu_id=?";
+*/  															$sql = "UPDATE  `tbl_usuario` SET `usu_usuari`=?,`usu_passwd`=?,`usu_ficid`=?,`usu_perid`=?,`tipo_usuario_id`=? WHERE `usu_id`=?";
+																 $this->pdo->prepare($sql)
 																          ->execute(
 																          			array(
 																          					$data->usuario,
-																          					$data->nombre,
-																          					$data->area,
 																          					md5($data->clave),
-																          					$data->id
+																          					$data->ficha,
+																          					$data->idpersona,
+																							$data->tipusuid,
+																							$data->id
 																          				 )
 																          		   );
 															 }

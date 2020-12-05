@@ -6,20 +6,16 @@
     <br>
     <input type="text" name="usuario"><br>
 
-
-    <label for="nombres">nombres</label>
+    
+    <label for="clave">clave</label>
     <br>
-    <input type="text" name="nombres"><br>
+    <input type="text" name="clave"><br>
+
 
 
     <label for="area">area</label>
     <br>
     <input type="text" name="area"><br>
-
-
-    <label for="clave">clave</label>
-    <br>
-    <input type="text" name="clave"><br>
 
 
     <label for="estado">estado</label>
