@@ -1,4 +1,4 @@
-<!-- <section id="main-content">
+ <section id="main-content">
     <section class="wrapper">
 
 
@@ -18,4 +18,4 @@
         </div>
 
     </section>
-</section> -->
+</section> 

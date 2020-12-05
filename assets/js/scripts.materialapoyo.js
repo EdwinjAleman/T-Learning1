@@ -41,7 +41,7 @@ function BorrarMaterialApoyo(map_id,map_archurl,fcpt,idfase) {
                 };
 
                 ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-                ajax.send("ctrl=materialapoyo&acti=eliminar&map_id="+map_id+"&map_archurl="+map_archurl+"&fcpt="+fcpt;
+                ajax.send("ctrl=materialapoyo&acti=eliminar&map_id="+map_id+"&map_archurl="+map_archurl+"&fcpt="+fcpt);
             },
             Cancelar: function() {
                 $.alert('Has cancelado la eliminación');
@@ -52,21 +52,23 @@ function BorrarMaterialApoyo(map_id,map_archurl,fcpt,idfase) {
 }
 
 
-function InsertMaterialApoyo() {
+function InsertarMaterial() {
 
     
 
     var paquete = new FormData();
-    paquete.append('archivo', $('#file-archivo')[0].files[0]);
+    paquete.append('archurl', $('#file_archivo')[0].files[0]);
 
     
 
-    var publicador=document.getElementById("publicadormodal").value;
-    var titulo=document.getElementById("titulomodal").value;
-    var descrp=document.getElementById("descrpmodal").value;
-    
+    var id=document.getElementById("map_id").value;
+    var titulo=document.getElementById("map_titulo").value;
+	var fecpub=document.getElementById("map_fecpub").value;
+	var descrp=document.getElementById("map_descrp").value;
+    var fasid=document.getElementById("map_fasid").value;
+    var usuid=document.getElementById("map_usuid").value;
 
-    var destino = "main.php?ctrl=materialapoyo&acti=insertar&publicador="+publicador+"&titulo="+titulo+"&descrp="+descrp+"&fecpud"+;
+    var destino = send("main.php?Ctr=materialapoyo&Acc=insertar$id"+id+"&titulo="+titulo+"&fecpub="+fecpub+"&descrp="+descrp+"&fasid="+fasid+"&usuid="+usuid);
     $.ajax({
         url: destino,
         type: 'POST',
@@ -83,6 +85,7 @@ function InsertMaterialApoyo() {
     });
      
 }
+
 
 var urlvieja;
 

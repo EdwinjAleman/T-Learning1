@@ -3,7 +3,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Ficha</h5>
+                <h5 class="modal-title" id="staticBackdropLabel">Nuevo Anuncio</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -56,14 +56,7 @@
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button class="btn btn-primary" onclick="InsertAnuncio();" value="Grabar"
                         id="btnguardar">Guardar</button>
-                </div>
-
-                    <input id="btnguardar" type="button" value="Grabar" onclick="">
-
-                </form>
-
-
-               
+              
 
               
 

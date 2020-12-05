@@ -1,3 +1,4 @@
+
 <section id="main-content">
     <section class="wrapper site-min-height">
         <h3><i class="fa fa-angle-right"></i> Anuncios </h3>
@@ -5,10 +6,10 @@
 
 
 
-
+       
 
         <!-- Modal -->
-
+       
         <?php foreach ($this->anuncio->Select() as $filas): ?>
 
         <?php $grupal="'".$filas->anu_id."','".$filas->anu_titl."','".$filas->anu_descrpcn."','".$filas->anu_fechCrcn."','".$filas->usu_usuari."'" ?>
@@ -17,16 +18,13 @@
 
             <div class="pull-right">
 
-                <?php  if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="3"){ ?>
+                
 
-                <<button type="button" class="btn btn-theme04 delete">
+                <button type="button" class="btn btn-theme04 delete">
                     <i class="glyphicon glyphicon-trash"></i>
                     <span>Delete</span>
                 </button>
                 <button type="button" class="btn btn-success">Editar</button>
-                <?php } ?>
-
-                
             </div>
 
             <div class="col-md-6">

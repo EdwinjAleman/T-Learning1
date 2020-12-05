@@ -17,7 +17,7 @@
 									   
 									//require_once('../views/frames/header.php');
 									//require_once('frames/sidebaradministrador.php');
-									require_once('../views/materialapoyo/materialapoyoSelect.php');
+									require_once('../views/materialapoyo/materialapoyoView.php');
 									//require_once('../views/frames/footer.php');
 									
 									
@@ -40,40 +40,34 @@
 		public function Insertar()
 								{
 
-									$fichapuntero=$_REQUEST['ficid'];
-
-									$datos= $this->materialapoyo;
-
-									$datos->publicador=$_REQUEST['publicador'];
-									$datos->titulo=$_REQUEST['titulo'];
-									$datos->descrp=$_REQUEST['descrp'];
-								    $datos->fecpud=$_REQUEST['fecpud'];
-
 									date_default_timezone_set('America/Bogota');
-									$fecha  = date("Ymd_His");
+									$fecha = date('Ymd_Hi');
+									$nombre=$_POST['trimestre'];
 									
-									$name = $_FILES['archivo']['name'];     
-									$exts = explode('.',$name);             
-									$exts = end($exts);
-									
-									$datos->icono=$exts;
-									
-									$temp = $_FILES['archivo']['tmp_name']; 
-									$ruta = '../assets/fichas/'.$fichapuntero.'/';
-									$ruta = $ruta.$fecha.".".$exts;
+
+									$name=$_FILES['archurl']['name'];
+									$ext =explode('.',$name);
+									$ext = end($ext);
+									$temp =$_FILES['archurl']['tmp_name'];
+									$ruta = '../assets/images/adjuntos/';
+									$file = $fecha.$nombre.".".$ext;
 
 									if(is_uploaded_file($temp)){
-										move_uploaded_file($temp,$ruta);										
+
+										move_uploaded_file($temp, $ruta.$file);
 									}else{
-										echo "No se cargo la imagen";
+										echo "NO se cargo la imagen";
 									}
+									$datos = $this->materialapoyo;
+                                    $datos->titulo = $_REQUEST['titulo'];
+                                    $datos->fecpud  = $_REQUEST['descrip'];
+                                    $datos->descrp = $_REQUEST['descrp'];
+                                    $datos->archurl = $file;
+									$datos->fasid = $_REQUEST['fasid'];
+									$datos->usuid = $_REQUEST['usuid'];
 									
-	
-																	
-									$this->materialapoyo->Insert($ruta,$datos);
-
+									$this->materialapoyo->Insert($datos);
 									require_once('../views/materialapoyo/materialapoyoSelect.php');
-
 
 								}
 		public function Actualizar()

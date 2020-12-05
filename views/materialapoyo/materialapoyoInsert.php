@@ -1,6 +1,6 @@
 <!-- Modal -->
 
-<div class="modal fade" id="modalmaterialapoyo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+<!--div class="modal fade" id="modalmaterialapoyo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
   <div class="modal-dialog" role="document">
 	  <div class="modal-content">
 			<div class="modal-header Color-Slidebar">
@@ -44,7 +44,7 @@
 
 					<div><br>
 						<label for="file-archivo">Material De Apoyo</label><br>
-						<input type="file" id="file-archivo" lang="es" required>
+						<input type="file" id="file_archivo" lang="es" required>
 						<div class="invalid-feedback">Complete el campo.</div><br>
 					</div>
 
@@ -95,4 +95,38 @@
 		   </div>
 		</div>   
 	</div>
-</div>
+</div-->
+<form name="formMate" id="formMate" >
+
+<h1> Subir Material De Apoyo </h1>
+
+<input type="text" name="map_id" hidden> <br>
+
+<label for="map_titulo"> Titulo  </label> <br>
+<input type="text" name="map_titulo"> <br>
+
+<label for="map_fecpub"> Fecha inicio: </label> <br>
+<input type="date" name="map_fecpub"> <br>
+
+<label for="map_descrp"> Descripcion: </label> <br>
+<textarea name="map_descrp" placeholder="Descripcion"></textarea> <br>
+
+<label for="map_fasid"> Fase: </label> <br>
+<input type="text" name="map_fasid"> <br>
+
+<label for="map_usuid"> usuario: </label> <br>
+<input type="text" name="map_usuid"> <br>
+
+<div class="modal-body" id="cargar">
+<div class="form-group">
+<label for="description">archivo</label>
+<input type="file" class="form-control" id="adjunto" name="adjunto">
+</div>                          
+
+
+<button class="btn btn-primary" onclick="InsertarMaterial();" value="Grabar" id="btnguardar">Guardar</button>
+
+</form>				
+				
+				
+		
