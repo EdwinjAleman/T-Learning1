@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <section id="main-content">
     <section class="wrapper site-min-height">
         <h3><i class="fa fa-angle-right"></i> Anuncios </h3>
@@ -6,31 +5,9 @@
 
 
 
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSelecFicha">
-            Crear anuncio
-        </button>
+
 
         <!-- Modal -->
-        <div class="modal fade" id="modalSelecFicha" tabindex="-1" role="dialog" aria-labelledby="modal"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalSelecFicha">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <?php include('anuncioInsert.php'); ?>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <?php foreach ($this->anuncio->Select() as $filas): ?>
 
@@ -40,13 +17,16 @@
 
             <div class="pull-right">
 
+                <?php  if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="3"){ ?>
 
-
-                <button type="button" class="btn btn-theme04 delete">
+                <<button type="button" class="btn btn-theme04 delete">
                     <i class="glyphicon glyphicon-trash"></i>
                     <span>Delete</span>
                 </button>
                 <button type="button" class="btn btn-success">Editar</button>
+                <?php } ?>
+
+                
             </div>
 
             <div class="col-md-6">

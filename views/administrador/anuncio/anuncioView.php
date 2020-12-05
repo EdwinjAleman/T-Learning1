@@ -1,21 +1,20 @@
-<!--funcionalidad-->
-<script src="../assets/js/scripts.foro.js"></script>
-<script src="../assets/js/scripts.comentario.js"></script>
-<script src="../assets/js/scripts.respuesta.js"></script>
 
-<!--scrip funcionalidad-->
+        <script src="../assets/js/scripts.anuncio.js"></script>
+        <?php  if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="3"){ ?>
+       
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formanuncio">
+            Crear anuncio
+        </button>
+        <div id="foranun">
+
+            <?php  include_once('anuncioInsert.php'); ?>
+        </div>
+
+        <?php } ?>
 
 
-<div id="main">
+        <div id="tview">
 
-    <script src="../assets/js/scripts.anuncio.js"></script>
+            <?php  include_once('anuncioSelect.php'); ?>
 
-    <button type="button" id="boton1" onclick="BotonCrearAnuncio();"> Crear anuncio </button>
-
-    <div id="tview">
-
-        <?php  include_once('anuncioSelect.php'); ?>
-
-    </div>
-
-</div>
+        </div>

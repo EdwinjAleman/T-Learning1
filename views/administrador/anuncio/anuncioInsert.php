@@ -1,25 +1,78 @@
-<form name="formanuncio" id="formanuncio" onSubmit="event.preventDefault();">
+<div class="modal fade" id="formanuncio" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Ficha</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
 
-    <input type="text" name="id" hidden>
+                <form onSubmit="event.preventDefault();">
 
-    <label for="titulo">Titulo</label><br>
-    <input type="text" name="titulo" id="anu_titulo"><br>
+                    <input type="text" name="id" hidden>
 
-    <label for="foro_mensaje"> Mensaje: </label> <br>
-    <textarea name="mensaje" placeholder="Asunto"></textarea> <br>
+                    <div class="form-group ">
+                        <label for="titulo" class="control-label col-lg-2">Titulo</label>
+                        <div class="col-lg-10">
+                            <input class=" form-control" type="text" name="titulo" id="titulo" required />
+                        </div>
+                    </div>
 
-    <label for="fchcre">Fecha Creacion</label><br>
-    <input type="date" name="fchcre" id="anu_fechaCreacion"><br>
+                    <div class="form-group ">
+                    <label for="foro_mensaje" class="control-label col-lg-2"> Mensaje: </label>
+                    <div class="col-lg-10">
+                        <textarea class=" form-control" placeholder="Asunto" name="mensaje" id="mensaje" required></textarea>
+                    </div>
+                </div>
 
-    <label for="fchfin">Fecha Fin</label><br>
-    <input type="date" name="fchfin" id="anu_fechafin"><br>
+                    
+                <div class="form-group ">
+                    <label for="fchcre" class="control-label col-lg-2">Fecha Creacion</label>
+                    <div class="col-lg-10">
+                        <input class="form-control " type="date" name="fchcre" id="anu_fechaCreacion" required />
+                    </div>
+                </div>
 
-    <label for="fchfin">Nombre Creador</label><br>
-    <input type="text" name="nombre" id="anu_nombreCreacion"><br>
+                  
+                <div class="form-group ">
+                    <label for="fchfin" class="control-label col-lg-2" for="fecha">Fecha fin</label>
+                    <div class="col-lg-10">
+                        <input class="form-control " type="Date" name="fchfin" id="fchfin" required />
+                    </div>
+                </div>
 
-    <input id="btnguardar" type="button" value="Grabar" onclick="InsertAnuncio();">
 
-</form>
+                <div class="form-group ">
+                    <label for="nombre" class="control-label col-lg-2" for="fecha">Nombre Creador</label>
+                    <div class="col-lg-10">
+                        <input class="form-control " type="text" name="nombre" id="anu_nombreCreacion" required />
+                    </div>
+                </div>
+                   
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" onclick="InsertAnuncio();" value="Grabar"
+                        id="btnguardar">Guardar</button>
+                </div>
+
+                    <input id="btnguardar" type="button" value="Grabar" onclick="">
+
+                </form>
+
+
+               
+
+              
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
 
 <!DOCTYPE html>
 <html>

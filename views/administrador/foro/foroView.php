@@ -14,8 +14,8 @@
         <br>
         <br>
         <br>
-
-
+        <?php
+        if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="3"){ ?> 
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formforo">Nuevo
             Foro</button>
         <br>
@@ -25,7 +25,7 @@
 
             <?php  include_once('foroInsert.php'); ?>
         </div>
-
+            <?php } ?>
         <div id="tview">
 
             <?php  include_once('foroSelect.php'); ?>
