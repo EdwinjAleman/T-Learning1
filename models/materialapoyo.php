@@ -1,19 +1,16 @@
-<?php
+<?php  
+	class Material {
 
-    class Materialapoyo{
-
-        private $pdo;
+		private $pdo;
 
 
-        public function __Construct(){ 
+		public function __Construct(){ 
 
-                                        try 					{	$this->pdo=Database::Conectar();	}
-                                        catch (Exception $e) 	{	die($e->getMessage());				}
-        
-                                    }
-        
-    
-        public function Select(){
+										try 					{	$this->pdo=Database::Conectar();	}
+										catch (Exception $e) 	{	die($e->getMessage());				}
+		}
+
+		public function Select(){
 										try 					{	
 																	$sql=$this->pdo->prepare("SELECT * FROM tbl_materialapoyo ORDER BY map_id desc");
 																	$sql->execute();
@@ -23,69 +20,74 @@
 										catch (Exception $e) 	{	
 																	die($e->getMessage());
 																}
-		}
-        public function Insert($url,$datos)
-                                    { 
-                                        try  				 {
-                                                                $sql1="INSERT INTO tbl_materialapoyo(map_titulo,map_fecpud,map_descrp,map_archurl,map_ficid,map_usuid) 
-                                                                      VALUES(?,?,?,?,?,?);";
-                                                                      
-                                                                $this->pdo->prepare($sql1)
-                                                                        ->execute(array(
-                                                                                            $datos->titulo,
-                                                                                            $datos->fecpud,
-                                                                                            $datos->descrp,
-                                                                                            $url,
-                                                                                            $datos->ficid,
-                                                                                            $datos->usuid
-                                                                                            
-                                                                                            
-                                                                                           
-                                                                                        ));
-                                                               
-                                                                
-                                                                    $sql2=$this->GetMaterialApoyo($datos,$url);           
-                                                                                        
-                                                                                        
-
-                                                                                            
-                               
-                                                              
-
+        
                                                             }
-                                        catch (Exception $e) {	die($e->getMessage());}
-                                    }
 
-        public function Delect($map_id)
-                                    {
-                                        try  				 {
-                                                                $sql="DELETE FROM tbl_materialapoyo WHERE map_id=?";
-                                                                $this->pdo->prepare($sql)
-                                                                        ->execute(array($map_id));
-                                                            }
-                                        catch (Exception $e) {	die($e->getMessage());			 }
-                                    }
+        public function Delete($id)
+							{
+								try {	
+										$sql="DELETE FROM tbl_materialapoyo WHERE map_id=?";
+										$this->pdo->prepare($sql)
+												  ->execute(
+															array(
+																$id
+																)
+															);
+									} 
+								catch (Exception $e) {	die($e->getMessage());	}
+							}
 
-        public function Update($url,$datos)
-                                    {
-                                        try  				 {
-                                                                $sql="UPDATE tbl_materialapoyo SET map_titulo=?,map_descrp=?,map_fecpud=?,map_archurl=?
-                                                                WHERE map_id=?";
-                                                                $this->pdo->prepare($sql)
-                                                                        ->execute(array(
+	public function Insert(material $data)
+							{   
+								
+         
+								try {	
+										$sql="INSERT INTO tbl_materialapoyo (map_titulo,map_fecpub,map_descrp,map_archurl,map_fass_id,map_usr_id)
+										VALUES(?,?,?,?,?,?)";
+										$this->pdo->prepare($sql)
+												  ->execute(
+															array(
+																$data->titulo,
+																$data->fecpub,
+																$data->descrp,
+																$data->archurl,
+                                                                $data->fasid,
+                                                                $data->usuid
+																)
+															);
+									} 
+								catch (Exception $e) {	die($e->getMessage());	}
+							}
 
+	public function Update(materialapoyo $data)
+							{
+								try {	
+										$sql="UPDATE tbl_materialapoyo
+												SET map_titulo= ?,
+                                                map_fchpub =  ?, 
+                                                map_descrp = ?,
+                                                map_archurl = ?,
+                                                map_fasid = ?,
+                                                map_usuid = ?
+	
+												WHERE map_id = ?";
 
-                                                                                       $datos->titulo,
-                                                                                       $datos->descrp,
-                                                                                       $datos->fecpud,
-                                                                                       $url 
-                                                                                        
-                                                                                        
-                                                                                       
-                                                                                    ));
-                                                            }
-                                        catch (Exception $e) {	die($e->getMessage());			 }
-                                    }
+										$this->pdo->prepare($sql)
+												  ->execute(
+															array(
+																
+																$data->titulo,
+																$data->fchpub,
+																$data->descrp,
+																$data->archurl,
+                                                                $data->fasid,
+                                                                $data->usuid,
+                                                                $data->id
+																)
+															);
+									} 
+								catch (Exception $e) {	die($e->getMessage());	}
+							}
 
     }
 ?>

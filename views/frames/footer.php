@@ -4,8 +4,8 @@
 
 
 
-	<script type="text/javascript" src="../assets/DataTables/jQuery-3.3.1/jquery-3.5.1.min.js"></script>
-	<script type="text/javascript" src="../assets/DataTables/Bootstrap-4-4.1.1/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript" src="../assets/DataTables/bootstrap-4.5.3-dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../assets/DataTables/datatables.min.js"></script>
 	<script type="text/javascript" src="../assets/js/jquery-confirm.js"></script>
 	<script type="text/javascript" src="../assets/js/scripts.usuarios.js"></script>

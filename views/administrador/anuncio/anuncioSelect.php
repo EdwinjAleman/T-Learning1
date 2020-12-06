@@ -1,6 +1,4 @@
 
-<section id="main-content">
-    <section class="wrapper site-min-height">
         <h3><i class="fa fa-angle-right"></i> Anuncios </h3>
         <h4>Los siguientes anuncios son referentes al Centro de Formacion (CDTI) y a nuestro programa de formacion:</h4>
 
@@ -18,14 +16,17 @@
 
             <div class="pull-right">
 
-                
-
+            <?php    if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="3" or $_SESSION['SRol']=="1") { ?>
                 <button type="button" class="btn btn-theme04 delete">
                     <i class="glyphicon glyphicon-trash"></i>
                     <span>Delete</span>
                 </button>
                 <button type="button" class="btn btn-success">Editar</button>
-            </div>
+           
+            <?php } ?>
+
+                
+            
 
             <div class="col-md-6">
                 <h2 contenteditable="true">
@@ -52,5 +53,3 @@
 
         <?php endforeach; ?>
 
-    </section>
-</section>

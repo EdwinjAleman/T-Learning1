@@ -15,7 +15,7 @@
         <br>
         <br>
         <?php
-        if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="3"){ ?> 
+        if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="1" or $_SESSION['SRol']=="3"){ ?> 
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formforo">Nuevo
             Foro</button>
         <br>

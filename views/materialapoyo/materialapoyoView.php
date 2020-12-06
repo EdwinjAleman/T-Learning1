@@ -1,20 +1,20 @@
-<script src="../assets/js/scripts.materialapoyo.js"></script>
-<div class="container">
-	<div id="main">
+<section id="main-content">
+    <section class="wraper">
 
-		<div id="forms">
-				<?php  include('materialapoyoInsert.php'); ?>
-		</div>
 
-		<div id="fasescontainer table-responsive ">
-			<div id="drow-fases" class="btn-group dropdown "> 
-			</div>
-			
-		</div>
+        <script src="../assets/js/scripts.materialapoyo.js"></script>
 
-		<div class="materialview" id="tview">
-					
-		</div>
+        <div id="tview">
+            <?php  include_once('materialapoyoInsert.php'); ?>
 
-	</div>
-</div>
+        </div>
+
+        <div id="ms">
+
+            <?php  include_once('materialapoyoSelect.php'); ?>
+        </div>
+
+
+
+    </section>
+</section>

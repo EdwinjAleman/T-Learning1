@@ -21,7 +21,7 @@ function CrearRespuesta(){
 									};
 	
 	ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	ajax.send("ctrl=respuesta&acti=insertar&res_usunom="+res_usunom+"&res_mensj="+res_mensj+"&res_com_id="+res_com_id);
+	ajax.send("Ctr=respuesta&Acc=insertar&res_usunom="+res_usunom+"&res_mensj="+res_mensj+"&res_com_id="+res_com_id);
 
 }
 
@@ -46,6 +46,6 @@ function BorrarRespuesta(res_id){
 									};
 	
 	ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	ajax.send("ctrl=respuesta&acti=eliminar&res_id="+res_id);
+	ajax.send("Ctr=respuesta&Acc=eliminar&res_id="+res_id);
 
 }

@@ -50,7 +50,7 @@ function BorrarForo(id){
 									};
 	
 	ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	ajax.send("ctrl=foro&acti=eliminar&id="+id);
+	ajax.send("Ctr=foro&Acc=eliminar&id="+id);
 
 }
 
@@ -103,7 +103,7 @@ function UpdateForo(){
 
 	
 	ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	ajax.send("ctrl=foro&acti=actualizar&foro_id="+foro_id+"&foro_titulo="+foro_titulo+"&foro_mensaje="+foro_mensaje+"&foro_fecha_inicio="+foro_fecha_inicio+"&foro_fecha_fin="+foro_fecha_fin);
+	ajax.send("Ctr=foro&Acc=actualizar&foro_id="+foro_id+"&foro_titulo="+foro_titulo+"&foro_mensaje="+foro_mensaje+"&foro_fecha_inicio="+foro_fecha_inicio+"&foro_fecha_fin="+foro_fecha_fin);
 
 
 	//cambiar la propiedad onsubmit
@@ -135,7 +135,7 @@ function BotonCrearForo(){
                                         };
 
     ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-	ajax.send("ctrl=foro&acti=crearforo");
+	ajax.send("Ctr=foro&Acc=crearforo");
 
 	document.getElementById('boton1').innerText="Cancelar";
 	document.getElementById("boton1").setAttribute('onclick','CancelarCrearForo();');
@@ -165,7 +165,7 @@ function CancelarCrearForo(){
                                         };
 
     ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-	ajax.send("ctrl=foro&acti=cancelarcrearforo");
+	ajax.send("Ctr=foro&Acc=cancelarcrearforo");
 	document.getElementById("boton1").setAttribute('onclick','CrearForo();');									
 	document.getElementById('boton1').innerText="Crear Foro";
 }
@@ -194,7 +194,7 @@ function EditarAntes(id, titulo, mensaje, fechaInicio, fechaFin){
                                         };
 
     ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-	ajax.send("ctrl=foro&acti=EditarAntes");
+	ajax.send("Ctr=foro&Acc=EditarAntes");
 
 	
 }

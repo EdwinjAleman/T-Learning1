@@ -1,56 +1,54 @@
-<?php
+<?php  
+	require_once('../models/materialapoyo.php');
 
-    require_once('../models/materialapoyo.php');
-	require_once('../models/usuario.php');
+	class MaterialapoyoController{
 
-	class MaterialapoyoController
-	{	
-		private $materialapoyo;
+		private $material;
 
-		function __Construct()	{
-                                      $this->materialapoyo= new Materialapoyo();
-                                      	
-							  	}
+		function __Construct() 
+								{
+									$this->material=new Material();
+								}
 
 		public function Index()
 								{
-									   
-									//require_once('../views/frames/header.php');
-									//require_once('frames/sidebaradministrador.php');
-									require_once('../views/materialapoyo/materialapoyoView.php');
-									//require_once('../views/frames/footer.php');
-									
-									
-                                }
-        public function Faseconfirmar()
-                                    {
-                                        
-                                        
-
-
-                                        
-                                        $fichapuntero=$_REQUEST['fcpt'];
-
-
-                                        
-
-                                        require_once('../views/materialapoyo/materialapoyoSelect.php'); 
-
-									}
-		public function Insertar()
+								require_once('../views/frames/header.php');
+            					require_once('frames/sidebaradministrador.php');
+								require_once('../views/materialapoyo/materialapoyoView.php');
+								require_once('../views/frames/footer.php');	
+								
+								}
+		public function Eliminar()
 								{
+
+									$ruta = '../assets/images/adjuntos/';
+									unlink($ruta.$_POST["file"]);
+									
+									$this->material->Delete($_REQUEST['id']);
+									require_once('../views/materialapoyo/materialapoyoView.php');
+								}
+								
+		public function Insertar()
+								{	
+                                    $datos = $this->material;
+                                    $datos->titulo = $_REQUEST['titulo'];
+                                    $datos->fecpub  = $_REQUEST['fecpub'];
+                                    $datos->descrp = $_REQUEST['descrp'];
+                                    
+									$datos->fasid = $_REQUEST['fasid'];
+									$datos->usuid = $_REQUEST['usuid'];
 
 									date_default_timezone_set('America/Bogota');
 									$fecha = date('Ymd_Hi');
-									$nombre=$_POST['trimestre'];
+									
 									
 
-									$name=$_FILES['archurl']['name'];
+									$name=$_FILES['adjunto']['name'];
 									$ext =explode('.',$name);
 									$ext = end($ext);
-									$temp =$_FILES['archurl']['tmp_name'];
+									$temp =$_FILES['adjunto']['tmp_name'];
 									$ruta = '../assets/images/adjuntos/';
-									$file = $fecha.$nombre.".".$ext;
+									$file = $fecha.$datos->titulo.".".$ext;
 
 									if(is_uploaded_file($temp)){
 
@@ -58,84 +56,30 @@
 									}else{
 										echo "NO se cargo la imagen";
 									}
+									
+									$datos->archurl = $file;
+									
+									$this->material->Insert($datos);
+									require_once('../views/materialapoyo/materialapoyoSelect.php');
+								
+								}
+								
+
+		public function Actualizar()
+								{	
 									$datos = $this->materialapoyo;
                                     $datos->titulo = $_REQUEST['titulo'];
                                     $datos->fecpud  = $_REQUEST['descrip'];
                                     $datos->descrp = $_REQUEST['descrp'];
-                                    $datos->archurl = $file;
-									$datos->fasid = $_REQUEST['fasid'];
-									$datos->usuid = $_REQUEST['usuid'];
+                                    $datos->archurl = $_REQUEST['archurl'];
+									$datos->fases = $_REQUEST['fases'];
+									$datos->usuario = $_REQUEST['usuario'];
 									
-									$this->materialapoyo->Insert($datos);
+									$this->materialapoyo->Update($datos);
 									require_once('../views/materialapoyo/materialapoyoSelect.php');
-
 								}
-		public function Actualizar()
-		{					
-									$fichapuntero=$_REQUEST['ficid'];
-									$datos= $this->materialapoyo;
-
-									$datos->id=$_REQUEST['map_id'];
-									$datos->publicador=$_REQUEST['publicador'];
-									$datos->titulo=$_REQUEST['titulo'];
-									$datos->descrp=$_REQUEST['descrp'];
-									$datos->fases=$_REQUEST['fases'];
-									$datos->ficid=$_REQUEST['ficid'];
-
-									$url = $_REQUEST['url'];
-									file_exists($url) ? unlink($url): "";		
-									
-																													
-
-									date_default_timezone_set('America/Bogota');
-									$fecha  = date("Ymd_His");
-								
-									$name = $_FILES['archivo']['name'];     
-									$exts = explode('.',$name);             
-									$exts = end($exts);  
-									
-									$datos->icono=$exts;
-
-									$temp = $_FILES['archivo']['tmp_name']; 
-									$ruta = '../assets/fichas/'.$datos->ficid.'/';
-									$ruta = $ruta.$fecha.".".$exts;
-
-									if(is_uploaded_file($temp)){
-
-										move_uploaded_file($temp,$ruta);
-
-									}else{
-
-										echo "No se cargo la imagen";
-
-									}	
-									
-									$idfase=$_REQUEST['fases'];
-
-									$this->materialapoyo->Update($ruta,$datos);
-
-									require_once('../views/materialapoyo/materialapoyoSelect.php');
-			}
-			public function Eliminar()
-			{
-				
-				$idfase=$_REQUEST['idfase'];
-				$map_id = $_REQUEST['map_id'];
-				
-
-				$map_archurl = $_REQUEST['map_archurl'];
-
-				file_exists($map_archurl) ? unlink($urmap_archurll): "";
-
-				$this->materialapoyo->Delect($map_id);
-
-				$fichapuntero=$_REQUEST['fcpt'];
-
-				require_once('../views/materialapoyo/materialapoyoSelect.php');
-
-			}	
-
 
 	}
 
-?>
+
+ ?>
