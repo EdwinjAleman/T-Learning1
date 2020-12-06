@@ -5,6 +5,7 @@
 
 
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
 	<script type="text/javascript" src="../assets/DataTables/bootstrap-4.5.3-dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../assets/DataTables/datatables.min.js"></script>
 	<script type="text/javascript" src="../assets/js/jquery-confirm.js"></script>

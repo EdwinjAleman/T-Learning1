@@ -11,7 +11,7 @@
 								btnClass: 'btn-primary',
 								keys: ['enter'],
 								action: function(){
-									window.location = "./index.php";
+									window.location = "../index.php";
 								}
 							},
 							cancel: {

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--DOCTYPE html>
 <html>
 
 <head>
@@ -17,7 +17,7 @@
         });
     });
     </script>
-</head>
+</head-->
 
 <body>
 

@@ -71,9 +71,7 @@
 
   /* eslint max-len: off */
 
-  var localesAll = [
-    l0, l1, l2, l3, l4, l5,
-  ];
+  var localesAll = [l0, l1, l2, l3, l4, l5];
 
   return localesAll;
 

@@ -5,7 +5,7 @@
 	require_once('../controllers/usuario.controller.php');
 
 	$objUser=new UsuarioController();
-	$respuesta=$objUser->Logout($_SESSION['SIdu']);
+	$respuesta=$objUser->logout($_SESSION['SIdu']);
 	session_destroy();
 
 	
