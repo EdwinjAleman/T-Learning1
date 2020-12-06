@@ -41,8 +41,8 @@
                 <h2 class="form-login-heading"> BIENVENIDOS <BR>INTRANET T-LEARNING <BR> SENA </h2>
                 <div class="login-wrap">
 
-                    <input type="text" class="form-control" placeholder="Usuario" autofocus name="usur" id="usur"><br>
-                    <input type="password" class="form-control" placeholder="Contraseña" name="pass" id="pass"> <br>
+                    <input type="text" class="form-control" placeholder="Usuario" autofocus name="usur" id="usur" required><br>
+                    <input type="password" class="form-control" placeholder="Contraseña" name="pass" id="pass" required> <br>
 
                     <button class="btn btn-theme btn-block" type="submit"> SIGN IN</button>
                     <hr>
