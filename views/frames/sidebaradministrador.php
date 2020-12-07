@@ -52,6 +52,7 @@
                     <span>Panel de Control</span>
                 </a>
                 <ul class="sub">
+                    <li><a href="./main.php?Ctr=area"><i class="fa fa-graduation-cap"></i> Area </a></li>
                     <li><a href="./main.php?Ctr=estado"><i class="fa fa-toggle-on"></i>Estado</a></li>
                     <li><a href="./main.php?Ctr=fases"><i class="fa fa-clone"></i>Fases</a></li>
                     <li><a href="./main.php?Ctr=ficha"><i class="fa fa-address-card"></i>Ficha</a></li>
@@ -59,9 +60,8 @@
                     <li><a href="./main.php?Ctr=modalidad"><i class="fa fa-cog"></i>Modalidad</a></li>
                     <li><a href="./main.php?Ctr=tipoofe"><i class="fa fa-book"></i>Oferta</a></li>
                     <li><a href="./main.php?Ctr=tipopro"><i class="fa fa-desktop"></i>Tipo Programa</a></li>
-                    <li><a href="./main.php?Ctr=usuario"><i class="fa fa-user"></i>Usuarios</a></li>
-                    <li><a href="panels.html"><i class="fa fa-graduation-cap"></i>Programas formativos</a></li>
-
+                    <li><a href="./main.php?Ctr=datousu"><i class="fa fa-user"></i>Usuarios</a></li>
+                    <li><a href="./main.php?Ctr=programafor"><i class="fa fa-graduation-cap"></i>Programas formativos</a></li>
                 </ul>
             </li>
 

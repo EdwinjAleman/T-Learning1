@@ -23,10 +23,7 @@
     <link href="../assets/plantilla/css/style-responsive.css" rel="stylesheet">
 
 
-    <!-- calendario-->
-    <link href='../assets\calendario/main.css' rel='stylesheet' />
-    <script src='../assets\calendario/main.js'></script>
-    <script src='../assets\calendario/locales-all.js'></script>
+
 
 
 

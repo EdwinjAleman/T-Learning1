@@ -1,58 +1,51 @@
-<?php
+<?php  
+require_once('../models/tipopro.php');
 
-	require_once('../models/tipopro.php');
+class TipoproController{
 
-	class TipoProController
-	{	
-		private $fases;
+    private $tipopro;
 
-		function __Construct()	{
-							  		$this->tipopro= new TipoPro(); 		// Instancia de la Clase del Modelo Usuario
-							  	}
-
-		public function Index()
+    function __Construct() 
 								{
-									
-									require_once('../views/frames/header.php');
-            						require_once('frames/sidebaradministrador.php');
-									require_once('../views/tipopro/tipoproView.php');		
-									require_once('../views/frames/footer.php');
-									
+									$this->tipopro=new Tipopro();
 								}
 
-		public function Eliminar()
+    public function Index()
 								{
-									$this->tipopro->Delete($_REQUEST['id']);
-									require_once('../views/tipopro/tipoproSelect.php');
-								}
+                                    require_once('../views/frames/header.php');
+								    if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="1"){ require_once('frames/sidebaradministrador.php'); }
+									if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="2"){ require_once('frames/menuAprendiz.php'); }
+									if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="3"){ require_once('frames/menuInstructor.php'); }
+									require_once('../views/modulos/tipopro/tipoproView.php');
+                                }
+                                
+    public function Insertar()
+                                {
+                                    $datos=$this->tipopro;
+        
+                                    $datos->tip_pro_nombr=$_REQUEST['tip_pro_nombr'];
 
-		public function Insertar()
-								{
+                                    $this->tipopro->Insert($datos);
+                                    require_once('../views/modulos/tipopro/tipoproView.php');
+                                }
 
-									$datos= $this->tipopro;
+    public function Eliminar()  
+                                {
+                                    $this->tipopro->Delete($_REQUEST['tip_pro_id']);
+                                    require_once('../views/modulos/tipopro/tipoproView.php');
+                                }
 
-									$datos->tipopro	= $_REQUEST['tipopro'];
-									
+    public function Actualizar()
+                                {
+                                    
+                                    $datos=$this->tipopro;
 
-									$this->tipopro->Insert($datos);
+                                    $datos->tip_pro_id=$_REQUEST['tip_pro_id'];
+                                    $datos->tip_pro_nombr=$_REQUEST['tip_pro_nombr'];
 
-									require_once('../views/tipopro/tipoproSelect.php');
-								}
+                                    $this->tipopro->Update($datos);
+                                    require_once('../views/modulos/tipopro/tipoproView.php');
+                                }	 
+}   
 
-		public function Actualizar()
-								{
-									
-									$datos= $this->tipopro;
-
-									$datos->id 		= $_REQUEST['id'];
-									$datos->tipopro	= $_REQUEST['tipopro'];
-									
-
-									$this->tipopro->Update($datos);
-
-									require_once('../views/tipopro/tipoproSelect.php');
-								}								
-
-	}
-
-?>
+ ?>

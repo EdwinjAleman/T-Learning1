@@ -1,57 +1,51 @@
-<?php
+<?php  
+require_once('../models/tipojor.php');
 
-	require_once('../models/tipojor.php');
+class TipojorController{
 
-	class TipoJorController
-	{	
-		private $fases;
+    private $tipojor;
 
-		function __Construct()	{
-							  		$this->tipojor= new TipoJor(); 		// Instancia de la Clase del Modelo Usuario
-							  	}
-
-		public function Index()
+    function __Construct() 
 								{
-									require_once('../views/frames/header.php');
-            						require_once('frames/sidebaradministrador.php');
-									require_once('../views/tipojor/tipojorView.php');		
-									require_once('../views/frames/footer.php');
-									
+									$this->tipojor=new Tipojor();
 								}
 
-		public function Eliminar()
+    public function Index()
 								{
-									$this->tipojor->Delete($_REQUEST['id']);
-									require_once('../views/tipojor/tipojorSelect.php');
-								}
+                                    require_once('../views/frames/header.php');
+									if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="1"){ require_once('frames/sidebaradministrador.php'); }
+									if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="2"){ require_once('frames/menuAprendiz.php'); }
+									if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="3"){ require_once('frames/menuInstructor.php'); }
+									require_once('../views/modulos/tipojor/tipojorView.php');
+                                }
+                                
+    public function Insertar()
+                                {
+                                    $datos=$this->tipojor;
+        
+                                    $datos->tip_jor_nombr=$_REQUEST['tip_jor_nombr'];
 
-		public function Insertar()
-								{
+                                    $this->tipojor->Insert($datos);
+                                    require_once('../views/modulos/tipojor/tipojorView.php');
+                                }
 
-									$datos= $this->tipojor;
+    public function Eliminar()  
+                                {
+                                    $this->tipojor->Delete($_REQUEST['tip_jor_id']);
+                                    require_once('../views/modulos/tipojor/tipojorView.php');
+                                }
 
-									$datos->tipojor	= $_REQUEST['tipojor'];
-									
+    public function Actualizar()
+                                {
+                                    
+                                    $datos=$this->tipojor;
 
-									$this->tipojor->Insert($datos);
+                                    $datos->tip_jor_id=$_REQUEST['tip_jor_id'];
+                                    $datos->tip_jor_nombr=$_REQUEST['tip_jor_nombr'];
 
-									require_once('../views/tipojor/tipojorSelect.php');
-								}
+                                    $this->tipojor->Update($datos);
+                                    require_once('../views/modulos/tipojor/tipojorView.php');
+                                }	 
+}   
 
-		public function Actualizar()
-								{
-									
-									$datos= $this->tipojor;
-
-									$datos->id 		= $_REQUEST['id'];
-									$datos->tipojor	= $_REQUEST['tipojor'];
-									
-
-									$this->tipojor->Update($datos);
-
-									require_once('../views/tipojor/tipojorSelect.php');
-								}								
-
-	}
-
-?>
+ ?>

@@ -1,57 +1,51 @@
-<?php
+<?php  
+require_once('../models/estado.php');
 
-	require_once('../models/estado.php');
+class EstadoController{
 
-	class EstadoController
-	{	
-		private $estado;
+    private $estado;
 
-		function __Construct()	{
-							  		$this->estado= new Estado(); 		// Instancia de la Clase del Modelo Usuario
-							  	}
-
-		public function Index()
+    function __Construct() 
 								{
-									require_once('../views/frames/header.php');
-            						require_once('frames/sidebaradministrador.php');
-									require_once('../views/estado/estadoView.php');		
-									require_once('../views/frames/footer.php');
-									
+									$this->estado=new Estado();
 								}
 
-		public function Eliminar()
+    public function Index()
 								{
-									$this->estado->Delete($_REQUEST['id']);
-									require_once('../views/estado/estadoSelect.php');
-								}
+                                    require_once('../views/frames/header.php');
+								    if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="1"){ require_once('frames/sidebaradministrador.php'); }
+									if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="2"){ require_once('frames/menuAprendiz.php'); }
+									if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="3"){ require_once('frames/menuInstructor.php'); }
+									require_once('../views/modulos/estado/estadoView.php');
+                                }
+                                
+    public function Insertar()
+                                {
+                                    $datos=$this->estado;
+        
+                                    $datos->est_nombr=$_REQUEST['est_nombr'];
 
-		public function Insertar()
-								{
+                                    $this->estado->Insert($datos);
+                                    require_once('../views/modulos/estado/estadoView.php');
+                                }
 
-									$datos= $this->estado;
+    public function Eliminar()  
+                                {
+                                    $this->estado->Delete($_REQUEST['est_id']);
+                                    require_once('../views/modulos/estado/estadoView.php');
+                                }
 
-									$datos->estado	= $_REQUEST['estado'];
-									
+    public function Actualizar()
+                                {
+                                    
+                                    $datos=$this->estado;
 
-									$this->estado->Insert($datos);
+                                    $datos->est_id=$_REQUEST['est_id'];
+                                    $datos->est_nombr=$_REQUEST['est_nombr'];
 
-									require_once('../views/estado/estadoSelect.php');
-								}
+                                    $this->estado->Update($datos);
+                                    require_once('../views/modulos/estado/estadoView.php');
+                                }	 
+}   
 
-		public function Actualizar()
-								{
-									
-									$datos= $this->estado;
-
-									$datos->id 		= $_REQUEST['id'];
-									$datos->estado	= $_REQUEST['estado'];
-									
-
-									$this->estado->Update($datos);
-
-									require_once('../views/estado/estadoSelect.php');
-								}								
-
-	}
-
-?>
+ ?>

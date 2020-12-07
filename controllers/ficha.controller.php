@@ -1,73 +1,51 @@
-<?php
+<?php  
+require_once('../models/fases.php');
 
-require_once('../models/ficha.php');
+class FasesController{
 
-    class fichaController{
-        private $ficha;
+    private $tipopro;
 
-        function __Construct(){
-            $this->ficha = new Ficha();
-        }
+    function __Construct() 
+								{
+									$this->fases=new Fases();
+								}
 
-        public function index(){
-
-            require_once('../views/frames/header.php');
-            require_once('../views/frames/sidebaradministrador.php');
-            require_once('../views/ficha/fichaView.php');
-            require_once('../views/frames/footer.php');
-        }
-
-
-        public function Eliminar(){
-
-            $this->ficha->Delete($_REQUEST['id']);
-            require_once('../views/ficha/fichaSelect.php');
-
-        }
-        
-        public function Insert(){
-
-            $datos =  $this->ficha;
-
-           echo "llegue";
-           exit();
-            $datos->codigo = $_REQUEST['codigo'];
-            $datos->programa = $_REQUEST['programa'];
-            $datos->abreviacion = $_REQUEST['abreviacion'];
-            $datos->fechacreacion = $_REQUEST['fechacreacion'];
-            $datos->fechafin = $_REQUEST['fechafin'];
-
-            $this->ficha->Create($datos);
-
-            require_once('../views/ficha/fichaSelect.php');
-
-        }       
-
-
-
-        public function Actualizar()
+    public function Index()
+								{
+                                    require_once('../views/frames/header.php');
+									if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="1"){ require_once('frames/sidebaradministrador.php'); }
+									if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="2"){ require_once('frames/menuAprendiz.php'); }
+									if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="3"){ require_once('frames/menuInstructor.php'); }
+									require_once('../views/modulos/fases/fasesView.php');
+                                }
+                                
+    public function Insertar()
                                 {
-                                    
-                                    $datos= $this->ficha;
+                                    $datos=$this->tipopro;
+        
+                                    $datos->tip_pro_nombr=$_REQUEST['tip_pro_nombr'];
 
-                                    $datos->codigo = $_REQUEST['codigo'];
-                                    $datos->programa = $_REQUEST['programa'];
-                                    $datos->abreviatura = $_REQUEST['abreviatura'];
-                                    $datos->fechacreacion = $_REQUEST['fechacreacion'];
-                                    $datos->fechafin = $_REQUEST['fechafin'];
-                                    
-                                    $this->ficha->Update($datos);
-
-                                    require_once('../views/ficha/fichaSelect.php');
+                                    $this->tipopro->Insert($datos);
+                                    require_once('../views/modulos/tipopro/tipoproView.php');
                                 }
 
+    public function Eliminar()  
+                                {
+                                    $this->tipopro->Delete($_REQUEST['tip_pro_id']);
+                                    require_once('../views/modulos/tipopro/tipoproView.php');
+                                }
 
+    public function Actualizar()
+                                {
+                                    
+                                    $datos=$this->tipopro;
 
+                                    $datos->tip_pro_id=$_REQUEST['tip_pro_id'];
+                                    $datos->tip_pro_nombr=$_REQUEST['tip_pro_nombr'];
 
+                                    $this->tipopro->Update($datos);
+                                    require_once('../views/modulos/tipopro/tipoproView.php');
+                                }	 
+}   
 
-    }
-
-
-
-
-?>
+ ?>

@@ -41,16 +41,15 @@
 
 public function Update(Anuncio $data){
 								
-			try 					{	$sql = "UPDATE tbl_anuncio SET anu_descripcion=?,anu_titulo=?,anu_fechaCreacion=?,usu_usuari=?
+			try 					{	$sql = "UPDATE tbl_anuncio SET anu_descripcion=?,anu_titulo=?,anu_fechaCreacion=?,asu_usuari=?
 															  WHERE anu_id=?";
 										   $this->pdo->prepare($sql) 
 													 ->execute(
 																array(
 																	$data->anu_descripcion,
 																	$data->anu_titulo,
-																    $data->anu_fechaFin,
 																	$data->anu_fechaCreacion,
-																	$data->anu_nombreCreador,
+																	$data->asu_usuari,
 																	$data->aun_id
 																)
 															);

@@ -1,58 +1,51 @@
-<?php
+<?php  
+require_once('../models/modalidad.php');
 
-	require_once('../models/modalidad.php');
+class ModalidadController{
 
-	class ModalidadController
-	{	
-		private $modal;
+    private $modalidad;
 
-		function __Construct()	{
-							  		$this->modal= new Modalidad(); 		// Instancia de la Clase del Modelo Usuario
-							  	}
-
-		public function Index()
+    function __Construct() 
 								{
-									require_once('../views/frames/header.php');
-            						require_once('frames/sidebaradministrador.php');
-									require_once('../views/modalidad/modalidadView.php');
-									require_once('../views/frames/footer.php');		
-									
-									
+									$this->modalidad=new Modalidad();
 								}
 
-		public function Eliminar()
+    public function Index()
 								{
-									$this->modal->Delete($_REQUEST['id']);
-									require_once('../views/modalidad/modalidadSelect.php');
-								}
+                                    require_once('../views/frames/header.php');
+								    if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="1"){ require_once('frames/sidebaradministrador.php'); }
+									if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="2"){ require_once('frames/menuAprendiz.php'); }
+									if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="3"){ require_once('frames/menuInstructor.php'); }
+									require_once('../views/modulos/modalidad/modalidadView.php');
+                                }
+                                
+    public function Insertar()
+                                {
+                                    $datos=$this->modalidad;
+        
+                                    $datos->mod_nombr=$_REQUEST['mod_nombr'];
 
-		public function Insertar()
-								{
+                                    $this->modalidad->Insert($datos);
+                                    require_once('../views/modulos/modalidad/modalidadView.php');
+                                }
 
-									$datos= $this->modal;
+    public function Eliminar()  
+                                {
+                                    $this->modalidad->Delete($_REQUEST['mod_id']);
+                                    require_once('../views/modulos/modalidad/modalidadView.php');
+                                }
 
-									$datos->modal	= $_REQUEST['modal'];
-									
+    public function Actualizar()
+                                {
+                                    
+                                    $datos=$this->modalidad;
 
-									$this->modal->Insert($datos);
+                                    $datos->mod_id=$_REQUEST['mod_id'];
+                                    $datos->mod_nombr=$_REQUEST['mod_nombr'];
 
-									require_once('../views/modalidad/modalidadSelect.php');
-								}
+                                    $this->modalidad->Update($datos);
+                                    require_once('../views/modulos/modalidad/modalidadView.php');
+                                }	 
+}   
 
-		public function Actualizar()
-								{
-									
-									$datos= $this->modal;
-
-									$datos->id 		= $_REQUEST['id'];
-									$datos->modal	= $_REQUEST['modal'];
-									
-
-									$this->modal->Update($datos);
-
-									require_once('../views/modalidad/modalidadSelect.php');
-								}								
-
-	}
-
-?>
+ ?>

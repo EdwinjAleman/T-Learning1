@@ -39,21 +39,19 @@
 										catch(exception $e)		{ die ($e->getMessage()); 				 }
 }
 
-public function Update(centro $data){
+public function Update(Anuncio $data){
 								
-			try 					{	$sql = "UPDATE tbl_inf_centro SET inf_soms=?,inf_misn=?,inf_visn=?,inf_dirctr_genrl=?,inf_dirctr_regnl=?, inf_subdrctr_centr=?, inf_cordndr_msnl=?
-															  WHERE inf_id=?";
+			try 					{	$sql = "UPDATE tbl_anuncio SET anu_descripcion=?,anu_titulo=?,anu_fechaFin=?,anu_fechaCreacion=?,anu_nombreCreador=?
+															  WHERE anu_id=?";
 										   $this->pdo->prepare($sql) 
 													 ->execute(
 																array(
-																	$datos->inf_soms,      
-                                   									$datos->inf_misn,   
-                                    								$datos->inf_visn,
-                                    								$datos->inf_dirctr_genrl,
-																	$datos->inf_dirctr_regnl, 
-																	$datos->inf_subdrctr_centr,
-																	$datos->inf_cordndr_msnl,
-																	$datos->inf_id 
+																	$data->anu_descripcion,
+																	$data->anu_titulo,
+																    $data->anu_fechaFin,
+																	$data->anu_fechaCreacion,
+																	$data->anu_nombreCreador,
+																	$data->aun_id
 																)
 															);
 					}

@@ -1,105 +1,51 @@
 <?php  
-	require_once('../models/horario.php');
+require_once('../models/horario.php');
 
-	class HorarioController{
+class HorarioController{
 
-		private $horario;
+    private $horario;
 
-		function __Construct() 
+    function __Construct() 
 								{
-									$this->horario = new Horario();
+									$this->horario=new Horario();
 								}
 
-		public function Index()
+    public function Index()
 								{
-                                    require_once('../views/frames/header.php');
-                                     require_once('frames/sidebaradministrador.php');
-                                    require_once('../views/horario/horarioView.php');	
-                                    require_once('../views/frames/footer.php');							}
+                                    //require_once('../views/frames/header.php');
+								    //if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="1"){ require_once('frames/sidebaradministrador.php'); }
+									//if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="2"){ require_once('frames/menuAprendiz.php'); }
+									//if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="3"){ require_once('frames/menuInstructor.php'); }
+									require_once('../views/modulos/horario/horarioView.php');
+                                }
+                                
+    public function Insertar()
+                                {
+                                    $datos=$this->tipopro;
+        
+                                    $datos->tip_pro_nombr=$_REQUEST['tip_pro_nombr'];
 
-		public function Insertar()
-									{	 				
-										date_default_timezone_set('America/Bogota');
-										$fecha  = date("Ymd_His");
-									
-										$name = $_FILES['archivo']['name'];     
-										$exts = explode('.',$name);             
-										$exts = end($exts);                     
-										$temp = $_FILES['archivo']['tmp_name']; 
-										$ruta = "../assets/horarios/";
-										$ruta = $ruta.$fecha.".".$exts;
-	
-										if(is_uploaded_file($temp)){
-											move_uploaded_file($temp,$ruta);										
-										}else{
-											echo "No se cargo el archivo";
-										}			
-										
-										$datos = $this->horario;
-	
-										$datos->url = $ruta;
-										$datos->triini = $_REQUEST['triini'];
-										$datos->trifin = $_REQUEST['trifin'];
-										$datos->trinum = $_REQUEST['trinum'];
-										$datos->fichaid	= $_REQUEST['fichaid'];
-	
-										$fichacodi = $_REQUEST['fichaid'];
-																		
-										$this->horario->Insert($datos);
-	
-										require_once('../views/horario/horarioSelect.php');
-									}
-	
-		public function Eliminar()
-									{		
-										$fichacodi = -0;	
-										$url = $_REQUEST['url'];
-										file_exists($url) ? unlink($url): "";	
-	
-										$this->horario->Delete($_REQUEST['id']);
-										require_once('../views/horario/horarioSelect.php');
-									}
-	
-		public function Actualizar()
-										{					
-											$url = $_REQUEST['url'];
-											file_exists($url) ? unlink($url): "";		
-											
-											$datos = $this->horario;																				
-	
-											date_default_timezone_set('America/Bogota');
-											$fecha  = date("Ymd_His");
-										
-											$name = $_FILES['archivo']['name'];     
-											$exts = explode('.',$name);             
-											$exts = end($exts);                     
-											$temp = $_FILES['archivo']['tmp_name']; 
-											$ruta = "../assets/horarios/";
-											$ruta = $ruta.$fecha.".".$exts;
-	
-											if(is_uploaded_file($temp)){
-												move_uploaded_file($temp,$ruta);										
-											}else{
-												echo "No se cargo el archivo";
-											}	
-											
-											$datos->id = $_REQUEST['id'];
-											$datos->url = $ruta;
-											$datos->triini = $_REQUEST['triini'];
-											$datos->trifin = $_REQUEST['trifin'];
-											$datos->trinum = $_REQUEST['trinum'];	
-											
-											$fichacodi = $_REQUEST['fichaid'];
-											
-											 $this->horario->Update($datos);
-	
-											 require_once('../views/horario/horarioSelect.php');
-										}						
-	
-	
-		}							
-		
+                                    $this->tipopro->Insert($datos);
+                                    require_once('../views/modulos/tipopro/tipoproView.php');
+                                }
 
+    public function Eliminar()  
+                                {
+                                    $this->tipopro->Delete($_REQUEST['tip_pro_id']);
+                                    require_once('../views/modulos/tipopro/tipoproView.php');
+                                }
 
-		
+    public function Actualizar()
+                                {
+                                    
+                                    $datos=$this->tipopro;
+
+                                    $datos->tip_pro_id=$_REQUEST['tip_pro_id'];
+                                    $datos->tip_pro_nombr=$_REQUEST['tip_pro_nombr'];
+
+                                    $this->tipopro->Update($datos);
+                                    require_once('../views/modulos/tipopro/tipoproView.php');
+                                }	 
+}   
+
  ?>

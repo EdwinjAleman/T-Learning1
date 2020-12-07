@@ -1,21 +1,18 @@
 # T-Learning1
 tareas que faltan por realizar
 
-
-
 lewis:
-no que hacer :c
+- AREA
+- ESTADO
+- FASES
+- JORNADA
+- MODALIDAD
+- OFERTA
+- TIPO PROGRAMA
+- PROGRAMAS FORMATIVOS
 
+ED:
+- FICHA
 
 Canelita:
-- Material de apoyo
-
-Mayer:
-- Anuncios
-- Foro
-- Info Centro
-
-Edwin:
-insert usuario funcional...listo
-actualizar....listo
-eliminar....listo
+- PERSONA

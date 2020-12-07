@@ -1,58 +1,51 @@
-<?php
+<?php  
+require_once('../models/tipoofe.php');
 
-	require_once('../models/tipoofe.php');
+class TipoofeController{
 
-	class TipoOfeController
-	{	
-		private $fases;
+    private $tipoofe;
 
-		function __Construct()	{
-							  		$this->tipoofe= new TipoOfe(); 		// Instancia de la Clase del Modelo Usuario
-							  	}
-
-		public function Index()
+    function __Construct() 
 								{
-									
-									require_once('../views/frames/header.php');
-            						require_once('frames/sidebaradministrador.php');
-									require_once('../views/tipoofe/tipoofeView.php');		
-									require_once('../views/frames/footer.php');
-									
+									$this->tipoofe=new Tipoofe();
 								}
 
-		public function Eliminar()
+    public function Index()
 								{
-									$this->tipoofe->Delete($_REQUEST['id']);
-									require_once('../views/tipoofe/tipoofeSelect.php');
-								}
+                                    require_once('../views/frames/header.php');
+									if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="1"){ require_once('frames/sidebaradministrador.php'); }
+									if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="2"){ require_once('frames/menuAprendiz.php'); }
+									if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="3"){ require_once('frames/menuInstructor.php'); }
+                                    require_once('../views/modulos/tipoofe/tipoofeView.php');
+                                }
+                                
+    public function Insertar()
+                                {
+                                    $datos=$this->tipoofe;
+        
+                                    $datos->tip_ofe_nombr=$_REQUEST['tip_ofe_nombr'];
 
-		public function Insertar()
-								{
+                                    $this->tipoofe->Insert($datos);
+                                    require_once('../views/modulos/tipoofe/tipoofeView.php');
+                                }
 
-									$datos= $this->tipoofe;
+    public function Eliminar()  
+                                {
+                                    $this->tipoofe->Delete($_REQUEST['tip_ofe_id']);
+                                    require_once('../views/modulos/tipoofe/tipoofeView.php');
+                                }
 
-									$datos->tipoofe	= $_REQUEST['tipoofe'];
-									
+    public function Actualizar()
+                                {
+                                    
+                                    $datos=$this->tipoofe;
 
-									$this->tipoofe->Insert($datos);
+                                    $datos->tip_ofe_id=$_REQUEST['tip_ofe_id'];
+                                    $datos->tip_ofe_nombr=$_REQUEST['tip_ofe_nombr'];
 
-									require_once('../views/tipoofe/tipoofeSelect.php');
-								}
+                                    $this->tipoofe->Update($datos);
+                                    require_once('../views/modulos/tipoofe/tipoofeView.php');
+                                }	 
+    }   
 
-		public function Actualizar()
-								{
-									
-									$datos= $this->tipoofe;
-
-									$datos->id 		= $_REQUEST['id'];
-									$datos->tipoofe	= $_REQUEST['tipoofe'];
-									
-
-									$this->tipoofe->Update($datos);
-
-									require_once('../views/tipoofe/tipoofeSelect.php');
-								}								
-
-	}
-
-?>
+ ?>
