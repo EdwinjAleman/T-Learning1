@@ -1,13 +1,13 @@
 <?php  
-require_once('../models/fases.php');
+require_once('../models/ficha.php');
 
-class FasesController{
+class FichaController{
 
     private $tipopro;
 
     function __Construct() 
 								{
-									$this->fases=new Fases();
+									$this->ficha=new Ficha();
 								}
 
     public function Index()
@@ -16,16 +16,16 @@ class FasesController{
 									if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="1"){ require_once('frames/sidebaradministrador.php'); }
 									if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="2"){ require_once('frames/menuAprendiz.php'); }
 									if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="3"){ require_once('frames/menuInstructor.php'); }
-									require_once('../views/modulos/fases/fasesView.php');
+									require_once('../views/modulos/ficha/fichaView.php');
                                 }
                                 
     public function Insertar()
                                 {
-                                    $datos=$this->tipopro;
+                                    $datos=$this->ficha;
         
                                     $datos->tip_pro_nombr=$_REQUEST['tip_pro_nombr'];
 
-                                    $this->tipopro->Insert($datos);
+                                    $this->ficha->Insert($datos);
                                     require_once('../views/modulos/tipopro/tipoproView.php');
                                 }
 
