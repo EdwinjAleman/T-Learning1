@@ -1,30 +1,10 @@
-<!--DOCTYPE html>
-<html>
-
-<head>
-
-
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $('#txt-content').Editor();
-
-        $('#txt-content').Editor('setText', ['<p style="color:black;"></p>']);
-
-        $('#btn-enviar').click(function(e) {
-            e.preventDefault();
-            $('#txt-content').text($('#mensaje').Editor('getText'));
-            $('#frm-test').submit();
-        });
-    });
-    </script>
-</head-->
 
 <body>
 
 
     <div class="modal fade" id="formforo" data-backdrop="static" data-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="staticBackdropLabel">CREAR FORO</h5>
