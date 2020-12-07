@@ -2,7 +2,6 @@
 tareas que faltan por realizar
 
 lewis:
-- AREA
 - ESTADO
 - FASES
 - JORNADA

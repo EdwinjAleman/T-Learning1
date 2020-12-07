@@ -1,9 +1,12 @@
 function Crear(){
 
+
+	alert("aqui estoy");
+
 	var result=document.getElementById('tview');
 	
-	var are_nombr=document.formfases.are_nombr.value;
-	var are_sedid=document.formfases.are_sedid.value;
+	var are_nombr=document.formarea.are_nombr.value;
+	var are_sedid=document.formarea.are_sedid.value;
 
 	const ajax=new XMLHttpRequest(); 
 	ajax.open("POST","main.php",true);
@@ -16,11 +19,12 @@ function Crear(){
 									};
 	
 	ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    ajax.send("Ctr=area&Acc=insertar&are_nombr="+are_nombr+"&fas_nombr_fas="+fas_nombr_fas);
+    ajax.send("Ctr=area&Acc=insertar&are_nombr="+are_nombr+"&are_sedid="+are_sedid);
 }
 
 function Borrar(are_id){
 
+	alert("aqui estoy");
 
 	var result=document.getElementById('tview');
 
@@ -40,23 +44,28 @@ function Borrar(are_id){
 	ajax.send("Ctr=area&Acc=eliminar&are_id="+are_id);
 }
 
-function Editar(id, nombre){
+function Editar(id, nombre, sede){
+
+	alert("aqui estoy");
 	
-	document.formfases.are_id.value=id;
-	document.formfases.are_nombr.value=nombre;
-	document.formfases.fas_nombr_fas.value=nombre;
+	document.formarea.are_id.value=id;
+	document.formarea.are_nombr.value=nombre;
+	document.formarea.are_sedid.value=sede;
 
 	document.getElementById("btnguardar").value="Actualizar"; //Lo Edita
 
-	document.getElementById("formfases").setAttribute('onSubmit','Update();return false;'); // Lo cambia
+	document.getElementById("formarea").setAttribute('onSubmit','Update(); return false;'); // Lo cambia
 }
 
 function Update(){
 
+	alert("aqui estoy");
+
 	var result=document.getElementById('tview');
 	
-	var fas_id=document.formfases.fas_id.value;
-	var fas_nombr_fas=document.formfases.fas_nombr_fas.value;
+	var are_id=document.formarea.are_id.value;
+	var are_nombr=document.formarea.are_nombr.value;
+	var are_sedid=document.formarea.are_sedid.value;
 
 	var ajax=new XMLHttpRequest();
 	ajax.open("POST","main.php",true);
@@ -68,6 +77,6 @@ function Update(){
 		}else{}
 	};
 	ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	ajax.send("Ctr=area&Acc=actualizar&fas_id="+fas_id+"&fas_nombr_fas="+fas_nombr_fas);
+	ajax.send("Ctr=area&Acc=actualizar&are_id="+are_id+"&are_nombr="+are_nombr+"&are_sedid="+are_sedid);
 
 }
