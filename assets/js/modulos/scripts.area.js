@@ -1,8 +1,5 @@
 function Crear(){
 
-
-	alert("aqui estoy");
-
 	var result=document.getElementById('tview');
 	
 	var are_nombr=document.formarea.are_nombr.value;
@@ -24,8 +21,6 @@ function Crear(){
 
 function Borrar(are_id){
 
-	alert("aqui estoy");
-
 	var result=document.getElementById('tview');
 
 	const ajax=new XMLHttpRequest(); 
@@ -45,8 +40,6 @@ function Borrar(are_id){
 }
 
 function Editar(id, nombre, sede){
-
-	alert("aqui estoy");
 	
 	document.formarea.are_id.value=id;
 	document.formarea.are_nombr.value=nombre;
@@ -58,8 +51,6 @@ function Editar(id, nombre, sede){
 }
 
 function Update(){
-
-	alert("aqui estoy");
 
 	var result=document.getElementById('tview');
 	
