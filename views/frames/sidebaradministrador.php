@@ -59,6 +59,7 @@
                     <li><a href="./main.php?Ctr=tipojor"><i class="fa fa-clock-o"></i>Jornada</a></li>
                     <li><a href="./main.php?Ctr=modalidad"><i class="fa fa-cog"></i>Modalidad</a></li>
                     <li><a href="./main.php?Ctr=tipoofe"><i class="fa fa-book"></i>Oferta</a></li>
+                    <li><a href="./main.php?Ctr=persona"><i class="fa fa-graduation-cap"></i> Persona </a></li>
                     <li><a href="./main.php?Ctr=tipopro"><i class="fa fa-desktop"></i>Tipo Programa</a></li>
                     <li><a href="./main.php?Ctr=datousu"><i class="fa fa-user"></i>Usuarios</a></li>
                     <li><a href="./main.php?Ctr=programafor"><i class="fa fa-graduation-cap"></i>Programas formativos</a></li>

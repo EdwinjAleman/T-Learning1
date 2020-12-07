@@ -34,27 +34,27 @@
 		public function Insert(Area $data)
 									 {
 									 	try  				 {
-									 							$sql="INSERT INTO tbl_area (are_nombre,are_sedid)
+									 							$sql="INSERT INTO tbl_area (are_nombr,are_sedid)
 									 										        VALUES(?,?)";
 									 							$this->pdo->prepare($sql)
 									 									  ->execute(
 									 									  			 array(
-									 									  			 	    $data->nombre,
-									 									  			 	    $data->sedid
+									 									  			 	    $data->are_nombr,
+									 									  			 	    $data->are_sedid
 									 									  			 	   )
 									 									  			);
 									 						 }
 									 	catch (Exception $e) {	die($e->getMessage());			 }
 									 }
 
-		public function Delete($id)
+		public function Delete($are_id)
 									 {
 									 	try  				 {
 									 							$sql="DELETE FROM tbl_area WHERE are_id=?";
 									 							$this->pdo->prepare($sql)
 									 									  ->execute(
 									 									  			 array(
-									 									  			 	    $id
+									 									  			 	    $are_id
 									 									  			 	  )
 									 									  			);
 									 						 }
@@ -66,18 +66,16 @@
 		public function Update(Area $data)
 									 {
 									 	try  				 {
-									 							$sql="UPDATE tbl_area
-									 									 SET are_nombre  = ?,
-									 										 are_sedid  = ?
-									 								  	WHERE are_id = ? ";
+									 							$sql="UPDATE tbl_area SET are_nombr=?,	are_sedid=?
+									 								WHERE are_id=?";
 
 									 							$this->pdo->prepare($sql)
 									 									  ->execute(
 									 									  			 array(
 									 									  			 	    
-									 									  			 	    $data->nombre,
-									 									  			 	    $data->sedid,
-									 									  			 	    $data->id
+									 									  			 	    $data->are_nombr,
+									 									  			 	    $data->are_sedid,
+									 									  			 	    $data->are_id
 									 									  			 	  )
 									 									  			);
 									 						 }
