@@ -17,6 +17,7 @@ class ProgramaforController{
 									if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="2"){ require_once('frames/menuAprendiz.php'); }
 									if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="3"){ require_once('frames/menuInstructor.php'); }
                                     require_once('../views/modulos/programafor/programaforView.php');
+                                    require_once('../views/frames/footer.php');
                                 }
                                 
     public function Insertar()
