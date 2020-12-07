@@ -3,7 +3,7 @@ require_once('../models/ficha.php');
 
 class FichaController{
 
-    private $tipopro;
+    private $ficha;
 
     function __Construct() 
 								{
@@ -24,28 +24,41 @@ class FichaController{
                                 {
                                     $datos=$this->ficha;
         
-                                    $datos->tip_pro_nombr=$_REQUEST['tip_pro_nombr'];
+                                    $datos->fic_codigo=$_REQUEST['fic_codigo'];
+                                    $datos->fic_fch_inc=$_REQUEST['fic_fch_inc'];
+                                    $datos->fic_fecfn=$_REQUEST['fic_fecfn'];
+                                    $datos->fic_pro_for_id=$_REQUEST['fic_pro_for_id'];
+                                    $datos->fic_tip_jor_id=$_REQUEST['fic_tip_jor_id'];
+                                    $datos->fic_tip_ofe_id=$_REQUEST['fic_tip_ofe_id'];
+                                    $datos->fic_mod_id=$_REQUEST['fic_mod_id'];
 
                                     $this->ficha->Insert($datos);
-                                    require_once('../views/modulos/tipopro/tipoproView.php');
+                                    require_once('../views/modulos/ficha/fichaView.php');
                                 }
 
     public function Eliminar()  
                                 {
-                                    $this->tipopro->Delete($_REQUEST['tip_pro_id']);
-                                    require_once('../views/modulos/tipopro/tipoproView.php');
+                                    $this->ficha->Delete($_REQUEST['fic_id']);
+                                    require_once('../views/modulos/ficha/fichaView.php');
                                 }
 
     public function Actualizar()
                                 {
                                     
-                                    $datos=$this->tipopro;
+                                    $datos=$this->ficha;
 
-                                    $datos->tip_pro_id=$_REQUEST['tip_pro_id'];
-                                    $datos->tip_pro_nombr=$_REQUEST['tip_pro_nombr'];
+                                    $datos->fic_id=$_REQUEST['fic_id'];
+                                    $datos->fic_codigo=$_REQUEST['fic_codigo'];
+                                    $datos->fic_fch_inc=$_REQUEST['fic_fch_inc'];
+                                    $datos->fic_fecfn=$_REQUEST['fic_fecfn'];
+                                    $datos->fic_pro_for_id=$_REQUEST['fic_pro_for_id'];
+                                    $datos->fic_tip_jor_id=$_REQUEST['fic_tip_jor_id'];
+                                    $datos->fic_tip_ofe_id=$_REQUEST['fic_tip_ofe_id'];
+                                    $datos->fic_mod_id=$_REQUEST['fic_mod_id'];
+                                    
 
                                     $this->tipopro->Update($datos);
-                                    require_once('../views/modulos/tipopro/tipoproView.php');
+                                    require_once('../views/modulos/ficha/fichaView.php');
                                 }	 
 }   
 
