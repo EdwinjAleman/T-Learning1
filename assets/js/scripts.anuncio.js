@@ -33,7 +33,7 @@
 											 };
 
 		ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-		ajax.send("ctrl=anuncio&acti=eliminar&id="+id);
+		ajax.send("Ctr=anuncio&Acc=eliminar&id="+id);
 	}
 
 
@@ -67,7 +67,7 @@
 											 };
 
 		ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-		ajax.send("ctrl=anuncio&acti=insertar&anu_titulo="+titulo+"&anu_descripcion="+mensaje+"&anu_fechaCreacion="+fchcre+"&anu_fechaFin="+fchfin+"&anu_nombreCreador="+nombre);
+		ajax.send("Ctr=anuncio&Acc=insertar&anu_titulo="+titulo+"&anu_descripcion="+descrp+"&anu_fechaCreacion="+fchcre+"&anu_fechaFin="+fchfin+"&anu_nombreCreador="+nombre);
 	
 		document.getElementById("btnguardar").setAttribute("onclick", "InsertAnuncio();");
 		document.getElementById('formanuncio').reset();

@@ -1,19 +1,17 @@
-
-<div class="modal fade" id="forminfo" data-backdrop="static" data-keyboard="false" tabindex="-1"
+<div class="modal fade" id="forminfo" name="forminfo" data-backdrop="static" data-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-            <form name="forminfo" id="forminfo" onSubmit="Editar(); return false">
             <h5 class="modal-title" id="staticBackdropLabel">Informacion del Centro</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <form action="" onSubmit="event.preventDefault();">
+                <form onSubmit="event.preventDefault();">
 
-                    <input type="text" name="inf_id" hidden><br>
+                    <input type="text" name="inf_id" hidden>
 
                     <div class="form-group ">
                         <label for="inf_soms" class="control-label col-lg-4">Historia</label>
@@ -24,17 +22,17 @@
                     </div>
 
                     <div class="form-group ">
-                        <label for="inf_visn" class="control-label col-lg-3">Mision</label>
+                        <label for="inf_misn" class="control-label col-lg-3">Mision</label>
                         <div class="col-lg-10">
-                            <textarea class=" form-control" name="mensaje" name="inf_visn" id="inf_visn"
+                            <textarea class=" form-control" name="mensaje" name="inf_misn" id="inf_misn"
                                 required> </textarea><br>
                         </div>
                     </div>
 
                     <div class="form-group ">
-                        <label for="inf_soms" class="control-label col-lg-4">Vision </label>
+                        <label for="inf_visn" class="control-label col-lg-4">Vision </label>
                         <div class="col-lg-10">
-                            <textarea class="form-control " name="mensaje" name="inf_soms" id="inf_soms"
+                            <textarea class="form-control " name="mensaje" name="inf_visn" id="inf_visn"
                                 required> </textarea><br>
                         </div>
                     </div>
@@ -75,7 +73,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <input id="btnguardar" class="btn btn-primary" type="button" value="Grabar"
-                            onclick="InsertAnuncio();">
+                            onclick="Crearcentro();">
                     </div>
 
             </div>

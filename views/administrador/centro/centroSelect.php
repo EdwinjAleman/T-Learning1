@@ -2,7 +2,7 @@
     <!-- Cabecera de la tabla-->
     <thead>
         <tr>
-
+        <th>ID</th>
             <th>Historia</th>
             <th>Mision</th>
             <th>Vision</th>
@@ -21,6 +21,7 @@
         <?php $grupal="'".$filas->inf_id."','".$filas->inf_soms."','".$filas->inf_visn."','".$filas->inf_dirctr_genrl."','".$filas->inf_dirctr_regnl."','".$filas->inf_subdrctr_centr."','".$filas->inf_cordndr_msnl."'" ?>
 
         <tr>
+            <th hide><?php echo $filas->inf_id; ?> </th>
             <th><?php echo $filas->inf_soms; ?> </th>
             <th><?php echo $filas->inf_misn; ?> </th>
             <th><?php echo $filas->inf_visn; ?> </th>
@@ -29,7 +30,11 @@
             <th><?php echo $filas->inf_subdrctr_centr; ?> </th>
             <th><?php echo $filas->inf_cordndr_msnl; ?> </th>
 
-            <th> <button onclick="Editar(<?php echo $grupal;?>);"> Editar </button></th>
+            <td> <button type="button" class="btn btn-warning ToggleOpti" data-toggle="modal"
+                    data-target="#forminfo" onclick="Editar(<?php echo $grupal;?>);"> Editar </button> </td>
+
+            <th> <button > Editar </button></th>
+            
         </tr>
         <?php endforeach; ?>
     </tbody>

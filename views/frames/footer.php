@@ -21,7 +21,7 @@
 	<script src="../assets/plantilla/lib/jquery.nicescroll.js" type="text/javascript"></script>
 	<script src="../assets/plantilla/lib/jquery.sparkline.js"></script>
 	<!--common script for all pages-->
-	<script src="../assets/plantilla/lib/common-scripts.js"></script>
+	
 	<script type="text/javascript" src="../assets/plantilla/lib/gritter/js/jquery.gritter.js"></script>
 	<script type="text/javascript" src="../assets/plantilla/lib/gritter-conf.js"></script>
 	<!--script for this page-->

@@ -22,43 +22,43 @@
                     </div>
 
                     <div class="form-group ">
-                    <label for="foro_mensaje" class="control-label col-lg-2"> Mensaje: </label>
-                    <div class="col-lg-10">
-                        <textarea class=" form-control" placeholder="Asunto" name="mensaje" id="mensaje" required></textarea>
+                        <label for="foro_mensaje" class="control-label col-lg-2"> Mensaje: </label>
+                        <div class="col-lg-10">
+                            <textarea class=" form-control" placeholder="Asunto" name="mensaje" id="mensaje"
+                                required></textarea>
+                        </div>
                     </div>
-                </div>
 
-                    
-                <div class="form-group ">
-                    <label for="fchcre" class="control-label col-lg-2">Fecha Creacion</label>
-                    <div class="col-lg-10">
-                        <input class="form-control " type="date" name="fchcre" id="anu_fechaCreacion" required />
+
+                    <div class="form-group ">
+                        <label for="fchcre" class="control-label col-lg-4">Fecha Creacion</label>
+                        <div class="col-lg-10">
+                            <input class="form-control " type="date" name="fchcre" id="anu_fechaCreacion" required />
+                        </div>
                     </div>
-                </div>
 
-                  
-                <div class="form-group ">
-                    <label for="fchfin" class="control-label col-lg-2" for="fecha">Fecha fin</label>
-                    <div class="col-lg-10">
-                        <input class="form-control " type="Date" name="fchfin" id="fchfin" required />
+
+                    <div class="form-group ">
+                        <label for="fchfin" class="control-label col-lg-4" for="fecha">Fecha fin</label>
+                        <div class="col-lg-10">
+                            <input class="form-control " type="Date" name="fchfin" id="fchfin" required />
+                        </div>
                     </div>
-                </div>
 
 
-                <div class="form-group ">
-                    <label for="nombre" class="control-label col-lg-2" for="fecha">Nombre Creador</label>
-                    <div class="col-lg-10">
-                        <input class="form-control " type="text" name="nombre" id="anu_nombreCreacion" required />
+                    <div class="form-group ">
+                        <label for="nombre" class="control-label col-lg-2" for="fecha">Nombre Creador</label>
+                        <div class="col-lg-10">
+                            <input class="form-control " type="text" name="nombre" id="anu_nombreCreacion" required />
+                        </div>
                     </div>
-                </div>
-                   
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button class="btn btn-primary" onclick="InsertAnuncio();" value="Grabar"
-                        id="btnguardar">Guardar</button>
-              
 
-              
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button class="btn btn-primary" onclick="InsertAnuncio();" value="Grabar"
+                            id="btnguardar">Guardar</button>
+                    </div>
+                </form>
 
 
             </div>
