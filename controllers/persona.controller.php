@@ -24,13 +24,13 @@ class PersonaController{
 
         $datos=$this->persona;
         
-        $datos->nombr=$_REQUEST['nombr'];
-        $datos->aplld=$_REQUEST['aplld'];
-        $datos->cedl=$_REQUEST['cedl'];
-        $datos->drccn=$_REQUEST['drccn'];
-        $datos->corr=$_REQUEST['corr'];
-        $datos->telfn=$_REQUEST['telfn'];
-        $datos->area=$_REQUEST['area'];
+        echo $datos->nombr=$_REQUEST['nombr'];
+        echo $datos->aplld=$_REQUEST['aplld'];
+        echo $datos->cedl=$_REQUEST['cedl'];
+        echo $datos->drccn=$_REQUEST['drccn'];
+        echo $datos->corr=$_REQUEST['corr'];
+        echo $datos->telfn=$_REQUEST['telfn'];
+        echo $datos->area=$_REQUEST['area'];
        
 
         $this->persona->Insert($datos);

@@ -2,13 +2,15 @@ function Crear(){
 
 	var result=document.getElementById('tview');
 	
-	var nombr=document.formpersona.nombr.value;
-	var aplld=document.formpersona.aplld.value;
-	var cedl=document.formpersona.cedl.value;
-	var drccn=document.formpersona.drccn.value;
-	var corr=document.formpersona.corr.value;
-	var telfn=document.formpersona.telfn.value;
-	var area=document.formpersona.area.value;
+	var nombr	=document.formpersona.nombr.value;
+	var aplld	=document.formpersona.aplld.value;
+	var cedl	=document.formpersona.cedl.value;
+	var drccn	=document.formpersona.drccn.value;
+	var corr	=document.formpersona.corr.value;
+	var telfn	=document.formpersona.telfn.value;
+	var area	=document.formpersona.area.value;
+
+	
 
 	const ajax=new XMLHttpRequest(); //Ojo se puede llamar la funcion CrearAjax();
 	ajax.open("POST","main.php",true); // Se usa el controlador general y su accion
@@ -25,7 +27,7 @@ function Crear(){
 									};
 	
 	ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	ajax.send("ctrl=persona&acti=insertar&nombr="+nombr+"&aplld="+aplld+"&cedl"+cedl+"&drccn="+drccn+"&corr="+corr+"&telfn"+telfn+"&area"+area);
+	ajax.send("Ctr=persona&Acc=insertar&nombr="+nombr+"&aplld="+aplld+"&cedl="+cedl+"&drccn="+drccn+"&corr="+corr+"&telfn="+telfn+"&area="+area);
 
 
 
