@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade" id="formficha" data-backdrop="static" data-keyboard="false" tabindex="-1"
+<!-- <div class="modal fade" id="formficha" data-backdrop="static" data-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -76,22 +76,22 @@
 
         </div>
     </div>
-</div>
+</div> -->
 
-<!-- <form name="formficha" id="formficha" onSubmit="Crear(); return false;">
+ <form name="formficha" id="formficha" onSubmit="Crear(); return false;">
 
     <h1> crear ficha: </h1>
 
     <input type="text" name="fic_id" hidden> <br>
 
     <label for="fic_codigo"> codigo: </label> <br>
-    <input type="text" name="fic_codigotip_ofe_nombr"> <br>
+    <input type="text" name="fic_codigo"> <br>
 
     <label for="fic_fch_inc"> ficha inicio: </label> <br>
     <input type="date" name="fic_fch_inc"> <br>
 
-    <label for="fic_fecfn"> ficha fin: </label> <br>
-    <input type="date" name="fic_fecfn"> <br>
+    <label for="fic_fch_fin"> ficha fin: </label> <br>
+    <input type="date" name="fic_fch_fin"> <br>
 
     <label for="fic_pro_for_id"> programa de formacion: </label> <br>
     <input type="text" name="fic_pro_for_id"> <br>
@@ -106,8 +106,6 @@
     <input type="text" name="fic_mod_id"> <br>
 
     
-
-
     <input type="submit" value="Crear" id="btnguardar">
 
-</form>  -->
+</form>

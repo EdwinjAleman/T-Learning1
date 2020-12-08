@@ -22,11 +22,12 @@ class FichaController{
                                 
     public function Insertar()
                                 {
+                                    echo "suqchanedour";
                                     $datos=$this->ficha;
         
                                     $datos->fic_codigo=$_REQUEST['fic_codigo'];
                                     $datos->fic_fch_inc=$_REQUEST['fic_fch_inc'];
-                                    $datos->fic_fecfn=$_REQUEST['fic_fecfn'];
+                                    $datos->fic_fch_fin=$_REQUEST['fic_fch_fin'];
                                     $datos->fic_pro_for_id=$_REQUEST['fic_pro_for_id'];
                                     $datos->fic_tip_jor_id=$_REQUEST['fic_tip_jor_id'];
                                     $datos->fic_tip_ofe_id=$_REQUEST['fic_tip_ofe_id'];
@@ -50,14 +51,14 @@ class FichaController{
                                     $datos->fic_id=$_REQUEST['fic_id'];
                                     $datos->fic_codigo=$_REQUEST['fic_codigo'];
                                     $datos->fic_fch_inc=$_REQUEST['fic_fch_inc'];
-                                    $datos->fic_fecfn=$_REQUEST['fic_fecfn'];
+                                    $datos->fic_fch_fin=$_REQUEST['fic_fch_fin'];
                                     $datos->fic_pro_for_id=$_REQUEST['fic_pro_for_id'];
                                     $datos->fic_tip_jor_id=$_REQUEST['fic_tip_jor_id'];
                                     $datos->fic_tip_ofe_id=$_REQUEST['fic_tip_ofe_id'];
                                     $datos->fic_mod_id=$_REQUEST['fic_mod_id'];
                                     
 
-                                    $this->tipopro->Update($datos);
+                                    $this->ficha->Update($datos);
                                     require_once('../views/modulos/ficha/fichaView.php');
                                 }	 
 }   

@@ -33,7 +33,7 @@
             }
         }
         
-        public function Create(Ficha $data){
+        public function Insert(Ficha $data){
             try {
                 $sql= "INSERT INTO tbl_ficha(fic_codigo,fic_fch_inc,fic_fch_fin,fic_pro_for_id,fic_tip_jor_id,fic_tip_ofe_id,fic_mod_id) 
                          VALUES (?,?,?,?,?,?,?)";

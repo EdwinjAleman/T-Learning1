@@ -1,14 +1,20 @@
-function Crear(){
+
+
+ function Crear(){
+
+	
 
 	var result=document.getElementById('tview');
 	
 	var fic_codigo = document.formficha.fic_codigo.value;
     var fic_fch_inc = document.formficha.fic_fch_inc.value;
-    var fic_fch_fin = document.formficha.fic_fecfn.value;
+    var fic_fch_fin = document.formficha.fic_fch_fin.value;
     var fic_pro_for_id = document.formficha.fic_pro_for_id.value;
     var fic_tip_jor_id = document.formficha.fic_tip_jor_id.value;
     var fic_tip_ofe_id = document.formficha.fic_tip_ofe_id.value;
     var fic_mod_id = document.formficha.fic_mod_id.value;
+   
+	alert ("suqchaenfour2");
 
 	const ajax=new XMLHttpRequest(); 
 	ajax.open("POST","main.php",true);
@@ -45,19 +51,22 @@ function Borrar(fic_id){
 									};
 	
 	ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	ajax.send("Ctr=ficha&Acc=eliminar&fic_id="+fic_id+"&fic_codigo="+fic_codigo+"&fic_fch_inc="+fic_fch_inc+"&fic_fch_fin="+fic_fch_fin+"&fic_pro_for_id="+fic_pro_for_id+"&fic_tip_jor_id="+fic_tip_jor_id+"&fic_tip_ofe_id="+fic_tip_ofe_id+"&fic_mod_id="+fic_mod_id);
+	ajax.send("Ctr=ficha&Acc=eliminar&fic_id="+fic_id);
 }
 
 function Editar(id, codigo, ini, fin, pro, jor, ofe, mod){
-    
-    document.formficha.fic_id.value=id;
+   
+	
+
+ 	document.formficha.fic_id.value=id;
 	document.formficha.fic_codigo.value=codigo;
     document.formficha.fic_fch_inc.value=ini;
-    document.formficha.fic_fecfn.value=fin;
+    document.formficha.fic_fch_fin.value=fin;
     document.formficha.fic_pro_for_id.value=pro;
     document.formficha.fic_tip_jor_id.value=jor;
     document.formficha.fic_tip_ofe_id.value=ofe;
     document.formficha.fic_mod_id.value=mod;
+    
 
 	document.getElementById("btnguardar").value="Actualizar"; //Lo Edita
 
@@ -66,16 +75,19 @@ function Editar(id, codigo, ini, fin, pro, jor, ofe, mod){
 
 function Update(){
 
+	
+
 	var result=document.getElementById('tview');
 	
 	var fic_id=document.formficha.fic_id.value;
 	var fic_codigo = document.formficha.fic_codigo.value;
     var fic_fch_inc = document.formficha.fic_fch_inc.value;
-    var fic_fch_fin = document.formficha.fic_fecfn.value;
+    var fic_fch_fin = document.formficha.fic_fch_fin.value;
     var fic_pro_for_id = document.formficha.fic_pro_for_id.value;
     var fic_tip_jor_id = document.formficha.fic_tip_jor_id.value;
     var fic_tip_ofe_id = document.formficha.fic_tip_ofe_id.value;
     var fic_mod_id = document.formficha.fic_mod_id.value;
+
 
 	var ajax=new XMLHttpRequest();
 	ajax.open("POST","main.php",true);
@@ -97,4 +109,4 @@ function Update(){
 
 	//cambiar la propiedad onsubmit
 	//document.getElementById("formtipoofe").setAttribute('onSubmit','CrearForo();');
-}
+} 
