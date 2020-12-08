@@ -1,4 +1,4 @@
-<div class="modal fade" name="formtipoofe" id="formtipoofe" return false" data-backdrop="static" data-keyboard="false"
+<div class="modal fade" name="formtipoofe" id="formtipoofe"  data-backdrop="static" data-keyboard="false"
     tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
