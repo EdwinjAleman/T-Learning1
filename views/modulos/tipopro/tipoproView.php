@@ -1,10 +1,15 @@
+<section id="main-content">
+        <section class="wrapper">
+        <button type="button" class="btn btn-primary" data-toggle="modal"
+                data-target="#formtipopro">Nuevo Programa</button>    
+        </section>
+    </section>
+
 <div id="main">
 
     <script src="../assets/js/modulos/scripts.tipopro.js"></script>
-
     <div id="tview">
-        <?php  include_once('tipoproInsert.php'); ?>
-        <?php  include_once('tipoproSelect.php'); ?>
+        <?php  include('tipoproInsert.php'); ?>
+        <?php  include('tipoproSelect.php'); ?>
     </div>
-
 </div>

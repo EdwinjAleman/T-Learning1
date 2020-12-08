@@ -5,8 +5,8 @@
         <div class="row mt">
             <div class="col-md-12">
                 <div class="content-panel">
-                    <table class="table table-striped table-advance table-hover">
-                        <h4><i class="fa fa-angle-right"></i> Estos son los siguientes tipos de programas registrados:
+                    <table style="margin: 0 auto; overflow-y: scroll;" class="table table-hover">
+                        <h4><i class="fa fa-angle-right"></i> Tipos de programas registrados:
                         </h4>
                         <hr>
                         <thead>
@@ -17,21 +17,21 @@
                             </tr>
                         </thead>
                         <tbody>
-                            
+
                             <?php $contador=0;
                             foreach ($this->tipopro->Select() as $filas): ?>
                             <?php $grupal="'".$filas->tip_pro_id."','".$filas->tip_pro_nombr."'" ?>
 
                             <tr>
                                 <?php $contador = $contador+1; ?>
-                                <td> <?php echo $contador; ?> </td>	
+                                <td> <?php echo $contador; ?> </td>
                                 <td class="hidden-phone">
 
                                     <?php echo $filas->tip_pro_nombr; ?>
 
                                 </td>
                                 <td>
-                                    <button class="btn btn-success btn-xs" onclick="Editar(<?php echo $grupal;?>);">
+                                    <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#formtipopro" onclick="Editar(<?php echo $grupal;?>);" >
                                         <i class="fa fa-pencil"></i>
                                     </button>
                                     <button class="btn btn-danger btn-xs" onclick="Borrar(<?php echo $grupal;?>);">
@@ -45,5 +45,6 @@
                 </div>
             </div>
         </div>
+
     </section>
-</section> 
+</section>

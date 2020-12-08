@@ -1,82 +1,84 @@
 function Crear(){
 
-	var result=document.getElementById('tview');
-	
-	var tip_pro_nombr=document.formtipopro.tip_pro_nombr.value;
+			var result=document.getElementById('tview');
 
-	const ajax=new XMLHttpRequest(); 
-	ajax.open("POST","main.php",true);
-	ajax.onreadystatechange=function(){
-										if(ajax.readyState==4){
-											if(ajax.status==200){
-												result.innerHTML=ajax.responseText;
-											}else{}
-										}else{}
-									};
-	
-	ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    ajax.send("Ctr=tipopro&Acc=insertar&tip_pro_nombr="+tip_pro_nombr);
+			var tip_pro_id=document.formtipopro.tip_pro_id.value;
+			var tip_pro_nombr=document.formtipopro.tip_pro_nombr.value;
+		
+			const ajax=new XMLHttpRequest(); 
+			ajax.open("POST","main.php",true);
+			ajax.onreadystatechange=function(){
+												if(ajax.readyState==4){
+													if(ajax.status==200){
+														result.innerHTML=ajax.responseText;
+													}else{}
+												}else{}
+											};
+			
+			
+			
+
+			ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+		if(tip_pro_id=="")
+	{
+
+		ajax.send("Ctr=tipopro&Acc=insertar&tip_pro_nombr="+tip_pro_nombr);
+		
+	}
+	else 
+	{
+		ajax.send("Ctr=tipopro&Acc=actualizar&tip_pro_id="+tip_pro_id+"&tip_pro_nombr="+tip_pro_nombr);
+		document.getElementById("btnguardar").value="Guardar";
+		
+	}
+		document.formtipopro.reset();
+	}
+function Limpiar()
+{
+	document.formtipopro.reset();
+
+	document.getElementById("btnguardar").value="Guardar";
+
+}
+function Editar(tip_pro_id,tip_pro_nombr)
+{
+	document.formtipopro.tip_pro_id.value=tip_pro_id;
+	document.formtipopro.tip_pro_nombr.value=tip_pro_nombr;
+		
+
+		document.getElementById("btnguardar").value="Actualizar";
+		
+
 }
 
-function Borrar(tip_pro_id){
+	function Borrar(tip_pro_id)
+	{
+		var result = document.getElementById('tview');
 
-	var result=document.getElementById('tview');
+		const ajax = new XMLHttpRequest(); // Ojo Se puede Llamar la funcion CrearAjax();
+		ajax.open("POST","main.php",true); // Se usa el Controlador General y su Accion
+		ajax.onreadystatechange = function (){
+												if( ajax.readyState == 4 ) // Estado 4 es DONE = TERMINADO
+												{
+													if( ajax.status == 200 ) // Estado 200 es SUCCESS = CORRECTO
+													{
 
-	const ajax=new XMLHttpRequest(); 
+														result.innerHTML = ajax.responseText;
 
-	ajax.open("POST","main.php",true);
+													}
+													else
+													{
+														console.log("Ups, Me equivoque;");
+													}
+												}
+											 };
 
-	ajax.onreadystatechange=function(){
-										if(ajax.readyState==4){
-											if(ajax.status==200){
-												result.innerHTML=ajax.responseText;
-											}else{
-												console.log('Ups,Me equivoque;');
-											}
-										}else{
-											console.log("Ups, Me equivoque;");
-										}
-									};
-	
-	ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	ajax.send("Ctr=tipopro&Acc=eliminar&tip_pro_id="+tip_pro_id);
-}
-
-function Editar(id, nombre){
-	
-	document.formtipopro.tip_pro_id.value=id;
-	document.formtipopro.tip_pro_nombr.value=nombre;
-
-	document.getElementById("btnguardar").value="Actualizar"; //Lo Edita
-
-	document.getElementById("formtipopro").setAttribute('onSubmit','Update();return false;'); // Lo cambia
-}
-
-function Update(){
-
-	var result=document.getElementById('tview');
-	
-	var tip_pro_id=document.formtipopro.tip_pro_id.value;
-	var tip_pro_nombr=document.formtipopro.tip_pro_nombr.value;
-
-	var ajax=new XMLHttpRequest();
-	ajax.open("POST","main.php",true);
-	ajax.onreadystatechange=function(){
-										if(ajax.readyState==4){
-											if(ajax.status==200){
-												result.innerHTML=ajax.responseText;
-												
-											}else{
-												console.log('Ups,Me equivoque;');
-											}
-										}else{
-											console.log("Ups, Me equivoque;");
-										}
-									};
-	ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	ajax.send("Ctr=tipopro&Acc=actualizar&tip_pro_id="+tip_pro_id+"&tip_pro_nombr="+tip_pro_nombr);
+		ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		ajax.send("Ctr=tipopro&Acc=eliminar&tip_pro_id="+tip_pro_id);
+	}
 
 
-	//cambiar la propiedad onsubmit
-	//document.getElementById("formtipopro").setAttribute('onSubmit','CrearForo();');
-}
+
+
+
+
