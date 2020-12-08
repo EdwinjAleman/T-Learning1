@@ -77,3 +77,37 @@
         </div>
     </div>
 </div>
+
+<!-- <form name="formficha" id="formficha" onSubmit="Crear(); return false;">
+
+    <h1> crear ficha: </h1>
+
+    <input type="text" name="fic_id" hidden> <br>
+
+    <label for="fic_codigo"> codigo: </label> <br>
+    <input type="text" name="fic_codigotip_ofe_nombr"> <br>
+
+    <label for="fic_fch_inc"> ficha inicio: </label> <br>
+    <input type="date" name="fic_fch_inc"> <br>
+
+    <label for="fic_fecfn"> ficha fin: </label> <br>
+    <input type="date" name="fic_fecfn"> <br>
+
+    <label for="fic_pro_for_id"> programa de formacion: </label> <br>
+    <input type="text" name="fic_pro_for_id"> <br>
+
+    <label for="fic_tip_jor_id"> tipo jornada: </label> <br>
+    <input type="text" name="fic_tip_jor_id"> <br>
+
+    <label for="fic_tip_ofe_id"> tipo de oferta: </label> <br>
+    <input type="text" name="fic_tip_ofe_id"> <br>
+
+    <label for="fic_mod_id"> tipo de modalidad: </label> <br>
+    <input type="text" name="fic_mod_id"> <br>
+
+    
+
+
+    <input type="submit" value="Crear" id="btnguardar">
+
+</form>  -->

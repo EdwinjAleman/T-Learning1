@@ -2,13 +2,13 @@ function Crear(){
 
 	var result=document.getElementById('tview');
 	
-	var fic_codigo = document.formulario.fic_codigo.value;
-    var fic_fch_inc = document.formulario.fic_fch_inc.value;
-    var fic_fch_fin = document.formulario.fic_fecfn.value;
-    var fic_pro_for_id = document.formulario.fic_pro_for_id.value;
-    var fic_tip_jor_id = document.formulario.fic_tip_jor_id.value;
-    var fic_tip_ofe_id = document.formulario.fic_tip_ofe_id.value;
-    var fic_mod_id = document.formulario.fic_mod_id.value;
+	var fic_codigo = document.formficha.fic_codigo.value;
+    var fic_fch_inc = document.formficha.fic_fch_inc.value;
+    var fic_fch_fin = document.formficha.fic_fecfn.value;
+    var fic_pro_for_id = document.formficha.fic_pro_for_id.value;
+    var fic_tip_jor_id = document.formficha.fic_tip_jor_id.value;
+    var fic_tip_ofe_id = document.formficha.fic_tip_ofe_id.value;
+    var fic_mod_id = document.formficha.fic_mod_id.value;
 
 	const ajax=new XMLHttpRequest(); 
 	ajax.open("POST","main.php",true);
@@ -50,14 +50,14 @@ function Borrar(fic_id){
 
 function Editar(id, codigo, ini, fin, pro, jor, ofe, mod){
     
-    document.formsede.fic_id.value=id;
-	document.formulario.fic_codigo.value=codigo;
-    document.formulario.fic_fch_inc.value=ini;
-    document.formulario.fic_fecfn.value=fin;
-    document.formulario.fic_pro_for_id.value=pro;
-    document.formulario.fic_tip_jor_id.value=jor;
-    document.formulario.fic_tip_ofe_id.value=ofe;
-    document.formulario.fic_mod_id.value=mod;
+    document.formficha.fic_id.value=id;
+	document.formficha.fic_codigo.value=codigo;
+    document.formficha.fic_fch_inc.value=ini;
+    document.formficha.fic_fecfn.value=fin;
+    document.formficha.fic_pro_for_id.value=pro;
+    document.formficha.fic_tip_jor_id.value=jor;
+    document.formficha.fic_tip_ofe_id.value=ofe;
+    document.formficha.fic_mod_id.value=mod;
 
 	document.getElementById("btnguardar").value="Actualizar"; //Lo Edita
 
@@ -68,14 +68,14 @@ function Update(){
 
 	var result=document.getElementById('tview');
 	
-	var fic_id=document.formsede.sed_id.value;
-	var fic_codigo = document.formulario.fic_codigo.value;
-    var fic_fch_inc = document.formulario.fic_fch_inc.value;
-    var fic_fch_fin = document.formulario.fic_fecfn.value;
-    var fic_pro_for_id = document.formulario.fic_pro_for_id.value;
-    var fic_tip_jor_id = document.formulario.fic_tip_jor_id.value;
-    var fic_tip_ofe_id = document.formulario.fic_tip_ofe_id.value;
-    var fic_mod_id = document.formulario.fic_mod_id.value;
+	var fic_id=document.formficha.fic_id.value;
+	var fic_codigo = document.formficha.fic_codigo.value;
+    var fic_fch_inc = document.formficha.fic_fch_inc.value;
+    var fic_fch_fin = document.formficha.fic_fecfn.value;
+    var fic_pro_for_id = document.formficha.fic_pro_for_id.value;
+    var fic_tip_jor_id = document.formficha.fic_tip_jor_id.value;
+    var fic_tip_ofe_id = document.formficha.fic_tip_ofe_id.value;
+    var fic_mod_id = document.formficha.fic_mod_id.value;
 
 	var ajax=new XMLHttpRequest();
 	ajax.open("POST","main.php",true);
