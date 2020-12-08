@@ -34,8 +34,8 @@
                 <td> <?php echo $filas->fic_tip_ofe_id; 	?> </td>
                 <td> <?php echo $filas->fic_mod_id; 	?> </td>
 
-                <td> <button onclick="BorrarFicha(<?php echo $filas->fic_id;?>);"> ELIMINAR </button> </td>
-                <td> <button onclick="UpdateFicha(<?php echo $grupal;?>);"> EDITAR </button> </td>
+                <td> <button onclick="Borrar(<?php echo $grupal;?>);"> ELIMINAR </button> </td>
+                <td> <button onclick="Editar(<?php echo $grupal;?>);"> EDITAR </button> </td>
             </tr>
 
             <?php endforeach; ?>

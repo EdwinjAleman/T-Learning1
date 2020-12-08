@@ -3,7 +3,7 @@ require_once('../models/fases.php');
 
 class FasesController{
 
-    private $tipopro;
+    private $fases;
 
     function __Construct() 
 								{
