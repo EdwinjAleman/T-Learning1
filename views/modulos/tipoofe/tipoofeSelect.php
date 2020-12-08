@@ -1,29 +1,3 @@
-<!-- <h1>DATOS DE TIPO DE OFERTA:</h1>
-<table>
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Tipos de Programas </th>
-
-        </tr>
-    </thead>
-
-    <tbody>
-    <?php foreach ($this->tipoofe->Select() as $filas): ?>
-        <?php $grupal="'".$filas->tip_ofe_id."','".$filas->tip_ofe_nombr."'" ?>
-
-        <tr>
-            <th><?php echo $filas->tip_ofe_id; ?> </th>
-            <th><?php echo $filas->tip_ofe_nombr; ?> </th>
-
-            <th> <button onclick="Editar(<?php echo $grupal;?>);"> Editar </button></th>
-            <th> <button onclick="Borrar(<?php echo $grupal;?>);"> Borrar </button></th>
-        </tr>
-        <?php endforeach; ?>
-    </tbody>
-    <tfoot>
-    </tfoot>
-</table> -->
 
 <section id="main-content">
     <section class="wrapper">
@@ -58,7 +32,7 @@
 
                                 </td>
                                 <td>
-                                    <button class="btn btn-success btn-xs" onclick="Editar(<?php echo $grupal;?>);">
+                                    <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#formtipoofe"  onclick="Editar(<?php echo $grupal;?>);">
                                         <i class="fa fa-pencil"></i>
                                     </button>
                                     <button class="btn btn-danger btn-xs" onclick="Borrar(<?php echo $grupal;?>);">
