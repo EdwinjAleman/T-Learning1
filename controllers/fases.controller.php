@@ -27,13 +27,13 @@ class FasesController{
                                     $datos->fas_nombr_fas=$_REQUEST['fas_nombr_fas'];
 
                                     $this->fases->Insert($datos);
-                                    require_once('../views/modulos/fases/fasesView.php');
+                                    require_once('../views/modulos/fases/fasesSelect.php');
                                 }
 
     public function Eliminar()  
                                 {
                                     $this->fases->Delete($_REQUEST['fas_id']);
-                                    require_once('../views/modulos/fases/fasesView.php');
+                                    require_once('../views/modulos/fases/fasesSelect.php');
                                 }
 
     public function Actualizar()
@@ -45,7 +45,7 @@ class FasesController{
                                     $datos->fas_nombr_fas=$_REQUEST['fas_nombr_fas'];
 
                                     $this->fases->Update($datos);
-                                    require_once('../views/modulos/fases/fasesView.php');
+                                    require_once('../views/modulos/fases/fasesSelect.php');
                                 }	 
 }   
 

@@ -15,7 +15,30 @@ function Crear(){
 									};
 	
 	ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    ajax.send("Ctr=estado&Acc=insertar&est_nombr="+est_nombr);
+	ajax.send("Ctr=estado&Acc=insertar&est_nombr="+est_nombr);
+	document.getElementById('festado').reset();
+}
+
+function Validar()
+{
+	var buton=document.getElementById('btnguardar').innerHTML;
+	var id=document.getElementById('est_id').value;
+	var nombre=document.getElementById('est_nombr').value;
+
+	if(id!="" && nombre!=""){
+							if(buton=='Crear')
+										{	
+											Crear();
+										}
+											else if(buton=='Actualizar')
+										{
+											Update();
+										}
+							}
+							else
+							{
+								alert("campos vacios");
+							}
 }
 
 function Borrar(est_id){
@@ -42,22 +65,22 @@ function Borrar(est_id){
 	ajax.send("Ctr=estado&Acc=eliminar&est_id="+est_id);
 }
 
-function Editar(est_id, est_nombr){
+function Editar(id, nombre){
 	
-	document.formestado.est_id.value=est_id;
-	document.formestado.est_nombr.value=est_nombr;
+	document.getElementById('est_id').value=id;
+	document.getElementById('est_nombr').value=nombre;
 
-	document.getElementById("btnguardar").value="Actualizar"; //Lo Edita
-
-	document.getElementById("formestado").setAttribute('onSubmit','Update();return false;'); // Lo cambia
+	document.getElementById("btnguardar").innerHTML="Actualizar"; //Lo Edita
+	
+	
 }
 
 function Update(){
 
 	var result=document.getElementById('tview');
 	
-	var est_id=document.formestado.est_id.value;
-	var est_nombr=document.formestado.est_nombr.value;
+	var est_id=document.getElementById('est_id').value;
+	var est_nombr=document.getElementById('est_nombr').value;
 
 	var ajax=new XMLHttpRequest();
 	ajax.open("POST","main.php",true);
@@ -65,6 +88,8 @@ function Update(){
 										if(ajax.readyState==4){
 											if(ajax.status==200){
 												result.innerHTML=ajax.responseText;
+												document.getElementById("btnguardar").innerHTML="Crear"; //Lo Edita
+												document.getElementById('festado').reset();
 												
 											}else{
 												console.log('Ups,Me equivoque;');
@@ -75,8 +100,16 @@ function Update(){
 									};
 	ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	ajax.send("Ctr=estado&Acc=actualizar&est_id="+est_id+"&est_nombr="+est_nombr);
+	
 
 
 	//cambiar la propiedad onsubmit
 	//document.getElementById("formestado").setAttribute('onSubmit','CrearForo();');
 }
+
+function Limpiar()
+	{
+		document.getElementById("btnguardar").innerHTML="Crear"; //Lo Edita
+		document.getElementById('festado').reset();
+		
+	}
