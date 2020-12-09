@@ -1,7 +1,7 @@
 <section id="main-content">
         <section class="wrapper">
         <button type="button" class="btn btn-primary" data-toggle="modal"
-                data-target="#formtipopro">Nuevo Programa</button>    
+                data-target="#formtipopro">Nuevo Tipo Programa</button>    
         </section>
     </section>
 

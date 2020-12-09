@@ -1,6 +1,6 @@
 <section id="main-content">
     <section class="wrapper">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formprogramafor">Nueva Jornada</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formprogramafor">Nuevo Programa</button>
     </section>
 </section>
 
