@@ -1,31 +1,71 @@
-<form name="formpersona" id="formpersona" onSubmit="Crear(); return false">
+<!-- <form name="formpersona" id="formpersona" onSubmit="Crear(); return false">
 
    <h1> IMFORMACION DE PERSONA </h1>
 
-   <input type="text" name="tip_pro_id" hidden> <br>
+   <input type="text" name="per_id" hidden> <br>
 
-   <label for="nombr"> Nombre </label> <br>
-   <input type="text" name="nombr" id="nombr"> <br>
+   <label for="per_nombr"> Nombre </label> <br>
+   <input type="text" name="nombr" > <br>
 
-   <label for="aplld"> Apellido </label> <br>
-   <input type="text" name="aplld" id="aplld"> <br>
+   <label for="per_aplld"> Apellido </label> <br>
+   <input type="text" name="per_aplld" > <br>
 
-   <label for="cedl"> Cedula </label> <br>
-   <input type="text" name="cedl" id="cedl"> <br>
+   <label for="per_cedl"> Cedula </label> <br>
+   <input type="text" name="per_cedl" > <br>
 
-   <label for="drccn"> Direccion: </label> <br>
-   <input type="text" name="drccn" id="drccn"> <br>
+   <label for="per_dirccn"> Direccion: </label> <br>
+   <input type="text" name="per_dirccn" > <br>
 
-   <label for="corr"> Correo </label> <br>
-   <input type="text" name="corr" id="corr"> <br>
+   <label for="per_corr"> Correo </label> <br>
+   <input type="text" name="per_corr" > <br>
 
-   <label for="telfn"> Telefono </label> <br>
-   <input type="text" name="telfn" id="telfn"> <br>
+   <label for="per_telfn"> Telefono </label> <br>
+   <input type="text" name="per_telfn" > <br>
 
-   <label for="area"> Area </label> <br>
-   <input type="text" name="area" id="area"> <br>
+   <label for="per_areid"> Area </label> <br>
+   <input type="text" name="per_areid" > <br>
 
 
    <input type="submit" value="Crear" id="btnguardar">
 
-</form>
+</form> -->
+
+<form name="formpersona" id="formpersona" onSubmit="Crear(); return false;">
+
+<h1> IMFORMACION DE PERSONA </h1>
+
+<input type="text" name="per_id" hidden> <br>
+
+<label for="per_nombr"> Nombre </label> <br>
+<input type="text" name="per_nombr" > <br>
+
+<label for="per_aplld"> Apellido </label> <br>
+<input type="text" name="per_aplld" > <br>
+
+<label for="per_cedl"> Cedula </label> <br>
+<input type="text" name="per_cedl" > <br>
+
+<label for="per_dirccn"> Direccion: </label> <br>
+<input type="text" name="per_dirccn" > <br>
+
+<label for="per_corr"> Correo </label> <br>
+<input type="text" name="per_corr" > <br>
+
+<label for="per_telfn"> Telefono </label> <br>
+<input type="number" name="per_telfn" > <br>
+
+
+<div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label">
+                                area:
+                            </label>
+                            <select class="form-control" name="per_areid">
+                                <?php foreach ( $this->area->SelectTipoArea() as $filas ): 
+                                       echo '<option value="'.$filas->are_id.'">'.$filas->are_nombr.'</option>';
+                                 endforeach; ?>
+                            </select>
+                        </div>
+
+<input type="submit" value="Crear" id="btnguardar">
+
+</form> 

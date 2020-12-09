@@ -11,7 +11,7 @@
 		}
 
 
-/************************************************************** CONSULTAS DE FORO *****************************************************************/
+/************************************************************** CONSULTAS DE PERSONA *****************************************************************/
 		public function Select(){
 										try 					{	
 																	$sql=$this->pdo->prepare("SELECT * FROM tbl_persona ORDER BY per_id desc");
@@ -23,6 +23,17 @@
 																	die($e->getMessage());
 																}
 
+        }
+        public function SelectTipoArea(){
+			try 					{	
+										$sql=$this->pdo->prepare("SELECT * FROM tbl_area ORDER BY are_id desc");
+										$sql->execute();
+										return $sql->fetchALL(PDO::FETCH_OBJ);
+									}
+
+			catch (Exception $e) 	{	
+										die($e->getMessage());
+									}
 		}
 
 		public function Insert(Persona $data){
@@ -32,13 +43,13 @@
 																	   $this->pdo->prepare($sql) 
 																				 ->execute(
 																							array(
-                                                                                                $data->nombr,
-																								$data->aplld,
-																								$data->cedl,
-																								$data->drccn,
-																								$data->corr,
-																								$data->telfn,
-																								$data->area
+                                                                                                $data->per_nombr,
+																								$data->per_aplld,
+																								$data->per_cedl,
+																								$data->per_dirccn,
+																								$data->per_corr,
+																								$data->per_telfn,
+																								$data->per_areid
 																							)
 																						);
 
@@ -49,19 +60,50 @@
 
 							} 
 
-		public function Delete($res_id){
+		public function Delete($per_id){
 								
-										try 					{	$sql="DELETE FROM tbl_responder WHERE res_id=?";
+										try 					{	$sql="DELETE FROM tbl_persona WHERE per_id=?";
 																	$this->pdo->prepare($sql)
 										  					  				  ->execute(
 										  												array(
-										  					  									$res_id	
+										  					  									$per_id	
 										  													)
 										  												);
 										  						}
 
 										catch(exception $e)		{ die ($e->getMessage()); 				 }
-		}
+        }
+        
+        public function Update(Persona $data){
+                                
+           
+
+			try 					{	$sql = "UPDATE tbl_persona SET per_nombr=?,
+                                                                       per_aplld=?,
+                                                                       per_cedl=?,
+                                                                       per_dirccn=?,
+                                                                       per_corr=?,
+                                                                       per_telfn=?,
+                                                                       per_areid=?
+															  WHERE per_id=?";
+										   $this->pdo->prepare($sql) 
+													 ->execute(
+																array(
+																	$data->per_nombr,
+																	$data->per_aplld,
+																	$data->per_cedl,
+																	$data->per_dirccn,
+																	$data->per_corr,
+																	$data->per_telfn,
+																	$data->per_areid,
+																	$data->per_id
+																)
+															);
+					}
+
+			catch (Exception $e) { die($e->getMessage()); }
+
+} 
 
 	}
 ?>

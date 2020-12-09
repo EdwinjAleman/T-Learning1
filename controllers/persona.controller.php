@@ -24,18 +24,43 @@ class PersonaController{
 
         $datos=$this->persona;
         
-        $datos->nombr=$_REQUEST['nombr'];
-        $datos->aplld=$_REQUEST['aplld'];
-        $datos->cedl=$_REQUEST['cedl'];
-        $datos->drccn=$_REQUEST['drccn'];
-        $datos->corr=$_REQUEST['corr'];
-        $datos->telfn=$_REQUEST['telfn'];
-        $datos->area=$_REQUEST['area'];
+        $datos->per_nombr=$_REQUEST['per_nombr'];
+        $datos->per_aplld=$_REQUEST['per_aplld'];
+        $datos->per_cedl=$_REQUEST['per_cedl'];
+        $datos->per_dirccn=$_REQUEST['per_dirccn'];
+        $datos->per_corr=$_REQUEST['per_corr'];
+        $datos->per_telfn=$_REQUEST['per_telfn'];
+        $datos->per_areid=$_REQUEST['per_areid'];
+     
+    
        
 
         $this->persona->Insert($datos);
         require_once('../views/modulos/persona/personaView.php');
     }
+    public function Eliminar()  
+                                {
+                                    $this->persona->Delete($_REQUEST['per_id']);
+                                    require_once('../views/modulos/persona/personaView.php');
+                                }
+
+    public function Actualizar()
+                                {
+                                    
+                                    $datos=$this->persona;
+
+                                    $datos->per_id=$_REQUEST['per_id'];
+                                    $datos->per_nombr=$_REQUEST['per_nombr'];
+                                    $datos->per_aplld=$_REQUEST['per_aplld'];
+                                    $datos->per_cedl=$_REQUEST['per_cedl'];
+                                    $datos->per_dirccn=$_REQUEST['per_dirccn'];
+                                    $datos->per_corr=$_REQUEST['per_corr'];
+                                    $datos->per_telfn=$_REQUEST['per_telfn'];
+                                    $datos->per_areid=$_REQUEST['per_areid'];
+
+                                    $this->persona->Update($datos);
+                                    require_once('../views/modulos/persona/personaView.php');
+                                }	 
 
    
 }

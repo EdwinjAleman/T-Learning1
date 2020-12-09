@@ -2,37 +2,30 @@ function Crear(){
 
 	var result=document.getElementById('tview');
 	
-	var nombr=document.formpersona.nombr.value;
-	var aplld=document.formpersona.aplld.value;
-	var cedl=document.formpersona.cedl.value;
-	var drccn=document.formpersona.drccn.value;
-	var corr=document.formpersona.corr.value;
-	var telfn=document.formpersona.telfn.value;
-	var area=document.formpersona.area.value;
+    var per_nombr=document.formpersona.per_nombr.value;
+	var per_aplld=document.formpersona.per_aplld.value;
+	var per_cedl=document.formpersona.per_cedl.value;
+	var per_dirccn=document.formpersona.per_dirccn.value;
+	var per_corr=document.formpersona.per_corr.value;
+	var per_telfn=document.formpersona.per_telfn.value;
+    var per_areid=document.formpersona.per_areid.value;
 
-	const ajax=new XMLHttpRequest(); //Ojo se puede llamar la funcion CrearAjax();
-	ajax.open("POST","main.php",true); // Se usa el controlador general y su accion
+	const ajax=new XMLHttpRequest(); 
+	ajax.open("POST","main.php",true);
 	ajax.onreadystatechange=function(){
 										if(ajax.readyState==4){
 											if(ajax.status==200){
 												result.innerHTML=ajax.responseText;
-											}else{
-												console.log('Ups,Me equivoque;');
-											}
-										}else{
-											console.log("Ups, Me equivoque;");
-										}
+											}else{}
+										}else{}
 									};
 	
 	ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	ajax.send("ctrl=persona&acti=insertar&nombr="+nombr+"&aplld="+aplld+"&cedl"+cedl+"&drccn="+drccn+"&corr="+corr+"&telfn"+telfn+"&area"+area);
-
-
-
+    ajax.send("Ctr=persona&Acc=insertar&per_nombr="+per_nombr+"&per_aplld="+per_aplld+"&per_cedl="+per_cedl+"&per_dirccn="+per_dirccn+"&per_corr="+per_corr+"&per_telfn="+per_telfn+"&per_areid="+per_areid);
 }
 
 
-function BorrarForo(id){
+function Borrar(per_id){
 
 	var result=document.getElementById('tview');
 
@@ -53,41 +46,54 @@ function BorrarForo(id){
 									};
 	
 	ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	ajax.send("ctrl=foro&acti=eliminar&id="+id);
+	ajax.send("Ctr=persona&Acc=eliminar&per_id="+per_id);
 
 }
 
 
 
 
-function Editar(id, titulo, mensaje, fechaInicio, fechaFin){
+function Editar(id, nombre, apelliido, cedula, direccion, correo, telefono, area){
+
+   
 
 	//var result=document.getElementById('tview');
 	
-	document.formforo.foro_id.value=id;
-	document.formforo.foro_titulo.value=titulo;
-	document.formforo.foro_mensaje.value=mensaje;
-	document.formforo.foro_fecha_inicio.value=fechaInicio;
-	document.formforo.foro_fecha_fin.value=fechaFin;
+    document.formpersona.per_id.value=id;
+    document.formpersona.per_nombr.value=nombre;
+    document.formpersona.per_aplld.value=apelliido;
+    document.formpersona.per_cedl.value=cedula;
+    document.formpersona.per_dirccn.value=direccion
+    document.formpersona.per_corr.value=correo;
+    document.formpersona.per_telfn.value=telefono;
+    document.formpersona.per_areid.value=area;
+
+    
 
 	
 
 	document.getElementById("btnguardar").value="Actualizar"; //Lo Edita
 
-	document.getElementById("formforo").setAttribute('onSubmit','UpdateForo();'); // Lo cambia
+	document.getElementById("formpersona").setAttribute('onSubmit','UpdatePersona();return false;'); // Lo cambia
 
 	
 }
 
-function UpdateForo(){
+function UpdatePersona(){
 
+    
+
+    
 	var result=document.getElementById('tview');
 
-	var foro_id=document.formforo.foro_id.value;
-	var foro_titulo=document.formforo.foro_titulo.value;
-	var foro_mensaje=document.formforo.foro_mensaje.value;
-	var foro_fecha_inicio=document.formforo.foro_fecha_inicio.value;
-	var foro_fecha_fin=document.formforo.foro_fecha_fin.value;
+    var per_id=document.formpersona.per_id.value;
+    var per_nombr=document.formpersona.per_nombr.value;
+	var per_aplld=document.formpersona.per_aplld.value;
+	var per_cedl=document.formpersona.per_cedl.value;
+	var per_dirccn=document.formpersona.per_dirccn.value;
+	var per_corr=document.formpersona.per_corr.value;
+	var per_telfn=document.formpersona.per_telfn.value;
+	var per_areid=document.formpersona.per_areid.value;
 
 	const ajax=new XMLHttpRequest(); //Ojo se puede llamar la funcion CrearAjax();
 	ajax.open("POST","main.php",true); // Se usa el controlador general y su accion
@@ -106,10 +112,10 @@ function UpdateForo(){
 
 	
 	ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	ajax.send("ctrl=foro&acti=actualizar&foro_id="+foro_id+"&foro_titulo="+foro_titulo+"&foro_mensaje="+foro_mensaje+"&foro_fecha_inicio="+foro_fecha_inicio+"&foro_fecha_fin="+foro_fecha_fin);
+	ajax.send("Ctr=persona&Acc=actualizar&per_id="+per_id+"&per_nombr="+per_nombr+"&per_aplld="+per_aplld+"&per_cedl="+per_cedl+"&per_dirccn="+per_dirccn+"&per_corr="+per_corr+"&per_telfn="+per_telfn+"&per_areid="+per_areid);
 
 
 	//cambiar la propiedad onsubmit
-	document.getElementById("formforo").setAttribute('onSubmit','CrearForo();');
+	//document.getElementById("formpersona").setAttribute('onSubmit','Crear();');
 }
 
