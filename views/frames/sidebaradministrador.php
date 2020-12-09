@@ -29,7 +29,7 @@
             </li>
 
             <li class="sub-menu">
-                <a href="./main.php?Ctr=materialapoyo">
+                <a href="./main.php?Ctr=material">
                     <i class="fa fa-book"></i>
                     <span>Material de Apoyo</span>
                 </a>
