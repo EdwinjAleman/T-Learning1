@@ -1,4 +1,4 @@
-<!--  <form name="formarea" id="formarea" onSubmit="Crear(); return false;">
+<!-- <form name="formarea" id="formarea" onSubmit="Crear(); return false;">
 
      <h1> AREA: </h1>
 
@@ -21,8 +21,8 @@
 
      <input type="submit" value="Crear" id="btnguardar">
 
- </form>
- -->
+ </form> -->
+
 <section id="main-content">
     <section class="wrapper">
         <h3><i class="fa fa-angle-right"></i> CREAR AREA: </h3>
@@ -56,15 +56,11 @@
                                      endforeach; ?>
                             </select>
                         </div>
-                        <!--  <input type="submit" value="Crear" id="btnguardar"> -->
 
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <input type="submit" value="Crear" id="btnguardar" class="btn btn-primary" data-dismiss="modal" data-backdrop="false">
-                        </div>
+                        <input type="submit" value="Crear" id="btnguardar">
                     </form>
                 </div>
             </div>
         </div>
     </section>
-</section>
+</section> 
