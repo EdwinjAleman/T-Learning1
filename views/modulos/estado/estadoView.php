@@ -1,3 +1,9 @@
+<section id="main-content">
+    <section class="wrapper">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formestado">Nueva Estado</button>
+    </section>
+</section>
+
 <div id="main">
 
     <script src="../assets/js/modulos/scripts.estado.js"></script>

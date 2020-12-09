@@ -1,41 +1,42 @@
-<!-- <form name="formestado" id="formestado" onSubmit="Crear(); return false;">
+<div class="modal fade" name="formestado" id="formestado"  data-backdrop="static" data-keyboard="false"
+    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">CREAR ESTADO: </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
 
-    <h1> CREAR TIPO DE PROGRAMA: </h1>
-
-    <input type="text" name="est_id" hidden> <br>
-
-    <label for="est_nombr"> Tipo de programa: </label> <br>
-    <input type="text" name="est_nombr"> <br>
-
-    <input type="submit" value="Crear" id="btnguardar">
-
-</form>
- -->
-<section id="main-content">
-    <section class="wrapper">
-        <h3><i class="fa fa-angle-right"></i> CREAR ESTADO: </h3>
-        <div class="row mt">
-            <div class="col-lg-12">
-                <div class="form-panel">
-                    <h4 class="mb"><i class="fa fa-angle-right"></i> Ingrese los siguientes datos para agregar un
+                <form action="">
+                <h4 class="mb"><i class="fa fa-angle-right"></i> Ingrese los siguientes datos para agregar un
                         estado:</h4>
-                    <form class="form-horizontal style-form" name="formestado" id="formestado"
-                        onSubmit="Crear(); return false;">
-
                         <input type="text" name="est_id" hidden>
 
-                        <div class="form-group">
-                            <label class="col-sm-2 col-sm-2 control-label" for="est_nombr">
-                                Tipo de estado:
-                            </label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="est_nombr">
-                            </div>
+                    <div class="form-group ">
+                        <label for="est_nombr" class="control-label col-lg-4">Tipo de estado:</label>
+                        <div class="col-lg-10">
+                            <input class=" form-control" type="text" name="est_nombr" id="est_nombr" required />
                         </div>
-                        <input type="submit" value="Crear" id="btnguardar">
-                    </form>
-                </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button class="btn btn-primary" onclick="Crear();" value="Grabar" id="btnguardar">Crear</button>
+                    </div>
+
+                </form>
+
             </div>
+
         </div>
-    </section>
-</section>  
+    </div>
+</div>
+
+ 
+                   
+                  
+
+  
