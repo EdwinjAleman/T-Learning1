@@ -38,7 +38,7 @@
 
 		public function Insert(Persona $data){
 								
-<<<<<<< HEAD
+
 										try 					{	$sql = "INSERT INTO tbl_persona (per_nombr,per_aplld,per_cedl,per_dirccn,per_corr,per_telfn,per_areid) 
 																						  VALUES (?,?,?,?,?,?,?)";
 																	   $this->pdo->prepare($sql) 
@@ -51,20 +51,7 @@
 																								$data->per_corr,
 																								$data->per_telfn,
 																								$data->per_areid
-=======
-										try 	{	$sql = "INSERT INTO `tbl_persona`(`per_nombr`, `per_aplld`, `per_cedl`, `per_dirccn`, `per_corr`, `per_telfn`, `per_areid`) 
-															  VALUES (?,?,?,?,?,?,?)";
-															   $this->pdo->prepare($sql) 
-																	 ->execute(
-																				array(
-                                                                                        $data->nombr,
-																						$data->aplld,
-																						$data->cedl,
-																						$data->drccn,
-																						$data->corr,
-																						$data->telfn,
-																						$data->area
->>>>>>> e9513142ae11d5407302411a9c87e5a3c0b02fda
+
 																							)
 																						);
 

@@ -1,7 +1,7 @@
 <?php  
-	require_once('../models/materialapoyo.php');
+	require_once('../models/material.php');
 
-	class MaterialapoyoController{
+	class MaterialController{
 
 		private $material;
 
@@ -12,11 +12,7 @@
 
 		public function Index()
 								{
-								require_once('../views/frames/header.php');
-            					require_once('frames/sidebaradministrador.php');
-								require_once('../views/materialapoyo/materialapoyoView.php');
-								//require_once('../views/frames/footer.php');	
-								
+								require_once('../views/modulos/material/materialView.php');
 								}
 		public function Eliminar()
 								{
@@ -25,11 +21,12 @@
 									unlink($ruta.$_POST["file"]);
 									
 									$this->material->Delete($_REQUEST['id']);
-									require_once('../views/materialapoyo/materialapoyoView.php');
+									require_once('../views/modulos/material/materialView.php');
 								}
 								
 		public function Insertar()
 								{	
+									
                                     $datos = $this->material;
                                     $datos->titulo = $_REQUEST['titulo'];
                                     $datos->fecpub  = $_REQUEST['fecpub'];
@@ -60,7 +57,7 @@
 									$datos->archurl = $file;
 									
 									$this->material->Insert($datos);
-									require_once('../views/materialapoyo/materialapoyoSelect.php');
+									require_once('../views/modulos/material/materialSelect.php');
 								
 								}
 								

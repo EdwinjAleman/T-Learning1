@@ -60,7 +60,7 @@
                                 area:
                             </label>
                             <select class="form-control" name="per_areid">
-                                <?php foreach ( $this->area->SelectTipoArea() as $filas ): 
+                                <?php foreach ( $this->persona->SelectTipoArea() as $filas ): 
                                        echo '<option value="'.$filas->are_id.'">'.$filas->are_nombr.'</option>';
                                  endforeach; ?>
                             </select>

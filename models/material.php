@@ -12,7 +12,7 @@
 
 		public function Select(){
 										try 					{	
-																	$sql=$this->pdo->prepare("SELECT * FROM tbl_materialapoyo ORDER BY map_id desc");
+																	$sql=$this->pdo->prepare("SELECT * FROM tbl_material ORDER BY map_id desc");
 																	$sql->execute();
 																	return $sql->fetchALL(PDO::FETCH_OBJ);
 																}
@@ -26,7 +26,7 @@
         public function Delete($id)
 							{
 								try {	
-										$sql="DELETE FROM tbl_materialapoyo WHERE map_id=?";
+										$sql="DELETE FROM tbl_material WHERE map_id=?";
 										$this->pdo->prepare($sql)
 												  ->execute(
 															array(
@@ -42,7 +42,7 @@
 								
          
 								try {	
-										$sql="INSERT INTO tbl_materialapoyo (map_titulo,map_fecpub,map_descrp,map_archurl,map_fass_id,map_usr_id)
+										$sql="INSERT INTO tbl_material (map_titulo,map_fecpub,map_descrp,map_archurl,map_fass_id,map_usr_id)
 										VALUES(?,?,?,?,?,?)";
 										$this->pdo->prepare($sql)
 												  ->execute(

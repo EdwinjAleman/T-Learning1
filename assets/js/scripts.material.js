@@ -21,7 +21,7 @@ function Crear(){
                                     };
 
 	ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    ajax.send("Ctr=materialapoyo&Acc=insertar&titulo="+titulo+"&fecpub="+fecpub+"&descrp="+descrp+"&fasid="+fasid+"&usuid="+usuid+"&archurl="+archurl);
+    ajax.send("ctrl=material&acti=insertar&titulo="+titulo+"&fecpub="+fecpub+"&descrp="+descrp+"&fasid="+fasid+"&usuid="+usuid+"&archurl="+archurl);
    
 }
 function CrearMaterial()
@@ -39,7 +39,7 @@ function CrearMaterial()
 	var usuid=document.formmaterial.usuid.value;
 	
 
-		var destino ="main.php?Ctr=materialapoyo&Acc=insertar&titulo="+titulo+"&fecpub="+fecpub+"&descrp="+descrp+"&fasid="+fasid+"&usuid="+usuid;
+		var destino ="main.php?ctrl=material&acti=insertar&titulo="+titulo+"&fecpub="+fecpub+"&descrp="+descrp+"&fasid="+fasid+"&usuid="+usuid;
 
 			$.ajax({
 					url: destino,
@@ -87,7 +87,7 @@ function BorrarArchivo(id,archurl)
 												
 											};
 	ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	ajax.send("Ctr=materialapoyo&Acc=eliminar&id="+id+"&file="+archurl);
+	ajax.send("ctrl=material&acti=eliminar&id="+id+"&file="+archurl);
 	};
 	}
 	
