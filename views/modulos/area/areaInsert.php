@@ -60,7 +60,7 @@
 
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <input type="submit" value="Crear" id="btnguardar" class="btn btn-primary">
+                            <input type="submit" value="Crear" id="btnguardar" class="btn btn-primary" data-dismiss="modal" data-backdrop="false">
                         </div>
                     </form>
                 </div>
