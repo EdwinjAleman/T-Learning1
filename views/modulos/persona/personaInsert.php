@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <form name="formpersona" id="formpersona" onSubmit="Crear(); return false;">
 
 <h1> IMFORMACION DE PERSONA </h1>
@@ -59,53 +60,32 @@ endforeach; ?>
                 </button>
             </div>
             <div class="modal-body">
+=======
+<!-- <form name="formpersona" id="formpersona" onSubmit="Crear(); return false;">
+>>>>>>> c7450ffcc541da2e32aab7328acac400647e4e32
 
-                <form action="">
-                    <h4 class="mb"><i class="fa fa-angle-right"></i> Ingrese los siguientes datos para agregar
-                     la informacion del usuario:</h4>
-                    <input type="text" name="per_id" hidden>
+<h1> IMFORMACION DE PERSONA </h1>
 
-                    <div class="form-group ">
-                        <label for="per_nombr" class="control-label col-lg-4"> Nombre:</label>
-                        <div class="col-lg-10">
-                            <input class=" form-control" type="text" id="per_nombr" name="per_nombr" required />
-                        </div>
-                    </div>
+<input type="text" name="per_id" hidden> <br>
 
-                    <div class="form-group ">
-                        <label for="per_aplld" class="control-label col-lg-4"> Apellido:</label>
-                        <div class="col-lg-10">
-                            <input class=" form-control" type="text" id="per_aplld" name="per_aplld" required />
-                        </div>
-                    </div>
+<label for="per_nombr"> Nombre </label> <br>
+<input type="text" name="per_nombr" > <br>
 
-                    <div class="form-group ">
-                        <label for="per_cedl" class="control-label col-lg-4"> Cedula:</label>
-                        <div class="col-lg-10">
-                            <input class=" form-control" type="text" id="per_cedl" name="per_cedl" required />
-                        </div>
-                    </div>
+<label for="per_aplld"> Apellido </label> <br>
+<input type="text" name="per_aplld" > <br>
 
-                    <div class="form-group ">
-                        <label for="per_corr" class="control-label col-lg-4"> Direccion:</label>
-                        <div class="col-lg-10">
-                            <input class=" form-control" type="text" id="per_corr" name="per_corr" required />
-                        </div>
-                    </div>
+<label for="per_cedl"> Cedula </label> <br>
+<input type="text" name="per_cedl" > <br>
 
-                    <div class="form-group ">
-                        <label for="per_corr" class="control-label col-lg-4"> Correo :</label>
-                        <div class="col-lg-10">
-                            <input class=" form-control" type="text" id="per_corr" name="per_corr" required />
-                        </div>
-                    </div>
+<label for="per_dirccn"> Direccion: </label> <br>
+<input type="text" name="per_dirccn" > <br>
 
-                    <div class="form-group ">
-                        <label for="per_telfn" class="control-label col-lg-4"> Telefono:</label>
-                        <div class="col-lg-10">
-                            <input class=" form-control" type="text" id="per_telfn" name="per_telfn" required />
-                        </div>
-                    </div>
+<label for="per_corr"> Correo </label> <br>
+<input type="text" name="per_corr" > <br>
+
+<label for="per_telfn"> Telefono </label> <br>
+<input type="number" name="per_telfn" > <br>
+
 
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">
@@ -132,12 +112,46 @@ endforeach; ?>
                         <button class="btn btn-primary" onclick="Crear();" value="Grabar" id="btnguardar">Crear</button>
                     </div>
 
-                </form>
 
+</form>  -->
+<section id="main-content">
+    <section class="wrapper">
+        <h3><i class="fa fa-angle-right"></i> CREAR PERSONA: </h3>
+        <div class="row mt">
+            <div class="col-lg-12">
+                <div class="form-panel">
+                    <h4 class="mb"><i class="fa fa-angle-right"></i> Ingrese los siguientes datos para agregar un
+                        area:</h4>
+                    <form class="form-horizontal style-form" name="formarea" id="formarea"
+                        onSubmit="Crear(); return false;">
+
+                        <input type="text" name="are_id" hidden>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label" for="are_nombr">
+                                Area:
+                            </label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="are_nombr">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="are_sedid" class="col-sm-2 col-sm-2 control-label">
+                                Sede:
+                            </label>
+                            <br>
+                            <select class="form-control" name="are_sedid">
+                                <?php foreach ( $this->area->SelectSede() as $filas ): 
+                                    echo '<option value="'.$filas->sed_id.'">'.$filas->sed_nombr.'</option>';
+                                     endforeach; ?>
+                            </select>
+                        </div>
+                        <input type="submit" value="Crear" id="btnguardar">
+                    </form>
+                </div>
             </div>
-
         </div>
-    </div>
-</div>
+    </section>
+</section>
 
- -->

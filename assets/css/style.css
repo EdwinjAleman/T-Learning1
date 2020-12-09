@@ -1604,7 +1604,7 @@ PANELS CONFIGURATIONS
 
 .fontawesome-list i {
 	margin-right: 8px;
-}
+
 
 /* Grid Showcase*/
 
@@ -3440,3 +3440,7 @@ ul.chat-available-user li a:hover {
 #copyrights a {
   color: #fff;
 }
+
+#contenido{
+    display: flex; /* or inline-flex */
+  }
