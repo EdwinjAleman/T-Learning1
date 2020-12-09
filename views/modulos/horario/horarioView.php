@@ -1,7 +1,13 @@
 <section id="main-content">
     <section class="wrapper">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formhorario">Nueva
-            evento</button>
+
+    
+        <section id="main-content">
+            <section class="wrapper">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formhorario">Nueva
+                    evento</button>
+            </section>
+        </section>
 
 
         <div id="main">

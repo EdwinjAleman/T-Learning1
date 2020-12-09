@@ -15,8 +15,8 @@ class HorarioController{
 
                                     require_once('../views/frames/header.php');
 								    if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="1"){ require_once('frames/sidebaradministrador.php'); }
-								    //if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="2"){ require_once('frames/menuAprendiz.php'); }
-								    //if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="3"){ require_once('frames/menuInstructor.php'); }
+								    if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="2"){ require_once('frames/menuAprendiz.php'); }
+								    if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="3"){ require_once('frames/menuInstructor.php'); }
                                     require_once('../views/modulos/horario/horarioView.php');
                                     require_once('../views/frames/footer.php');
                                 }
@@ -32,12 +32,12 @@ class HorarioController{
        
 
                                     $this->horario->Insert($datos);
-                                    require_once('../views/modulos/horario/horarioView.php');
+                                    require_once('../views/modulos/horario/horarioSelect.php');
                                 }
     public function Eliminar()  
                                 {
                                     $this->horario->Delete($_REQUEST['eve_id']);
-                                    require_once('../views/modulos/horario/horarioView.php');
+                                    require_once('../views/modulos/horario/horarioSelect.php');
                                 }
 
     public function Actualizar()
@@ -53,7 +53,7 @@ class HorarioController{
                                     
 
                                     $this->horario->Update($datos);
-                                    require_once('../views/modulos/horario/horarioView.php');
+                                    require_once('../views/modulos/horario/horarioSelect.php');
                                 }	 
 
    

@@ -43,8 +43,8 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button class="btn btn-primary" onclick="Crear();" value="Grabar" id="btnguardar">Crear</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="Limpiar();">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="Crear();" value="Grabar" id="btnguardar" data-dismiss="modal">Crear</button>
                     </div>
 
                 </form>

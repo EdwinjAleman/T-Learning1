@@ -29,12 +29,12 @@
 		public function Insert(Horario $data){
 								
 
-										try 					{	$sql = "INSERT INTO tbl_horario (eve_id,eve_nombr,eve_descrpcn,eve_fech_inc,eve_fech_fn) 
-																						  VALUES (?,?,?,?,?)";
+										try 					{	$sql = "INSERT INTO tbl_evento (eve_nombr,eve_descrpcn,eve_fech_inc,eve_fech_fn) 
+																						  VALUES (?,?,?,?)";
 																	   $this->pdo->prepare($sql) 
 																				 ->execute(
 																							array(
-                                                                                                $data->eve_id,
+                                                                                                
 																								$data->eve_nombr,
 																								$data->eve_descrpcn,
 																								$data->eve_fech_inc,
@@ -50,9 +50,9 @@
 
 							} 
 
-		public function Delete($per_id){
+		public function Delete($eve_id){
 								
-										try 					{	$sql="DELETE FROM tbl_horario WHERE eve_id=?";
+										try 					{	$sql="DELETE FROM tbl_evento WHERE eve_id=?";
 																	$this->pdo->prepare($sql)
 										  					  				  ->execute(
 										  												array(
@@ -68,7 +68,7 @@
                                 
            
 
-			try 					{	$sql = "UPDATE tbl_horario SET eve_nombr=?,
+			try 					{	$sql = "UPDATE tbl_evento SET eve_nombr=?,
                                                                        eve_descrpcn=?,
                                                                        eve_fech_inc=?,
                                                                        eve_fech_fn=?
