@@ -56,7 +56,12 @@
                                      endforeach; ?>
                             </select>
                         </div>
-                        <input type="submit" value="Crear" id="btnguardar">
+                        <!--  <input type="submit" value="Crear" id="btnguardar"> -->
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <input type="submit" value="Crear" id="btnguardar" class="btn btn-primary">
+                        </div>
                     </form>
                 </div>
             </div>
