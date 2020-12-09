@@ -2,7 +2,7 @@ function Crear(){
 
 	var result=document.getElementById('tview');
 	
-	var est_nombr=document.formestado.est_nombr.value;
+	var est_nombr=document.getElementById('est_nombr').value;
 
 	const ajax=new XMLHttpRequest(); 
 	ajax.open("POST","main.php",true);
@@ -42,10 +42,10 @@ function Borrar(est_id){
 	ajax.send("Ctr=estado&Acc=eliminar&est_id="+est_id);
 }
 
-function Editar(id, nombre){
+function Editar(est_id, est_nombr){
 	
-	document.formestado.est_id.value=id;
-	document.formestado.est_nombr.value=nombre;
+	document.formestado.est_id.value=est_id;
+	document.formestado.est_nombr.value=est_nombr;
 
 	document.getElementById("btnguardar").value="Actualizar"; //Lo Edita
 

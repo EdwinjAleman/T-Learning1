@@ -8,7 +8,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" >
 
                 <form action="">
                 <h4 class="mb"><i class="fa fa-angle-right"></i> Ingrese los siguientes datos para agregar un
@@ -24,7 +24,7 @@
 
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button class="btn btn-primary" onclick="Crear();" value="Grabar" id="btnguardar">Crear</button>
+                        <button type="button" class="btn btn-primary"  onclick="Crear();" value="Grabar" id="btnguardar" data-dismiss="modal">Crear</button>
                     </div>
 
                 </form>

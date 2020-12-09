@@ -1,5 +1,4 @@
 <aside>
-
     <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
@@ -29,7 +28,7 @@
 
             </li>
 
-            <li class="sub-menu" >
+            <li class="sub-menu">
                 <a href="./main.php?Ctr=materialapoyo">
                     <i class="fa fa-book"></i>
                     <span>Material de Apoyo</span>
@@ -44,7 +43,7 @@
 
             </li>
 
-            
+
 
             <li class="sub-menu">
                 <a>
@@ -62,14 +61,12 @@
                     <li><a href="./main.php?Ctr=persona"><i class="fa fa-graduation-cap"></i> Persona </a></li>
                     <li><a href="./main.php?Ctr=tipopro"><i class="fa fa-desktop"></i>Tipo Programa</a></li>
                     <li><a href="./main.php?Ctr=datousu"><i class="fa fa-user"></i>Usuarios</a></li>
-                    <li><a href="./main.php?Ctr=programafor"><i class="fa fa-graduation-cap"></i>Programas formativos</a></li>
+                    <li><a href="./main.php?Ctr=programafor"><i class="fa fa-graduation-cap"></i>Programas
+                            formativos</a>
+                    </li>
                 </ul>
             </li>
 
         </ul>
-        <!-- sidebar menu end-->
     </div>
 </aside>
-
-
-

@@ -27,13 +27,13 @@ class EstadoController{
                                     $datos->est_nombr=$_REQUEST['est_nombr'];
 
                                     $this->estado->Insert($datos);
-                                    require_once('../views/modulos/estado/estadoView.php');
+                                    require_once('../views/modulos/estado/estadoSelect.php');
                                 }
 
     public function Eliminar()  
                                 {
                                     $this->estado->Delete($_REQUEST['est_id']);
-                                    require_once('../views/modulos/estado/estadoView.php');
+                                    require_once('../views/modulos/estado/estadoSelect.php');
                                 }
 
     public function Actualizar()
@@ -45,7 +45,7 @@ class EstadoController{
                                     $datos->est_nombr=$_REQUEST['est_nombr'];
 
                                     $this->estado->Update($datos);
-                                    require_once('../views/modulos/estado/estadoView.php');
+                                    require_once('../views/modulos/estado/estadoSelect.php');
                                 }	 
 }   
 
