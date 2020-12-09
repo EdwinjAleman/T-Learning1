@@ -17,7 +17,8 @@
         <div class="row mt">
             <div class="col-lg-12">
                 <div class="form-panel">
-                    <h4 class="mb"><i class="fa fa-angle-right"></i> Ingrese los siguientes datos para agregar una modalidad:</h4>
+                    <h4 class="mb"><i class="fa fa-angle-right"></i> Ingrese los siguientes datos para agregar una
+                        modalidad:</h4>
                     <form class="form-horizontal style-form" name="formmodalidad" id="formmodalidad"
                         onSubmit="Crear(); return false;">
 
@@ -38,4 +39,3 @@
         </div>
     </section>
 </section>
-
