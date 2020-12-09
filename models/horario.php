@@ -1,5 +1,5 @@
 <?php  
-	class Horario{
+	class Horario {
 
 		private $pdo;
 
@@ -10,69 +10,84 @@
 										catch (Exception $e) 	{	die($e->getMessage());				}
 		}
 
-		public function Select()
-									 {
-									 	try  				 {
-									 							$sql=$this->pdo->prepare("SELECT * FROM tbl_horario");
-									 							$sql->execute();
-									 							return $sql->fetchALL(PDO::FETCH_OBJ);
-									 						 }
-									 	catch (Exception $e) {	die($e->getMessage());			 }
-									 }
 
-		public function Get($ficid)
-		{
-									try  				 {
-															$sql=$this->pdo->prepare("SELECT * FROM tbl_horario WHERE hor_ficcodigo = ?");
-															$sql->execute(array($ficid));
-															return $sql->fetch(PDO::FETCH_OBJ);
-															}
-									catch (Exception $e) {	die($e->getMessage());			 }
-		}
+/************************************************************** CONSULTAS DE Horario *****************************************************************/
+		public function Select(){
+										try 					{	
+																	$sql=$this->pdo->prepare("SELECT * FROM tbl_evento");
+																	$sql->execute();
+																	return $sql->fetchALL(PDO::FETCH_OBJ);
+																}
 
-		public function Insert(Horario $datos)
-									 { 
-									 	try  				 {
-									 							$sql="INSERT INTO tbl_horario(hor_url, hor_triini, hor_trifin, hor_trinum, hor_ficcodigo) VALUES(?,?,?,?,?);";
-									 							$this->pdo->prepare($sql)
-																		   ->execute(array(
-																						   $datos->url,
-																						   $datos->triini,
-																						   $datos->trifin,
-																						   $datos->trinum,
-																						   $datos->fichaid	
-																		));
-									 						 }
-									 	catch (Exception $e) {	die($e->getMessage());}
-									 }
+										catch (Exception $e) 	{	
+																	die($e->getMessage());
+																}
 
-		public function Delete($id)
-									 {
-									 	try  				 {
-									 							$sql="DELETE FROM tbl_horario WHERE hor_id=?";
-									 							$this->pdo->prepare($sql)
-									 									  ->execute(array($id));
-									 						 }
-									 	catch (Exception $e) {	die($e->getMessage());			 }
-									 }
+        }
+        
 
-		public function Update(Horario $datos)
-									 {
-									 	try  				 {
-									 							$sql="UPDATE tbl_horario SET hor_url = ?, hor_triini = ?, hor_trifin = ?, hor_trinum = ?
-									 							WHERE hor_id=?";
-									 							$this->pdo->prepare($sql)
-									 									  ->execute(array(																						
-																						$datos->url,
-																						$datos->triini,
-																						$datos->trifin,
-																						$datos->trinum,
-																						$datos->id
-																					));
-									 						 }
-									 	catch (Exception $e) {	die($e->getMessage());			 }
-									 }
+		public function Insert(Horario $data){
+								
 
+										try 					{	$sql = "INSERT INTO tbl_horario (eve_id,eve_nombr,eve_descrpcn,eve_fech_inc,eve_fech_fn) 
+																						  VALUES (?,?,?,?,?)";
+																	   $this->pdo->prepare($sql) 
+																				 ->execute(
+																							array(
+                                                                                                $data->eve_id,
+																								$data->eve_nombr,
+																								$data->eve_descrpcn,
+																								$data->eve_fech_inc,
+																								$data->eve_fech_fn
+
+																							)
+																						);
+
+																		
+												}
+
+							    catch (Exception $e) { die($e->getMessage()); }
+
+							} 
+
+		public function Delete($per_id){
+								
+										try 					{	$sql="DELETE FROM tbl_horario WHERE eve_id=?";
+																	$this->pdo->prepare($sql)
+										  					  				  ->execute(
+										  												array(
+										  					  									$eve_id	
+										  													)
+										  												);
+										  						}
+
+										catch(exception $e)		{ die ($e->getMessage()); 				 }
+        }
+        
+        public function Update(Horario $data){
+                                
+           
+
+			try 					{	$sql = "UPDATE tbl_horario SET eve_nombr=?,
+                                                                       eve_descrpcn=?,
+                                                                       eve_fech_inc=?,
+                                                                       eve_fech_fn=?
+															  WHERE eve_id=?";
+										   $this->pdo->prepare($sql) 
+													 ->execute(
+																array(
+																	$data->eve_nombr,
+																	$data->eve_descrpcn,
+																	$data->eve_fech_inc,
+																	$data->eve_fech_fn,
+																	$data->eve_id
+																)
+															);
+					}
+
+			catch (Exception $e) { die($e->getMessage()); }
+
+} 
 
 	}
 ?>
