@@ -25,7 +25,7 @@ function Validar()
 	var id=document.getElementById('est_id').value;
 	var nombre=document.getElementById('est_nombr').value;
 
-	if(id!="" && nombre!=""){
+	if(nombre!=""){
 							if(buton=='Crear')
 										{	
 											Crear();
