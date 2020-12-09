@@ -35,12 +35,23 @@
 										die($e->getMessage());
 									}
 		}
+		public function SelectTipousuario(){
+			try 					{	
+										$sql=$this->pdo->prepare("SELECT * FROM tbl_usuario ORDER BY usu_id desc");
+										$sql->execute();
+										return $sql->fetchALL(PDO::FETCH_OBJ);
+									}
+
+			catch (Exception $e) 	{	
+										die($e->getMessage());
+									}
+		}
 
 		public function Insert(Persona $data){
 								
 
-										try 					{	$sql = "INSERT INTO tbl_persona (per_nombr,per_aplld,per_cedl,per_dirccn,per_corr,per_telfn,per_areid) 
-																						  VALUES (?,?,?,?,?,?,?)";
+										try 					{	$sql = "INSERT INTO tbl_persona (per_nombr,per_aplld,per_cedl,per_dirccn,per_corr,per_telfn,per_areid,per_usuid) 
+																						  VALUES (?,?,?,?,?,?,?,?)";
 																	   $this->pdo->prepare($sql) 
 																				 ->execute(
 																							array(
@@ -50,7 +61,9 @@
 																								$data->per_dirccn,
 																								$data->per_corr,
 																								$data->per_telfn,
-																								$data->per_areid
+																								$data->per_areid,
+																								$data->per_usuid
+
 
 																							)
 																						);

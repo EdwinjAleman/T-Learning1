@@ -1,4 +1,54 @@
-<div class="modal fade" name="formpersona" id="formpersona" data-backdrop="static" data-keyboard="false"
+<form name="formpersona" id="formpersona" onSubmit="Crear(); return false;">
+
+<h1> IMFORMACION DE PERSONA </h1>
+
+<input type="text" name="per_id" hidden> <br>
+
+<label for="per_nombr"> Nombre </label> <br>
+<input type="text" name="per_nombr" > <br>
+
+<label for="per_aplld"> Apellido </label> <br>
+<input type="text" name="per_aplld" > <br>
+
+<label for="per_cedl"> Cedula </label> <br>
+<input type="text" name="per_cedl" > <br>
+
+<label for="per_dirccn"> Direccion: </label> <br>
+<input type="text" name="per_dirccn" > <br>
+
+<label for="per_corr"> Correo </label> <br>
+<input type="text" name="per_corr" > <br>
+
+<label for="per_telfn"> Telefono </label> <br>
+<input type="number" name="per_telfn" > <br>
+
+<div class="form-group">
+<label class="col-sm-2 col-sm-2 control-label">
+area:
+</label>
+<select class="form-control" name="per_areid">
+<?php foreach ( $this->persona->SelectTipoArea() as $filas ): 
+echo '<option value="'.$filas->are_id.'">'.$filas->are_nombr.'</option>';
+endforeach; ?>
+</select>
+</div>
+
+<div class="form-group">
+<label class="col-sm-2 col-sm-2 control-label">
+Usuario:
+</label>
+<select class="form-control" name="per_usid">
+<?php foreach ( $this->persona->SelectTipousuario() as $filas ): 
+echo '<option value="'.$filas->usu_id.'">'.$filas->usu_usuari.'</option>';
+endforeach; ?>
+</select>
+</div>
+
+<input type="submit" value="Crear" id="btnguardar">
+
+</form>  
+
+<!-- <div class="modal fade" name="formpersona" id="formpersona" data-backdrop="static" data-keyboard="false"
     tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -67,6 +117,16 @@
                             endforeach; ?>
                         </select>
                     </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">
+                            Area:
+                        </label>
+                        <select class="form-control" name="per_usid">
+                            <?php foreach ( $this->persona->SelectTipousuario() as $filas ): 
+                            echo '<option value="'.$filas->usu_id.'">'.$filas->usu_usuari.'</option>';
+                            endforeach; ?>
+                        </select>
+                    </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button class="btn btn-primary" onclick="Crear();" value="Grabar" id="btnguardar">Crear</button>
@@ -80,3 +140,4 @@
     </div>
 </div>
 
+ -->

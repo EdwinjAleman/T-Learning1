@@ -41,13 +41,13 @@
 
 <section id="main-content">
     <section class="wrapper">
-        <h3><i class="fa fa-angle-right"></i> Modalidades </h3>
+        <h3><i class="fa fa-angle-right"></i> INFORMACION </h3>
 
         <div class="row mt">
             <div class="col-md-12">
                 <div class="content-panel">
                     <table class="table table-striped table-advance table-hover">
-                        <h4><i class="fa fa-angle-right"></i> Modalidades registradas:
+                        <h4><i class="fa fa-angle-right"></i> INFORMACION DE USUARIOS:
                         </h4>
                         <hr>
                         <thead>
@@ -60,13 +60,14 @@
             <th>Correo </th>
             <th>Telefono</th>
             <th>area </th>
+            <th>usuario </th>
                             </tr>
                         </thead>
                         <tbody>
 
                             <?php $contador=0;
                             foreach ($this->persona->Select() as $filas): ?>
-                            <?php $grupal="'".$filas->per_id."','".$filas->per_nombr."','".$filas->per_aplld."','".$filas->per_cedl."','".$filas->per_dirccn."','".$filas->per_corr."','".$filas->per_telfn."','".$filas->per_areid."'" ?>
+                            <?php $grupal="'".$filas->per_id."','".$filas->per_nombr."','".$filas->per_aplld."','".$filas->per_cedl."','".$filas->per_dirccn."','".$filas->per_corr."','".$filas->per_telfn."','".$filas->per_areid."','".$filas->per_usuid."'" ?>
 
                             <tr>
                                 <?php $contador = $contador+1; ?>
@@ -91,6 +92,9 @@
                                 </td>
                                 <td class="hidden-phone">
                                     <?php echo $filas->are_nombr; ?>
+                                </td>
+                                <td class="hidden-phone">
+                                    <?php echo $filas->per_usuid; ?>
                                 </td>
                                 <td>
                                     <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#formmodalidad" onclick="Editar(<?php echo $grupal;?>);">

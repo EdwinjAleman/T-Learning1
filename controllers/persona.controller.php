@@ -13,12 +13,12 @@ class PersonaController{
     public function Index()
 								{
 
-                                require_once('../views/frames/header.php');
-								if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="1"){ require_once('frames/sidebaradministrador.php'); }
+                                //require_once('../views/frames/header.php');
+								//if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="1"){ require_once('frames/sidebaradministrador.php'); }
 								//if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="2"){ require_once('frames/menuAprendiz.php'); }
 								//if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="3"){ require_once('frames/menuInstructor.php'); }
                                 require_once('../views/modulos/persona/personaView.php');
-                                require_once('../views/frames/footer.php');
+                                //require_once('../views/frames/footer.php');
                                 }
                                 
     public function Insertar(){
@@ -32,6 +32,7 @@ class PersonaController{
         $datos->per_corr=$_REQUEST['per_corr'];
         $datos->per_telfn=$_REQUEST['per_telfn'];
         $datos->per_areid=$_REQUEST['per_areid'];
+        $datos->per_usuid=$_REQUEST['per_usuid'];
        
 
         $this->persona->Insert($datos);
@@ -56,6 +57,7 @@ class PersonaController{
                                     $datos->per_corr=$_REQUEST['per_corr'];
                                     $datos->per_telfn=$_REQUEST['per_telfn'];
                                     $datos->per_areid=$_REQUEST['per_areid'];
+                                    $datos->per_usuid=$_REQUEST['per_usuid'];
 
                                     $this->persona->Update($datos);
                                     require_once('../views/modulos/persona/personaView.php');
