@@ -14,7 +14,7 @@
 /************************************************************** CONSULTAS DE PERSONA *****************************************************************/
 		public function Select(){
 										try 					{	
-																	$sql=$this->pdo->prepare("SELECT * FROM tbl_persona ORDER BY per_id desc");
+																	$sql=$this->pdo->prepare("SELECT * FROM `tbl_persona` a INNER JOIN tbl_area b ON a.per_areid=b.are_id");
 																	$sql->execute();
 																	return $sql->fetchALL(PDO::FETCH_OBJ);
 																}
