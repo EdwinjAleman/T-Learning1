@@ -25,7 +25,7 @@
                     <th><?php echo $filas->eve_fech_inc; ?> </th>
                     <th><?php echo $filas->eve_fech_fn; ?> </th>
 
-                    <th> <button onclick="Editar(<?php echo $grupal;?>);" data-toggle="modal" data-target="#formhorario">
+                    <th> <button onclick="Editar(<?php echo $grupal;?>);">
                             Editar </button></th>
                     <th> <button onclick="Borrar(<?php echo $grupal;?>);"> Borrar </button></th>
                 </tr>

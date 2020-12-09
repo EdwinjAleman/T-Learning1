@@ -32,12 +32,12 @@ class HorarioController{
        
 
                                     $this->horario->Insert($datos);
-                                    require_once('../views/modulos/horario/horarioSelect.php');
+                                    require_once('../views/modulos/horario/horarioView.php');
                                 }
     public function Eliminar()  
                                 {
                                     $this->horario->Delete($_REQUEST['eve_id']);
-                                    require_once('../views/modulos/horario/horarioSelect.php');
+                                    require_once('../views/modulos/horario/horarioView.php');
                                 }
 
     public function Actualizar()
@@ -53,7 +53,7 @@ class HorarioController{
                                     
 
                                     $this->horario->Update($datos);
-                                    require_once('../views/modulos/horario/horarioSelect.php');
+                                    require_once('../views/modulos/horario/horarioView.php');
                                 }	 
 
    
