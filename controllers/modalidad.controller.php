@@ -16,7 +16,8 @@ class ModalidadController{
 								    if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="1"){ require_once('frames/sidebaradministrador.php'); }
 									if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="2"){ require_once('frames/menuAprendiz.php'); }
 									if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="3"){ require_once('frames/menuInstructor.php'); }
-									require_once('../views/modulos/modalidad/modalidadView.php');
+                                    require_once('../views/modulos/modalidad/modalidadView.php');
+                                    require_once('../views/frames/footer.php');
                                 }
                                 
     public function Insertar()

@@ -1,18 +1,18 @@
 <section id="main-content">
     <section class="wrapper">
-        <h3><i class="fa fa-angle-right"></i> Tipos de Programa </h3>
+        <h3><i class="fa fa-angle-right"></i> FASES </h3>
 
         <div class="row mt">
             <div class="col-md-12">
                 <div class="content-panel">
                     <table class="table table-striped table-advance table-hover">
-                        <h4><i class="fa fa-angle-right"></i> Estos son los siguientes tipos de programas registrados:
+                        <h4><i class="fa fa-angle-right"></i> Fases Registradas:
                         </h4>
                         <hr>
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th><i class="fa fa-bullhorn"></i> Tipo de programa</th>
+                                <th><i class="fa fa-bullhorn"></i> Fases</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -31,7 +31,7 @@
 
                                 </td>
                                 <td>
-                                    <button class="btn btn-success btn-xs" onclick="Editar(<?php echo $grupal;?>);">
+                                    <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#formfases" onclick="Editar(<?php echo $grupal;?>);">
                                         <i class="fa fa-pencil"></i>
                                     </button>
                                     <button class="btn btn-danger btn-xs" onclick="Borrar(<?php echo $grupal;?>);">

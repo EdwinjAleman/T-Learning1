@@ -15,7 +15,7 @@
 								require_once('../views/frames/header.php');
             					require_once('frames/sidebaradministrador.php');
 								require_once('../views/materialapoyo/materialapoyoView.php');
-								require_once('../views/frames/footer.php');	
+								//require_once('../views/frames/footer.php');	
 								
 								}
 		public function Eliminar()

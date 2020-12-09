@@ -1,33 +1,3 @@
-<!-- <h1>DATOS DE PROGRAMA DE FORMACION:</h1>
-<table>
-    <thead>
-        <tr>
-            <th> ID</th>
-            <th> Nombre Programa de Formacion </th>
-            <th> Abreviatura </th>
-            <th> Tipos de Programas </th>
-
-        </tr>
-    </thead>
-
-    <tbody>
-        <?php foreach ($this->programafor->Select() as $filas): ?>
-        <?php $grupal="'".$filas->pro_for_id."','".$filas->pro_for_nombr."','".$filas->pro_for_abrvtr."','".$filas->tip_pro_nombr."'" ?>
-
-        <tr>
-            <th><?php echo $filas->pro_for_id; ?> </th>
-            <th><?php echo $filas->pro_for_nombr; ?> </th>
-            <th><?php echo $filas->pro_for_abrvtr; ?> </th>
-            <th><?php echo $filas->tip_pro_nombr; ?> </th>
-
-            <th> <button onclick="Editar(<?php echo $grupal;?>);"> Editar </button></th>
-            <th> <button onclick="Borrar(<?php echo $grupal;?>);"> Borrar </button></th>
-        </tr>
-        <?php endforeach; ?>
-    </tbody>
-    <tfoot>
-    </tfoot>
-</table> -->
 
 <section id="main-content">
     <section class="wrapper">
@@ -37,7 +7,7 @@
             <div class="col-md-12">
                 <div class="content-panel">
                     <table class="table table-striped table-advance table-hover">
-                        <h4><i class="fa fa-angle-right"></i> Estos son los siguientes Programas de Formacion
+                        <h4><i class="fa fa-angle-right"></i>Programas de Formacion
                             registrados:
                         </h4>
                         <hr>
@@ -69,7 +39,7 @@
                                     <?php echo $filas->tip_pro_nombr; ?>
                                 </td>
                                 <td>
-                                    <button class="btn btn-success btn-xs" onclick="Editar(<?php echo $grupal;?>);">
+                                    <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#formprogramafor"  onclick="Editar(<?php echo $grupal;?>);">
                                         <i class="fa fa-pencil"></i>
                                     </button>
                                     <button class="btn btn-danger btn-xs" onclick="Borrar(<?php echo $grupal;?>);">

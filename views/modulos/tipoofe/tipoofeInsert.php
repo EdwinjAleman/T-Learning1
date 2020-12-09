@@ -1,41 +1,36 @@
-<!-- <form name="formtipoofe" id="formtipoofe" onSubmit="Crear(); return false;">
+<div class="modal fade" name="formtipoofe" id="formtipoofe"  data-backdrop="static" data-keyboard="false"
+    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">CREAR TIPO DE OFERTA: </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
 
-    <h1> CREAR TIPO DE PROGRAMA: </h1>
-
-    <input type="text" name="tip_ofe_id" hidden> <br>
-
-    <label for="tip_ofe_nombr"> Tipo de programa: </label> <br>
-    <input type="text" name="tip_ofe_nombr"> <br>
-
-    <input type="submit" value="Crear" id="btnguardar">
-
-</form> -->
-
-<section id="main-content">
-    <section class="wrapper">
-        <h3><i class="fa fa-angle-right"></i> CREAR OFERTA: </h3>
-        <div class="row mt">
-            <div class="col-lg-12">
-                <div class="form-panel">
+                <form action="">
                     <h4 class="mb"><i class="fa fa-angle-right"></i> Ingrese los siguientes datos para agregar una
                         oferta:</h4>
-                    <form class="form-horizontal style-form" name="formtipoofe" id="formtipoofe"
-                        onSubmit="Crear(); return false;">
+                    <input type="text" name="tip_ofe_id" hidden>
 
-                        <input type="text" name="tip_ofe_id" hidden>
-
-                        <div class="form-group">
-                            <label class="col-sm-2 col-sm-2 control-label" for="tip_ofe_nombr">
-                                Tipo de oferta:
-                            </label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="tip_ofe_nombr">
-                            </div>
+                    <div class="form-group ">
+                        <label for="tip_ofe_nombr" class="control-label col-lg-4">Tipo de oferta:</label>
+                        <div class="col-lg-10">
+                            <input class=" form-control" type="text" name="tip_ofe_nombr" id="tip_ofe_nombr" required />
                         </div>
-                        <input type="submit" value="Crear" id="btnguardar">
-                    </form>
-                </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button class="btn btn-primary" onclick="Crear();" value="Grabar" id="btnguardar">Crear</button>
+                    </div>
+
+                </form>
+
             </div>
+
         </div>
-    </section>
-</section>  
+    </div>
+</div>

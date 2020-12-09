@@ -1,26 +1,38 @@
-<section id="main-content">
-    <section class="wrapper">
-        <h3><i class="fa fa-angle-right"></i> Formulario </h3>
-        <div class="row mt">
-            <div class="col-lg-12">
-                <div class="form-panel">
-                    <h4 class="mb"><i class="fa fa-angle-right"></i> Ingrese los siguientes datos para agregar un tipo
-                        de programa </h4>
-                    <form class="form-horizontal style-form" name="formfases" id="formfases"
-                        onSubmit="Crear(); return false;">
-                        <div class="form-group">
-                            <input type="text" name="fas_id" hidden>
-                            <label class="col-sm-2 col-sm-2 control-label" for="fas_nombr_fas">Tipo de programa:</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="fas_nombr_fas">
-                            </div>
-                        </div>
-
-                        <input type="submit" value="Crear" id="btnguardar">
-
-                    </form>
-                </div>
+<div class="modal fade" name="formfases" id="formfases"  data-backdrop="static" data-keyboard="false"
+    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">CREAR FASE: </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
+            <div class="modal-body">
+
+                <form action="">
+                    <h4 class="mb"><i class="fa fa-angle-right"></i> Ingrese los siguientes datos para agregar una
+                        fase</h4>
+                        <input type="text" name="fas_id" hidden>
+
+                    <div class="form-group ">
+                        <label for="fas_nombr_fas" class="control-label col-lg-4">Nombre Fase</label>
+                        <div class="col-lg-10">
+                            <input class=" form-control" type="text" name="fas_nombr_fas" id="fas_nombr_fas" required />
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button class="btn btn-primary" onclick="Crear();" value="Grabar" id="btnguardar">Crear</button>
+                    </div>
+
+                </form>
+
+            </div>
+
         </div>
-    </section>
-</section>
+    </div>
+</div>
+
+ 

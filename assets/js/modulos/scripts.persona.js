@@ -2,6 +2,7 @@ function Crear(){
 
 	var result=document.getElementById('tview');
 	
+<<<<<<< HEAD
     var per_nombr=document.formpersona.per_nombr.value;
 	var per_aplld=document.formpersona.per_aplld.value;
 	var per_cedl=document.formpersona.per_cedl.value;
@@ -12,6 +13,20 @@ function Crear(){
 
 	const ajax=new XMLHttpRequest(); 
 	ajax.open("POST","main.php",true);
+=======
+	var nombr	=document.formpersona.nombr.value;
+	var aplld	=document.formpersona.aplld.value;
+	var cedl	=document.formpersona.cedl.value;
+	var drccn	=document.formpersona.drccn.value;
+	var corr	=document.formpersona.corr.value;
+	var telfn	=document.formpersona.telfn.value;
+	var area	=document.formpersona.area.value;
+
+	
+
+	const ajax=new XMLHttpRequest(); //Ojo se puede llamar la funcion CrearAjax();
+	ajax.open("POST","main.php",true); // Se usa el controlador general y su accion
+>>>>>>> e9513142ae11d5407302411a9c87e5a3c0b02fda
 	ajax.onreadystatechange=function(){
 										if(ajax.readyState==4){
 											if(ajax.status==200){
@@ -21,7 +36,14 @@ function Crear(){
 									};
 	
 	ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+<<<<<<< HEAD
     ajax.send("Ctr=persona&Acc=insertar&per_nombr="+per_nombr+"&per_aplld="+per_aplld+"&per_cedl="+per_cedl+"&per_dirccn="+per_dirccn+"&per_corr="+per_corr+"&per_telfn="+per_telfn+"&per_areid="+per_areid);
+=======
+	ajax.send("Ctr=persona&Acc=insertar&nombr="+nombr+"&aplld="+aplld+"&cedl="+cedl+"&drccn="+drccn+"&corr="+corr+"&telfn="+telfn+"&area="+area);
+
+
+
+>>>>>>> e9513142ae11d5407302411a9c87e5a3c0b02fda
 }
 
 

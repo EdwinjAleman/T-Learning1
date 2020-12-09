@@ -33,17 +33,21 @@
             }
         }
         
-        public function Create(Ficha $data){
+        public function Insert(Ficha $data){
             try {
-                $sql= "INSERT INTO tbl_ficha(fic_codigo,fic_progrm,fic_abrvtr,fic_fchcrt,fic_fchupd) 
-                         VALUES (?,?,?,?,?)";
+                $sql= "INSERT INTO tbl_ficha(fic_codigo,fic_fch_inc,fic_fch_fin,fic_pro_for_id,fic_tip_jor_id,fic_tip_ofe_id,fic_mod_id) 
+                         VALUES (?,?,?,?,?,?,?)";
                 $this->pdo->prepare($sql)->execute(array(
 
-                                                        $data->codigo,
-                                                        $data->programa,
-                                                        $data->abreviacion,
-                                                        $data->fechacreacion,
-                                                        $data->fechafin
+                                                        $data->fic_codigo,
+                                                        $data->fic_fch_inc,
+                                                        $data->fic_fch_fin,
+                                                        $data->fic_pro_for_id,
+                                                        $data->fic_tip_jor_id,
+                                                        $data->fic_tip_ofe_id,
+                                                        $data->fic_mod_id
+                                                        
+                                                        
                                                         
                                                     )
             );
@@ -58,21 +62,26 @@
                                         try                  {
                                                                 $sql="UPDATE tbl_ficha
                                                                          SET fic_codigo = ?,
-                                                                             fic_progrm = ?,
-                                                                             fic_abrvtr    = ?,
-                                                                             fic_fchcrt   = ?,
-                                                                             fic_fchupd  = ?
+                                                                             fic_fch_inc = ?,
+                                                                             fic_fch_fin = ?,
+                                                                             fic_pro_for_id = ?,
+                                                                             fic_tip_jor_id = ?,
+                                                                             fic_tip_ofe_id = ?,
+                                                                             fic_mod_id =?
                                                                       WHERE  fic_id  = ? ";
 
                                                                 $this->pdo->prepare($sql)
                                                                           ->execute(
                                                                                      array(
-                                                                                            $data->codigo,
-                                                                                            $data->programa,
-                                                                                            $data->abreviacion,
-                                                                                            $data->fechacreacion,
-                                                                                            $data->fechafin,
-                                                                                            $data->id
+                                                                                            $data->fic_codigo,
+                                                                                            $data->fic_fch_inc,
+                                                                                            $data->fic_fch_fin,
+                                                                                            $data->fic_pro_for_id,
+                                                                                            $data->fic_tip_jor_id,
+                                                                                            $data->fic_tip_ofe_id,
+                                                                                            $data->fic_mod_id,
+                                                                                            $data->fic_id
+
                                                                                           )
                                                                                     );
                                                              }
