@@ -3,9 +3,8 @@ tareas que faltan por realizar
 
 lewis:
 - ESTADO
-- FASES
-- JORNADA
-- MODALIDAD
+
+
 
 
 ED:
