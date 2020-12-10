@@ -1,3 +1,5 @@
+<?php echo () $_SESSION['SRol'] ?>
+ 
  <section id="main-content">
 <div id="main">
 
