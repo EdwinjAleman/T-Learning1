@@ -2,8 +2,8 @@ function Crear(){
 
 			var result=document.getElementById('tview');
 
-			var tip_pro_id=document.formtipopro.tip_pro_id.value;
-			var tip_pro_nombr=document.formtipopro.tip_pro_nombr.value;
+			var tip_pro_id=document.getElementById('tip_pro_id').value;
+			var tip_pro_nombr=document.getElementById('tip_pro_nombr').value;
 		
 			const ajax=new XMLHttpRequest(); 
 			ajax.open("POST","main.php",true);
@@ -31,22 +31,22 @@ function Crear(){
 		document.getElementById("btnguardar").value="Guardar";
 		
 	}
-		document.formtipopro.reset();
+		document.getElementById('ftipojor').reset();
 	}
 function Limpiar()
 {
-	document.formtipopro.reset();
+	document.getElementById('ftipojor').reset();
 
-	document.getElementById("btnguardar").value="Guardar";
+	document.getElementById("btnguardar").innerHTML="Guardar";
 
 }
 function Editar(tip_pro_id,tip_pro_nombr)
 {
-	document.formtipopro.tip_pro_id.value=tip_pro_id;
-	document.formtipopro.tip_pro_nombr.value=tip_pro_nombr;
+	document.getElementById('tip_pro_id').value=tip_pro_id;
+	document.getElementById('tip_pro_nombr').value=tip_pro_nombr;
 		
 
-		document.getElementById("btnguardar").value="Actualizar";
+		document.getElementById("btnguardar").innerHTML="Actualizar";
 		
 
 }
