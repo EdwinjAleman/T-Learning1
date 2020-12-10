@@ -35,13 +35,21 @@
 										die($e->getMessage());
 									}
 		}
+<<<<<<< HEAD
 	
+=======
+		
+>>>>>>> 557e487f4a6b1fae008766737e32cd408e53f2a9
 
 		public function Insert(Persona $data){
 								
 
 										try 					{	$sql = "INSERT INTO tbl_persona (per_nombr,per_aplld,per_cedl,per_dirccn,per_corr,per_telfn,per_areid) 
+<<<<<<< HEAD
 																						  VALUES (?,?,?,?,?,?,?,?)";
+=======
+																						  VALUES (?,?,?,?,?,?,?)";
+>>>>>>> 557e487f4a6b1fae008766737e32cd408e53f2a9
 																	   $this->pdo->prepare($sql) 
 																				 ->execute(
 																							array(

@@ -27,7 +27,7 @@
 									unlink($ruta.$_POST["file"]);
 									
 									$this->material->Delete($_REQUEST['id']);
-									require_once('../views/modulos/material/materialView.php');
+									require_once('../views/modulos/material/materialSelect.php');
 								}
 								
 		public function Insertar()

@@ -27,13 +27,13 @@ class TipoproController{
                                     $datos->tip_pro_nombr=$_REQUEST['tip_pro_nombr'];
 
                                     $this->tipopro->Insert($datos);
-                                    require_once('../views/modulos/tipopro/tipoproView.php');
+                                    require_once('../views/modulos/tipopro/tipoproSelect.php');
                                 }
 
     public function Eliminar()  
                                 {
                                     $this->tipopro->Delete($_REQUEST['tip_pro_id']);
-                                    require_once('../views/modulos/tipopro/tipoproView.php');
+                                    require_once('../views/modulos/tipopro/tipoproSelect.php');
                                 }
 
     public function Actualizar()
@@ -45,7 +45,7 @@ class TipoproController{
                                     $datos->tip_pro_nombr=$_REQUEST['tip_pro_nombr'];
 
                                     $this->tipopro->Update($datos);
-                                    require_once('../views/modulos/tipopro/tipoproView.php');
+                                    require_once('../views/modulos/tipopro/tipoproSelect.php');
                                 }	 
 }   
 

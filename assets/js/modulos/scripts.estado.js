@@ -70,7 +70,7 @@ function Editar(id, nombre){
 	document.getElementById('est_id').value=id;
 	document.getElementById('est_nombr').value=nombre;
 
-	document.getElementById("btnguardar").innerHTML="Actualizar"; //Lo Edita
+	document.getElementById('btnguardar').innerHTML='Actualizar'; //Lo Edita
 	
 	
 }
@@ -88,7 +88,7 @@ function Update(){
 										if(ajax.readyState==4){
 											if(ajax.status==200){
 												result.innerHTML=ajax.responseText;
-												document.getElementById("btnguardar").innerHTML="Crear"; //Lo Edita
+												document.getElementById('btnguardar').innerHTML='Crear'; //Lo Edita
 												document.getElementById('festado').reset();
 												
 											}else{
@@ -109,7 +109,7 @@ function Update(){
 
 function Limpiar()
 	{
-		document.getElementById("btnguardar").innerHTML="Crear"; //Lo Edita
+		document.getElementById('btnguardar').innerHTML='Crear'; //Lo Edita
 		document.getElementById('festado').reset();
 		
 	}

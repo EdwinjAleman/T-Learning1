@@ -30,13 +30,13 @@ class ProgramaforController{
                                     $datos->pro_for_tip_id=$_REQUEST['pro_for_tip_id'];
 
                                     $this->programafor->Insert($datos);
-                                    require_once('../views/modulos/programafor/programaforView.php');
+                                    require_once('../views/modulos/programafor/programaforSelect.php');
                                 }
 
     public function Eliminar()  
                                 {
                                     $this->programafor->Delete($_REQUEST['pro_for_id']);
-                                    require_once('../views/modulos/programafor/programaforView.php');
+                                    require_once('../views/modulos/programafor/programaforSelect.php');
                                 }
 
     public function Actualizar()
@@ -50,7 +50,7 @@ class ProgramaforController{
                                     $datos->pro_for_tip_id=$_REQUEST['pro_for_tip_id'];
 
                                     $this->programafor->Update($datos);
-                                    require_once('../views/modulos/programafor/programaforView.php');
+                                    require_once('../views/modulos/programafor/programaforSelect.php');
                                 }	 
 }   
 

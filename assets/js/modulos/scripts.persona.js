@@ -1,4 +1,6 @@
 function Crear(){
+	
+	alert("en el js");
 
 	var result=document.getElementById('tview');
 	
@@ -10,7 +12,11 @@ function Crear(){
 	var per_corr=document.formpersona.per_corr.value;
 	var per_telfn=document.formpersona.per_telfn.value;
 	var per_areid=document.formpersona.per_areid.value;
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> 557e487f4a6b1fae008766737e32cd408e53f2a9
 	
 
 	const ajax=new XMLHttpRequest(); 
@@ -58,7 +64,7 @@ function Borrar(per_id){
 
 
 
-function Editar(id, nombre, apelliido, cedula, direccion, correo, telefono,area,usuario){
+function Editar(id, nombre, apelliido, cedula, direccion, correo, telefono,area){
 
    
 
@@ -72,7 +78,7 @@ function Editar(id, nombre, apelliido, cedula, direccion, correo, telefono,area,
     document.formpersona.per_corr.value=correo;
     document.formpersona.per_telfn.value=telefono;
 	document.formpersona.per_areid.value=area;
-	document.formpersona.per_usid.value=usuario;
+	
 	
     
 
@@ -101,6 +107,10 @@ function UpdatePersona(){
 	var per_telfn=document.formpersona.per_telfn.value;
 	var per_areid=document.formpersona.per_areid.value;
 	
+<<<<<<< HEAD
+=======
+
+>>>>>>> 557e487f4a6b1fae008766737e32cd408e53f2a9
 	const ajax=new XMLHttpRequest(); //Ojo se puede llamar la funcion CrearAjax();
 	ajax.open("POST","main.php",true); // Se usa el controlador general y su accion
 	ajax.onreadystatechange=function(){
