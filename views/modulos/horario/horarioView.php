@@ -18,7 +18,17 @@
 
                     <div id="tview">
                         <?php  include_once('horarioInsert.php'); ?>
-                        <?php  include_once('horarioSelect.php'); ?>
+                        <?php if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="1" or $_SESSION['SRol']=="3"){
+                          include_once('horarioInsert.php'); 
+                    }?>
+
+                        <?php if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="2"){
+                          include_once('horarioSelect.php'); 
+                    }?>
+
+
+
+
                     </div>
 
                 </div>
