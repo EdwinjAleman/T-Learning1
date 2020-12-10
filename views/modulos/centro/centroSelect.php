@@ -118,7 +118,7 @@
                                                 <div class="activity-panel">
                                                     <h4> HISTORIA </h4>
 
-<?php echo ($_SESSION['SIdu']);?><br>
+
                                                     <?php echo($_SESSION['SUsu']); ?>
                                                     <p>
                                                       <?php echo $filas->inf_soms; ?>

@@ -6,7 +6,14 @@
             <h5 class="centered"> <?php echo$_SESSION['SUsu'] ?> </h5>
             <div class="centered"><a href="logout.php">Cerrar Sesion</a><br></div>
             <li class="mt">
-                <a class="" href="./main.php?Ctr=anuncio">
+                <a href="./main.php?Ctr=agenda">
+                    <i class="fa fa-comment"></i>
+                    <span>Agenda</span>
+                </a>
+            </li>
+            
+            <li class="sub-menu">
+                <a href="./main.php?Ctr=anuncio">
                     <i class="fa fa-comment"></i>
                     <span>Anuncios</span>
                 </a>
