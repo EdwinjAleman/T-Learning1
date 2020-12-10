@@ -36,7 +36,7 @@
                     <td> <a title="Descargar" href="../assets/images/adjuntos/<?php echo $filas->map_archurl;?>"
                             download="<?php echo $filas->map_archurl;?>"> <span class="glyphicon glyphicon-download-alt"
                                 aria-hidden="true"></span> Descargar</a></td>
-                    <td> <a title="Visualizar" href="../assets/images/adjuntos/ <?php echo $filas->map_archurl;?>"  >Ver</a></td>
+                    <td> <a title="Visualizar" href="../assets/images/adjuntos/<?php echo $filas->map_archurl;?>" target="_blank"  >Ver</a></td>
                 </tr>
 
 

@@ -12,7 +12,7 @@
                     </div>
                     <div class="modal-body">
 
-                        <form action="" id="ftipojor">
+                        <form action="" id="ftipopro">
                             <h4 class="mb"><i class="fa fa-angle-right"></i> Ingrese los siguientes datos para agregar
                                 un
                                 tipo de programa de formacion</h4>
@@ -28,7 +28,7 @@
 
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="Limpiar();">Close</button>
-                                <button type="button" class="btn btn-primary" onclick="Crear();"  data-dismiss="modal"
+                                <button type="button" class="btn btn-primary" onclick="Validar();"  data-dismiss="modal"
                                     id="btnguardar">Crear</button>
                             </div>
 
