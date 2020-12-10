@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> 557e487f4a6b1fae008766737e32cd408e53f2a9
 <section id="main-content">
     <section class="wrapper">
         <h3><i class="fa fa-angle-right"></i> INFORMACION </h3>
@@ -20,7 +23,6 @@
             <th>Correo </th>
             <th>Telefono</th>
             <th>area </th>
-            <th>usuario </th>
                             </tr>
                         </thead>
                         <tbody>

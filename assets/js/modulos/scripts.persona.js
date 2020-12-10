@@ -12,7 +12,11 @@ function Crear(){
 	var per_corr=document.formpersona.per_corr.value;
 	var per_telfn=document.formpersona.per_telfn.value;
 	var per_areid=document.formpersona.per_areid.value;
+<<<<<<< HEAD
+	
+=======
 
+>>>>>>> 557e487f4a6b1fae008766737e32cd408e53f2a9
 	
 
 	const ajax=new XMLHttpRequest(); 
@@ -103,7 +107,10 @@ function UpdatePersona(){
 	var per_telfn=document.formpersona.per_telfn.value;
 	var per_areid=document.formpersona.per_areid.value;
 	
+<<<<<<< HEAD
+=======
 
+>>>>>>> 557e487f4a6b1fae008766737e32cd408e53f2a9
 	const ajax=new XMLHttpRequest(); //Ojo se puede llamar la funcion CrearAjax();
 	ajax.open("POST","main.php",true); // Se usa el controlador general y su accion
 	ajax.onreadystatechange=function(){

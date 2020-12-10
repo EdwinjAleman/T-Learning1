@@ -21,6 +21,18 @@
 										catch (Exception $e) { die($e->getMessage());			}
 									}
 
+		public function SelectTipoUsu(){
+		                            	try 					{	
+																	$sql=$this->pdo->prepare("SELECT * FROM tbl_tipo_usuario ORDER BY id desc");
+																	$sql->execute();
+																	return $sql->fetchALL(PDO::FETCH_OBJ);
+																}
+							
+										catch (Exception $e) 	{	
+																	die($e->getMessage());
+																}
+									}
+
 
 		public function Logout($id)
 									{
@@ -48,7 +60,7 @@
 		public function Delete($id)
 									{
 										try 				 { 
-																$sql="DELETE FROM USUARIOS WHERE id=?";
+																$sql="DELETE FROM tbl_usuario WHERE usu_id=?";
 																$this->pdo->prepare($sql)
 																		  ->execute(
 																		  			array($id)
@@ -59,19 +71,21 @@
 									}
 
 
-		public function Insert(Usuario $data)
+		public function Insert(Datousu $data)
 									{
+										
 										try 				 { 
 
-																$sql = "INSERT INTO usuarios (usuario,nombre,area,clave)
+																$sql = "INSERT INTO tbl_usuario (usu_fot,usu_usuari,usu_passwd,tipo_usuario_id )
 																					VALUES (?,?,?,?)";
 																$this->pdo->prepare($sql)
 																          ->execute(
 																          			array(
-																          					$data->usuario,
+																          				    $data->archurl,
 																          					$data->nombre,
-																          					$data->area,
-																          					md5($data->clave)
+																          					$data->pass,
+																          					$data->tipusu
+																          					
 																          				 )
 																          		   );
 

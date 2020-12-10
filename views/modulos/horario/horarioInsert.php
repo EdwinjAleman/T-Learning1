@@ -1,83 +1,151 @@
-<!-- <div class="modal fade" name="formhorario" id="formhorario"  data-backdrop="static" data-keyboard="false"
-    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">formulario horario: </h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var initialLocaleCode = 'es';
+    var localeSelectorEl = document.getElementById('locale-selector');
+    var calendarEl = document.getElementById('calendar');
 
-                <form action="" id="fhorario">
-                    <h4 class="mb"><i class="fa fa-angle-right"></i> ingrese los datos del horario </h4>
-                        <input type="text" name="eve_id" id="eve_id" hidden>
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+        headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+        },
+        initialDate: '2020-12-04',
+        locale: initialLocaleCode,
+        buttonIcons: false, // show the prev/next text
+        weekNumbers: true,
+        navLinks: true, // can click day/week names to navigate views
+        selectable: true,
+        selectMirror: true,
+        select: function(arg) {
+            var title = prompt('titulo del evento:');
+            if (title) {
+                calendar.addEvent({
+                    title: title,
+                    start: arg.start,
+                    end: arg.end,
+                    allDay: arg.allDay
+                })
+            }
+            calendar.unselect()
+        },
+        eventClick: function(arg) {
+            if (confirm('esta seguro que quiere eliminar este evento?')) {
+                arg.event.remove()
+            }
+        },
+        editable: true,
+        dayMaxEvents: true, // allow "more" link when too many events
+        events: [{
+                title: 'todo el dia en evento',
+                start: '2020-12-01'
+            },
+            {
+                title: 'dia de las velitas',
+                start: '2020-12-07',
+                end: '2020-12-07'
+            },
+            {
+                groupId: 999,
+                title: 'alguito',
+                start: '2020-12-09T16:00:00'
+            },
+            {
+                groupId: 999,
+                title: 'alguito',
+                start: '2020-12-16T16:00:00'
+            },
+            {
+                title: 'Conferencia',
+                start: '2020-12-11',
+                end: '2020-12-13'
+            },
+            {
+                title: 'reuniones',
+                start: '2020-12-12T10:30:00',
+                end: '2020-12-12T12:30:00'
+            },
+            {
+                title: 'almuerzo',
+                start: '2020-12-12T12:00:00'
+            },
+            {
+                title: 'reunion',
+                start: '2020-09-12T14:30:00'
+            },
+            {
+                title: 'hora felis',
+                start: '2020-12-12T16:20:00'
+            },
+            {
+                title: 'cena',
+                start: '2020-09-12T20:00:00'
+            },
+            {
+                title: 'fiesta',
+                start: '2020-12-13'
+            },
+            {
+                title: 'dia de navidad',
+                start: '2020-12-24',
+                end: '2020-12-24'
+            }
+        ]
+    });
 
-                    <div class="form-group " id="fhorario">
-                        <label for="eve_nombr" class="control-label col-lg-4"> Nombre del evento:</label>
-                        <div class="col-lg-10">
-                            <input class=" form-control" type="text" name="eve_nombr" id="eve_nombr" required />
-                        </div>
-                    </div>
+    calendar.render();
 
-                    <div class="form-group " id="fhorario">
-                        <label for="eve_descrpcn" class="control-label col-lg-4"> Descripcion del evento:</label>
-                        <div class="col-lg-10">
-                            <input class=" form-control" type="text" name="eve_descrpcn" id="eve_descrpcn" required />
-                        </div>
-                    </div>
+    // build the locale selector's options
+    calendar.getAvailableLocaleCodes().forEach(function(localeCode) {
+        var optionEl = document.createElement('option');
+        optionEl.value = localeCode;
+        optionEl.selected = localeCode == initialLocaleCode;
+        optionEl.innerText = localeCode;
+        localeSelectorEl.appendChild(optionEl);
+    });
 
-                    <div class="form-group " id="fhorario">
-                        <label for="eve_fech_inc" class="control-label col-lg-4"> Fecha de inicio del evento:</label>
-                        <div class="col-lg-10">
-                            <input class=" form-control" type="date" name="eve_fech_inc" id="eve_fech_inc" required />
-                        </div>
-                    </div>
+    // when the selected option changes, dynamically change the calendar option
+    localeSelectorEl.addEventListener('change', function() {
+        if (this.value) {
+            calendar.setOption('locale', this.value);
+        }
+    });
 
-                    <div class="form-group " id="fhorario">
-                        <label for="eve_fech_fn" class="control-label col-lg-4"> Fecha de fin del evento:</label>
-                        <div class="col-lg-10">
-                            <input class=" form-control" type="date" name="eve_fech_fn" id="eve_fech_fn" required />
-                        </div>
-                    </div>
+});
+</script>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 14px;
+}
 
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="Limpiar();">Close</button>
-                        <button type="button" class="btn btn-primary" onclick="Crear();"  id="btnguardar" data-dismiss="modal">Crear</button>
-                    </div>
+#top {
+    background: #eee;
+    border-bottom: 1px solid #ddd;
+    padding: 0 10px;
+    line-height: 40px;
+    font-size: 12px;
+}
 
-                </form>
+#calendar {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 10px;
+}
+</style>
+</head>
 
-            </div>
+<body>
 
-        </div>
+    <div id='top'>
+
+        Selector de idioma:
+        <select id='locale-selector'></select>
+
     </div>
-</div> -->
 
+    <div id='calendar'></div>
 
-<!-- <form name="formhorario" id="formhorario" onSubmit="Crear(); return false;">
-
-     <h1> horario: </h1>
-
-     <input type="text" name="eve_id"  hidden>
-
-     <label for="eve_nombr"> nombre: </label> <br>
-     <input type="text" name="eve_nombr"> <br>
-
-     <label for="eve_descrpcn"> descripcion: </label> <br>
-     <input type="text" name="eve_descrpcn"> <br>
-
-     <label for="eve_fech_inc"> fecha inicio: </label> <br>
-     <input type="date" name="eve_fech_inc"> <br>
-
-     <label for="eve_fech_fn"> fecha fin: </label> <br>
-     <input type="date" name="eve_fech_fn"> <br>
-
-     
-
-     
-
-     <input type="submit" value="Crear" id="btnguardar">
-
- </form>  -->
+</body>

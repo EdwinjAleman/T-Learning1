@@ -20,9 +20,15 @@
             <th><?php echo $filas->usu_usuari; ?> </th>
 
             <th><?php echo $filas->nombre; ?> </th>
+<<<<<<< HEAD
+            
+              <?php $group = "'".$filas->usu_id."','".$filas->usu_fot."'";?>    
+                <td><button onclick="BorrarArchivo(<?php echo $group;?>);">Eliminar</button></td>
+=======
 
             <?php $group = "'".$filas->usu_id."','".$filas->usu_fot."'";?>
             <td><button onclick="BorrarArchivo(<?php echo $group;?>);">Eliminar</button></td>
+>>>>>>> 557e487f4a6b1fae008766737e32cd408e53f2a9
         </tr>
         <?php endforeach; ?>
     </tbody>
