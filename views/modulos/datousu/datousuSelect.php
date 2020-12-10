@@ -1,4 +1,4 @@
- <h1>DATOS DE TIPO DE DATOS USUARIO:</h1>
+<h1>DATOS DE TIPO DE DATOS USUARIO:</h1>
 <table>
     <thead>
         <tr>
@@ -16,14 +16,13 @@
 
         <tr>
             <th><?php echo $filas->usu_id; ?> </th>
-            <th><?php echo $filas->usu_fot; ?> </th>
+            <th> <img src="<?php echo $filas->usu_fot; ?>" width="100" height="100"></th>
             <th><?php echo $filas->usu_usuari; ?> </th>
             <th><?php echo $filas->usu_passwd; ?> </th>
             <th><?php echo $filas->nombre; ?> </th>
             
-
-            <th> <button onclick="Editar(<?php echo $grupal;?>);"> Editar </button></th>
-            <th> <button onclick="Borrar(<?php echo $grupal;?>);"> Borrar </button></th>
+              <?php $group = "'".$filas->usu_id."','".$filas->usu_fot."'";?>    
+                <td><button onclick="BorrarArchivo(<?php echo $group;?>);">Eliminar</button></td>
         </tr>
         <?php endforeach; ?>
     </tbody>
