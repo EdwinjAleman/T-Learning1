@@ -2,8 +2,8 @@ function Crear(){
 
 			var result=document.getElementById('tview');
 
-			var tip_pro_id=document.formtipopro.tip_pro_id.value;
-			var tip_pro_nombr=document.formtipopro.tip_pro_nombr.value;
+			var tip_pro_id=document.getElementById('tip_pro_id').value;
+			var tip_pro_nombr=document.getElementById('tip_pro_nombr').value;
 		
 			const ajax=new XMLHttpRequest(); 
 			ajax.open("POST","main.php",true);
@@ -20,33 +20,49 @@ function Crear(){
 
 			ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 		if(tip_pro_id=="")
+
 	{
+		if(tip_pro_nombr!=""){
 
 		ajax.send("Ctr=tipopro&Acc=insertar&tip_pro_nombr="+tip_pro_nombr);
-		
+		}else
+		{
+			alert("campos vacios");
+		}
 	}
 	else 
-	{
-		ajax.send("Ctr=tipopro&Acc=actualizar&tip_pro_id="+tip_pro_id+"&tip_pro_nombr="+tip_pro_nombr);
-		document.getElementById("btnguardar").value="Guardar";
+	{	
+		if(tip_pro_nombr!=""){
+
+			ajax.send("Ctr=tipopro&Acc=actualizar&tip_pro_id="+tip_pro_id+"&tip_pro_nombr="+tip_pro_nombr);
+			document.getElementById("btnguardar").innerHTML="Crear"; //Lo Edita
+			}else
+			{
+				alert("campos vacios");
+			}
+		
+		
 		
 	}
-		document.formtipopro.reset();
+		document.getElementById('ftipojor').reset();
 	}
-function Limpiar()
-{
-	document.formtipopro.reset();
+		function Limpiar()
+		{
+	
+			document.getElementById("btnguardar").innerHTML="Guardar";
+	
+			document.getElementById('ftipojor').reset();
 
-	document.getElementById("btnguardar").value="Guardar";
+		}
 
-}
+
 function Editar(tip_pro_id,tip_pro_nombr)
 {
-	document.formtipopro.tip_pro_id.value=tip_pro_id;
-	document.formtipopro.tip_pro_nombr.value=tip_pro_nombr;
+	document.getElementById('tip_pro_id').value=tip_pro_id;
+	document.getElementById('tip_pro_nombr').value=tip_pro_nombr;
 		
 
-		document.getElementById("btnguardar").value="Actualizar";
+		document.getElementById("btnguardar").innerHTML="Actualizar";
 		
 
 }
