@@ -55,15 +55,15 @@
                                 <div class="row">
 
                                     <div class="col-md-6">
-                                     <?php foreach ($this->perfil->Select() as $filas): ?>
-                                      <?php $grupal="'".$filas->per_id."','".$filas->per_nombr."','".$filas->per_aplld."','".$filas->per_cedl."','".$filas->per_dirccn."','".$filas->per_corr."','".$filas->per_telfn."','".$filas->per_areid."'" ?> 
-                                        
+                                        <?php foreach ($this->perfil->Select() as $filas): ?>
+                                        <?php $grupal="'".$filas->per_id."','".$filas->per_nombr."','".$filas->per_aplld."','".$filas->per_cedl."','".$filas->per_dirccn."','".$filas->per_corr."','".$filas->per_telfn."','".$filas->per_areid."'" ?>
+
                                         <div class="detailed mt">
                                             <div class="recent-activity">
                                                 <div class="activity-icon bg-theme"><i class="fa fa-check"></i></div>
                                                 <div class="activity-panel">
                                                     <h4>Nombre</h4>
-                                                    <p>  <?php echo $filas->per_nombr; ?> </p>
+                                                    <p> <?php echo $filas->per_nombr; ?> </p>
                                                 </div>
                                                 <div class="activity-icon bg-theme02"><i class="fa fa-trophy"></i></div>
                                                 <div class="activity-panel">
@@ -79,7 +79,7 @@
 
                                             <!-- /recent-activity -->
                                         </div>
-                                      <?php endforeach; ?>
+                                        <?php endforeach; ?>
                                     </div>
                                     <!-- /col-md-6 -->
                                     <div class="col-md-6 detailed">
