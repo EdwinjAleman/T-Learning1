@@ -13,8 +13,13 @@
               </div>
               <!-- /col-md-4 -->
               <div class="col-md-4 profile-text">
-                <h3>Sam Soffes</h3>
-                <h6>Main Administrator</h6>
+                <h3><?php echo ($_SESSION['SUsu']);?></h3>
+                <h6>
+                  <?php 
+                    if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="1"){ echo ("Main Administrador"); };
+                    if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="3"){ echo ("Main Instructor"); };
+                  ?>
+                </h6>
                 <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.</p>
                 <br>
                 <p><button class="btn btn-theme"><i class="fa fa-envelope"></i> Send Message</button></p>
@@ -47,7 +52,7 @@
                   
                   <div id="overview" class="tab-pane active">
                     <div class="detailed mt">
-                      <h4> DATOS PERSONALES</h4>
+                      <h4 style="font-size:40px; font-family: 'Nerko One', cursive;"> DATOS PERSONALES</h4>
                     </div>
                     <div class="row">
                 
