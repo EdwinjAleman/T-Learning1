@@ -1,9 +1,9 @@
--->
-<section id="main-content">
-    <section class="wrapper">
-        <?php foreach ($this->agenda->Select() as $filas): ?>
+<?php foreach ($this->agenda->Select() as $filas): ?>
         <?php $grupal="'".$filas->per_id."','".$filas->per_nombr."','".$filas->per_aplld."','".$filas->per_cedl."','".$filas->per_dirccn."','".$filas->per_corr."','".$filas->per_telfn."','".$filas->per_areid."'" ?>
 
+<section id="main-content">
+    <section class="wrapper">
+        
         <div class="card" style="width: 18rem; height=300">
             <div class="card-body">
                 <h5 class="card-title">Agenda De personas </h5>
@@ -16,8 +16,9 @@
             </div>
         </div>
 
-        <?php endforeach; ?>
+        
 
 
     </section>
 </section>
+<?php endforeach; ?>
