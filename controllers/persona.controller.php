@@ -32,13 +32,7 @@ class PersonaController{
         $datos->per_corr=$_REQUEST['per_corr'];
         $datos->per_telfn=$_REQUEST['per_telfn'];
         $datos->per_areid=$_REQUEST['per_areid'];
-<<<<<<< HEAD
-    
-=======
-       
->>>>>>> 557e487f4a6b1fae008766737e32cd408e53f2a9
-       
-
+         
         $this->persona->Insert($datos);
         require_once('../views/modulos/persona/personaSelect.php');
     }

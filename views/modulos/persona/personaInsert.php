@@ -33,10 +33,6 @@ echo '<option value="'.$filas->are_id.'">'.$filas->are_nombr.'</option>';
 endforeach; ?>
 </select>
 </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> 557e487f4a6b1fae008766737e32cd408e53f2a9
 <input type="submit" value="Crear" id="btnguardar">
 
 </form>  
