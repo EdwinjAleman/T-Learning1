@@ -12,14 +12,11 @@
                     <div class="col-md-4 profile-text">
                         <h3><?php echo ($_SESSION['SUsu']);?></h3>
                         <h6>
-                            <?php 
-                    if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="1"){ echo ("Main Administrador"); };
-                    if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="3"){ echo ("Main Instructor"); };
-                  ?>
+                          <?php 
+                            if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="1"){ echo ("Main Administrador"); };
+                            if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="3"){ echo ("Main Instructor"); };
+                          ?>
                         </h6>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                            classical Latin literature from 45 BC.</p>
-                        <br>
                     </div>
                     <!-- /col-md-4 -->
 
@@ -30,19 +27,7 @@
             <!-- /col-lg-12 -->
             <div class="col-lg-12 mt">
                 <div class="row content-panel">
-                    <div class="panel-heading">
-                        <ul class="nav nav-tabs nav-justified">
-                            <li class="active">
-                                <a data-toggle="tab" href="#overview"> Datos</a>
-                            </li>
-                            <li>
-                                <a data-toggle="tab" href="#contact" class="contact-map">Contacto</a>
-                            </li>
-                            <li>
-                                <a data-toggle="tab" href="#edit"> Configuraciones </a>
-                            </li>
-                        </ul>
-                    </div>
+
                     <!-- /panel-heading -->
                     <div class="panel-body">
                         <div class="tab-content">
@@ -51,6 +36,7 @@
                                 <div class="detailed mt">
                                     <h4 style="font-size:40px; font-family: 'Nerko One', cursive;"> DATOS PERSONALES
                                     </h4>
+                                    <br>
                                 </div>
                                 <div class="row">
 
@@ -79,108 +65,33 @@
 
                                             <!-- /recent-activity -->
                                         </div>
-                                        <?php endforeach; ?>
+                                        
                                     </div>
                                     <!-- /col-md-6 -->
                                     <div class="col-md-6 detailed">
-
-                                        <!-- /row -->
-                                        <h4> Fichas Afiliadas</h4>
-                                        <!-- <div class="row centered mb">
-                                            <ul class="my-friends">
-                                                <li>
-                                                    <div class="friends-pic"><img class="img-circle" width="35"
-                                                            height="35" src="img/friends/fr-01.jpg">
-                                                        <h2>1907036</h2>
-                                                    </div>
-
-                                                </li>
-                                            </ul>
-                                            <ul class="my-friends">
-                                                <li>
-                                                    <div class="friends-pic"><img class="img-circle" width="35"
-                                                            height="35" src="img/friends/fr-01.jpg">
-                                                        <h2>1235486</h2>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                            <ul class="my-friends">
-                                                <li>
-                                                    <div class="friends-pic"><img class="img-circle" width="35"
-                                                            height="35" src="img/friends/fr-01.jpg">
-                                                        <h2>1235486</h2>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                            <ul class="my-friends">
-                                                <li>
-                                                    <div class="friends-pic"><img class="img-circle" width="35"
-                                                            height="35" src="img/friends/fr-01.jpg">
-                                                        <h2>1235486</h2>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                            <ul class="my-friends">
-                                                <li>
-                                                    <div class="friends-pic"><img class="img-circle" width="35"
-                                                            height="35" src="img/friends/fr-01.jpg">
-                                                        <h2>1235486</h2>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                            <ul class="my-friends">
-                                                <li>
-                                                    <div class="friends-pic"><img class="img-circle" width="35"
-                                                            height="35" src="img/friends/fr-01.jpg">
-                                                        <h2>1235486</h2>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                            <ul class="my-friends">
-                                                <li>
-                                                    <div class="friends-pic"><img class="img-circle" width="35"
-                                                            height="35" src="img/friends/fr-01.jpg">
-                                                        <h2>1235486</h2>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                            <ul class="my-friends">
-                                                <li>
-                                                    <div class="friends-pic"><img class="img-circle" width="35"
-                                                            height="35" src="img/friends/fr-01.jpg">
-                                                        <h2>1235486</h2>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                            <ul class="my-friends">
-                                                <li>
-                                                    <div class="friends-pic"><img class="img-circle" width="35"
-                                                            height="35" src="img/friends/fr-01.jpg">
-                                                        <h2>1235486</h2>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div> -->
+                                        <div class="recent-activity">
+                                            <br>
+                                            <div class="activity-icon bg-theme"><i class="fa fa-check"></i></div>
+                                            <div class="activity-panel">
+                                                <h4>Celular</h4>
+                                                <p> <?php echo $filas->per_telfn; ?> </p>
+                                            </div>
+                                            <div class="activity-icon bg-theme02"><i class="fa fa-trophy"></i></div>
+                                            <div class="activity-panel">
+                                                <h4> Correo </h4>
+                                                <p> <?php echo $filas->per_corr; ?> </p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!-- /col-md-6 -->
+                                    <?php endforeach; ?>
                                 </div>
-                                <!-- /OVERVIEW -->
                             </div>
                             <!-- /tab-pane -->
                             <div id="contact" class="tab-pane">
                                 <div class="row">
 
                                     <!-- /col-md-6 -->
-                                    <div class="col-md-6 detailed">
 
-                                        <h4>Contacts</h4>
-                                        <div class="col-md-8 col-md-offset-2 mt">
-                                            <p>
-                                                Celular: +33 4898-4303<br /> Correo: 48 4389-4393<br />
-                                            </p>
-                                            <br>
-                                        </div>
-                                    </div>
                                     <!-- /col-md-6 -->
                                 </div>
                                 <!-- /row -->
