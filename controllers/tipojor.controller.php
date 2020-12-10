@@ -27,13 +27,13 @@ class TipojorController{
                                     $datos->tip_jor_nombr=$_REQUEST['tip_jor_nombr'];
 
                                     $this->tipojor->Insert($datos);
-                                    require_once('../views/modulos/tipojor/tipojorView.php');
+                                    require_once('../views/modulos/tipojor/tipojorSelect.php');
                                 }
 
     public function Eliminar()  
                                 {
                                     $this->tipojor->Delete($_REQUEST['tip_jor_id']);
-                                    require_once('../views/modulos/tipojor/tipojorView.php');
+                                    require_once('../views/modulos/tipojor/tipojorSelect.php');
                                 }
 
     public function Actualizar()
@@ -45,7 +45,7 @@ class TipojorController{
                                     $datos->tip_jor_nombr=$_REQUEST['tip_jor_nombr'];
 
                                     $this->tipojor->Update($datos);
-                                    require_once('../views/modulos/tipojor/tipojorView.php');
+                                    require_once('../views/modulos/tipojor/tipojorSelect.php');
                                 }	 
 }   
 
