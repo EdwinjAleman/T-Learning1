@@ -20,26 +20,42 @@ function Crear(){
 
 			ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 		if(tip_pro_id=="")
+
 	{
+		if(tip_pro_nombr!=""){
 
 		ajax.send("Ctr=tipopro&Acc=insertar&tip_pro_nombr="+tip_pro_nombr);
-		
+		}else
+		{
+			alert("campos vacios");
+		}
 	}
 	else 
-	{
-		ajax.send("Ctr=tipopro&Acc=actualizar&tip_pro_id="+tip_pro_id+"&tip_pro_nombr="+tip_pro_nombr);
-		document.getElementById("btnguardar").value="Guardar";
+	{	
+		if(tip_pro_nombr!=""){
+
+			ajax.send("Ctr=tipopro&Acc=actualizar&tip_pro_id="+tip_pro_id+"&tip_pro_nombr="+tip_pro_nombr);
+			document.getElementById("btnguardar").innerHTML="Crear"; //Lo Edita
+			}else
+			{
+				alert("campos vacios");
+			}
+		
+		
 		
 	}
 		document.getElementById('ftipojor').reset();
 	}
-function Limpiar()
-{
-	document.getElementById('ftipojor').reset();
+		function Limpiar()
+		{
+	
+			document.getElementById("btnguardar").innerHTML="Guardar";
+	
+			document.getElementById('ftipojor').reset();
 
-	document.getElementById("btnguardar").innerHTML="Guardar";
+		}
 
-}
+
 function Editar(tip_pro_id,tip_pro_nombr)
 {
 	document.getElementById('tip_pro_id').value=tip_pro_id;
