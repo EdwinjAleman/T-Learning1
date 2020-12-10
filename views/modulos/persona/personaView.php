@@ -1,5 +1,7 @@
+<section id="main-content">
 <div id="main">
 
+    
     <script src="../assets/js/modulos/scripts.persona.js"></script>
 
     <div id="tview">
@@ -8,3 +10,5 @@
     </div>
 
 </div>
+
+</section>

@@ -32,11 +32,11 @@ class PersonaController{
         $datos->per_corr=$_REQUEST['per_corr'];
         $datos->per_telfn=$_REQUEST['per_telfn'];
         $datos->per_areid=$_REQUEST['per_areid'];
-        $datos->per_usuid=$_REQUEST['per_usuid'];
+       
        
 
         $this->persona->Insert($datos);
-        require_once('../views/modulos/persona/personaView.php');
+        require_once('../views/modulos/persona/personaSelect.php');
     }
     public function Eliminar()  
                                 {
@@ -57,7 +57,7 @@ class PersonaController{
                                     $datos->per_corr=$_REQUEST['per_corr'];
                                     $datos->per_telfn=$_REQUEST['per_telfn'];
                                     $datos->per_areid=$_REQUEST['per_areid'];
-                                    $datos->per_usuid=$_REQUEST['per_usuid'];
+                                    
 
                                     $this->persona->Update($datos);
                                     require_once('../views/modulos/persona/personaView.php');
