@@ -56,7 +56,7 @@
 </div> -->
 
 
-<form name="formhorario" id="formhorario" onSubmit="Crear(); return false;">
+<!-- <form name="formhorario" id="formhorario" onSubmit="Crear(); return false;">
 
      <h1> horario: </h1>
 
@@ -80,4 +80,4 @@
 
      <input type="submit" value="Crear" id="btnguardar">
 
- </form> 
+ </form>  -->
