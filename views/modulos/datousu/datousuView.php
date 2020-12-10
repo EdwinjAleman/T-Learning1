@@ -1,10 +1,19 @@
-<div id="main">
+<section id="main-content">
+    <section class="wrapper">
+        <section id="main-content">
+            <section class="wrapper">
 
-    <script src="../assets/js/modulos/scripts.tipoofe.js"></script>
+                <div id="main">
 
-    <div id="tview">
-        <?php  include_once('datousuInsert.php'); ?>
-        <?php  include_once('datousuSelect.php'); ?>
-    </div>
+                    <script src="../assets/js/modulos/scripts.tipoofe.js"></script>
 
-</div>
+                    <div id="tview">
+                        <?php  include_once('datousuInsert.php'); ?>
+                        <?php  include_once('datousuSelect.php'); ?>
+                    </div>
+
+                </div>
+            </section>
+        </section>
+    </section>
+</section>

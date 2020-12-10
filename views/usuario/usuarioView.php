@@ -1,5 +1,7 @@
 <section id="main-content">
     <section class="wrapper">
+<section id="main-content">
+    <section class="wrapper">
         <script src="../assets/js/scripts.usuarios.js"></script>
         <div class="maincontainer">
 
@@ -20,4 +22,6 @@
 
 
     </section>
+</section>
+</section>
 </section>
