@@ -12,7 +12,13 @@
 
 		public function Index()
 								{
-								require_once('../views/modulos/material/materialView.php');
+									require_once('../views/frames/header.php');
+									if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="1"){ require_once('frames/sidebaradministrador.php'); }
+									if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="2"){ require_once('frames/menuAprendiz.php'); }
+									if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="3"){ require_once('frames/menuInstructor.php'); }
+									require_once('../views/modulos/material/materialView.php');
+									require_once('../views/frames/footer.php');
+								
 								}
 		public function Eliminar()
 								{
@@ -21,7 +27,7 @@
 									unlink($ruta.$_POST["file"]);
 									
 									$this->material->Delete($_REQUEST['id']);
-									require_once('../views/modulos/material/materialView.php');
+									require_once('../views/modulos/material/materialSelect.php');
 								}
 								
 		public function Insertar()
@@ -64,7 +70,7 @@
 
 		public function Actualizar()
 								{	
-									$datos = $this->materialapoyo;
+									$datos = $this->material;
                                     $datos->titulo = $_REQUEST['titulo'];
                                     $datos->fecpud  = $_REQUEST['descrip'];
                                     $datos->descrp = $_REQUEST['descrp'];
@@ -72,8 +78,8 @@
 									$datos->fases = $_REQUEST['fases'];
 									$datos->usuario = $_REQUEST['usuario'];
 									
-									$this->materialapoyo->Update($datos);
-									require_once('../views/materialapoyo/materialapoyoSelect.php');
+									$this->material->Update($datos);
+									require_once('../views/modelos/material/materialSelect.php');
 								}
 
 	}

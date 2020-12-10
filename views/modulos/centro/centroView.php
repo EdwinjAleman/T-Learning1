@@ -1,4 +1,6 @@
-<section id="main-content">
+<?php echo () $_SESSION['SRol'] ?>
+ 
+ <section id="main-content">
 <div id="main">
 
     
@@ -11,4 +13,4 @@
 
 </div>
 
-</section>
+</section> 

@@ -7,7 +7,7 @@
             <div class="col-md-12">
                 <div class="content-panel">
                     <table class="table table-striped table-advance table-hover">
-                        <h4><i class="fa fa-angle-right"></i> Estas son los siguientes ofertas registradas:
+                        <h4><i class="fa fa-angle-right"></i> Ofertas registradas:
                         </h4>
                         <hr>
                         <thead>

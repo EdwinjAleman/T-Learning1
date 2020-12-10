@@ -59,7 +59,7 @@
 								catch (Exception $e) {	die($e->getMessage());	}
 							}
 
-	public function Update(materialapoyo $data)
+	public function Update(material $data)
 							{
 								try {	
 										$sql="UPDATE tbl_materialapoyo

@@ -23,7 +23,7 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="Limpiar();">Close</button>
+                        <button type="button" class="btn btn-secondary"  onclick="Limpiar();" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary"  onclick="Validar();"  id="btnguardar" data-dismiss="modal">Crear</button>
                     </div>
 
