@@ -5,7 +5,7 @@
 	// Acc = Accion       --> Metodo a Realizar o Ejecutar
 	require_once('../models/database.php');
 
-	$controller = 'usuario';
+	$controller = 'agenda';
 
 	if (isset($_SESSION['SUsu']) And isset($_SESSION['SRol']) And isset($_SESSION['SLog']))
 	{
