@@ -34,13 +34,13 @@ class FichaController{
                                     $datos->fic_mod_id=$_REQUEST['fic_mod_id'];
 
                                     $this->ficha->Insert($datos);
-                                    require_once('../views/modulos/ficha/fichaView.php');
+                                    require_once('../views/modulos/ficha/fichaSelect.php');
                                 }
 
     public function Eliminar()  
                                 {
                                     $this->ficha->Delete($_REQUEST['fic_id']);
-                                    require_once('../views/modulos/ficha/fichaView.php');
+                                    require_once('../views/modulos/ficha/fichaSelect.php');
                                 }
 
     public function Actualizar()
@@ -59,7 +59,7 @@ class FichaController{
                                     
 
                                     $this->ficha->Update($datos);
-                                    require_once('../views/modulos/ficha/fichaView.php');
+                                    require_once('../views/modulos/ficha/fichaSelect.php');
                                 }	 
 }   
 
