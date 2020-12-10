@@ -28,6 +28,11 @@
     <script src='../assets\calendario/main.js'></script>
     <script src='../assets\calendario/locales-all.js'></script>
 
+    <!-- PERFIL -->
+
+    <link href="../assets/plantilla/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
 
 
 

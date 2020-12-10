@@ -13,7 +13,7 @@
 		public function Select()
 									 {
 									 	try  				 {
-									 							$sql=$this->pdo->prepare("SELECT * FROM `tbl_area` a INNER JOIN tbl_sede s ON a.are_sedid=s.sed_id");
+									 							$sql=$this->pdo->prepare("SELECT * FROM `tbl_persona` a INNER JOIN tbl_area b ON a.per_areid=b.are_id");
 									 							$sql->execute();
 									 							return $sql->fetchALL(PDO::FETCH_OBJ);
 									 						 }

@@ -18,7 +18,8 @@
 									if (isset($_SESSION['SRol']) and $_SESSION['SRol']=="3"){ require_once('frames/menuInstructor.php'); }
             						require_once('../views/modulos/perfil/perfilView.php');									
 									require_once('../views/frames/footer.php');
-								
+									
+									echo ($_SESSION['SIdu']);
 								}
 
 		public function Eliminar()
