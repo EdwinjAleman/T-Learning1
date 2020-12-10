@@ -14,7 +14,7 @@
     var fic_tip_ofe_id = document.formficha.fic_tip_ofe_id.value;
     var fic_mod_id = document.formficha.fic_mod_id.value;
    
-	alert ("suqchaenfour2");
+	
 
 	const ajax=new XMLHttpRequest(); 
 	ajax.open("POST","main.php",true);

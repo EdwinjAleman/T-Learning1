@@ -47,12 +47,12 @@
                     <button class="btn btn-theme btn-block" type="submit"> SIGN IN</button>
                     <hr>
 
-                    <div class="registration">
+                    <!--div class="registration">
                         ¿Olvidaste tu contraseña?<br />
                         <a class="" href="#">
                             Recuperar contraseña
                         </a>
-                    </div>
+                    </div-->
                 </div>
                 <!-- Modal -->
 
