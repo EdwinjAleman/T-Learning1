@@ -13,7 +13,7 @@
                 <form action=""id="ffases">
                     <h4 class="mb"><i class="fa fa-angle-right"></i> Ingrese los siguientes datos para agregar una
                         fase</h4>
-                    <input type="text" name="fas_id" id=""hidden>
+                    <input type="text" name="fas_id" id="fas_id"hidden>
 
                     <div class="form-group ">
                         <label for="fas_nombr_fas" class="control-label col-lg-4">Nombre Fase</label>
