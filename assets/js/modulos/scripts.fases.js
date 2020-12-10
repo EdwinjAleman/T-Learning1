@@ -1,5 +1,5 @@
 function Crear(){
-    alert("suqchaenfour");
+    
 	var result=document.getElementById('tview');
 	
 	var fas_nombr_fas=document.getElementById('fas_nombr_fas').value;
