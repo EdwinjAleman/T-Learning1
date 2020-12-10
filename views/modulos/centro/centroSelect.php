@@ -115,7 +115,7 @@
                                                 <div class="activity-icon bg-theme"><i class="fa fa-check"></i></div>
                                                 <div class="activity-panel">
                                                     <h4> HISTORIA </h4>
-                                                    
+                                                    <?php echo($_SESSION['SUsu']); ?>
                                                     <p>
                                                       <?php echo $filas->inf_soms; ?>
                                                     </p>
