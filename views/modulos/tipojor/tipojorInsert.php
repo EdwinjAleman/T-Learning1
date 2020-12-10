@@ -13,7 +13,7 @@
                 <form action="">
                 <h4 class="mb"><i class="fa fa-angle-right"></i> Ingrese los siguientes datos para agregar una
                             jornada:</h4>
-                            <input type="text" name="tip_jor_id" hidden>
+                            <input type="text" name="tip_jor_id" id="tip_jor_id" hidden>
 
                     <div class="form-group ">
                         <label for="tip_jor_nombr" class="control-label col-lg-4"> Tipo de Jornada:</label>

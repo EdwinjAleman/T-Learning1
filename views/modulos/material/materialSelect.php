@@ -1,6 +1,6 @@
 <section id="main-content">
     <section class="wrapper">
-        <table>
+        <table  class="table table-striped table-bordered">
             <thead class="thead-dark">
                 <tr>
 
@@ -14,6 +14,7 @@
 
                     <th>eliminar</th>
                     <th>Descargar</th>
+                    <th>Ver</th>
                 </tr>
             </thead>
             <tbody>
@@ -34,9 +35,15 @@
 
                     <td> <a title="Descargar" href="../assets/images/adjuntos/<?php echo $filas->map_archurl;?>"
                             download="<?php echo $filas->map_archurl;?>"> <span class="glyphicon glyphicon-download-alt"
-                                aria-hidden="true"></span> </a></td>
-
+                                aria-hidden="true"></span> Descargar</a></td>
+                    <td> <a title="Visualizar" href="../assets/images/adjuntos/ <?php echo $filas->map_archurl;?>"  >Ver</a></td>
                 </tr>
+
+
+	
+	
+	
+
 
 
 
