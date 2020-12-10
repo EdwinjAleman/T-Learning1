@@ -16,7 +16,7 @@
 
         <tr>
             <th><?php echo $filas->usu_id; ?> </th>
-            <th> <img src="<?php echo $filas->usu_fot; ?>" width="100" height="100"></th>
+            <th> <?php echo $filas->usu_fot; ?></th>
             <th><?php echo $filas->usu_usuari; ?> </th>
             <th><?php echo $filas->usu_passwd; ?> </th>
             <th><?php echo $filas->nombre; ?> </th>
