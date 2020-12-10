@@ -1,4 +1,5 @@
 <section id="main-content">
+    <section class="wrapper">
 <div id="main">
 
     
@@ -10,5 +11,7 @@
     </div>
 
 </div>
+
+</section>
 
 </section>

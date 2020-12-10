@@ -49,7 +49,7 @@
 
             </div>
             <!--logo start-->
-            <a href="index.html" class="logo"><b>Se<span>Net</span></b></a>
+            <a href="index.html" class="logo"><b>T-LEA<span>RNING</span></b></a>
             <!--logo end-->
 
         </header>

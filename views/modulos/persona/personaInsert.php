@@ -1,4 +1,5 @@
-
+<section id="main-content">
+    <section class="wrapper">
 <form name="formpersona" id="formpersona" onSubmit="Crear(); return false;">
 
 <h1> IMFORMACION DE PERSONA </h1>
@@ -36,3 +37,6 @@ endforeach; ?>
 <input type="submit" value="Crear" id="btnguardar">
 
 </form>  
+</section>
+
+</section>
