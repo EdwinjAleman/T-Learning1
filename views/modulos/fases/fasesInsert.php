@@ -10,10 +10,10 @@
             </div>
             <div class="modal-body">
 
-                <form action=""id="ffases">
+                <form action="" id="ffases">
                     <h4 class="mb"><i class="fa fa-angle-right"></i> Ingrese los siguientes datos para agregar una
                         fase</h4>
-                    <input type="text" name="fas_id" id="fas_id"hidden>
+                    <input type="text" name="fas_id" id="fas_id" hidden>
 
                     <div class="form-group ">
                         <label for="fas_nombr_fas" class="control-label col-lg-4">Nombre Fase</label>
@@ -23,7 +23,7 @@
                     </div>
 
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"
                             onclick="Limpiar();">Close</button>
                         <button type="button" class="btn btn-primary" onclick="Validar();" id="btnguardar"
                             data-dismiss="modal">Crear</button>
